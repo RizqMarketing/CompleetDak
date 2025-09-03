@@ -113,16 +113,16 @@ export const sendEmail = async (formData: FormData): Promise<boolean> => {
       from_name: formData.name,
       from_email: formData.email,
       phone: formData.phone,
-      preferred_contact: formData.preferredContact || 'Niet opgegeven',
+      preferred_contact: 'Email', // Default since we removed this field
       stad: formData.stad || 'Niet opgegeven',
       address: formData.address || 'Niet opgegeven',
       provincie: formData.provincie || 'Niet opgegeven',
-      project_type: translatedProjectType,
+      project_type: formData.projectType ? translatedProjectType : 'Niet gespecificeerd',
       message: formData.message,
-      budget: translatedBudget,
+      budget: formData.budget ? translatedBudget : 'Niet gespecificeerd',
       timeline: translatedTimeline,
       service: formData.service || 'Algemene aanvraag',
-      to_email: 'info@aannemersbedrijf-emt.nl'
+      to_email: 'info@compleetdakonderhoudnederland.nl'
     };
 
     const response = await emailjs.send(

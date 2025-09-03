@@ -41,7 +41,16 @@ const Header = () => {
     { name: 'Tegelwerk', href: '/tegelwerk' },
     { name: 'Schoorsteenwerk', href: '/schoorsteenwerk' },
     { name: 'Aanbouw & Uitbouw', href: '/aanbouw-uitbouw' },
-    { name: 'Airco\'s Monteren', href: '/aircos-monteren' }
+    { name: 'Airco\'s Monteren', href: '/aircos-monteren' },
+    { name: 'Nokvorsten', href: '/nokvorsten' },
+    { name: 'Loodreparaties', href: '/loodreparaties' },
+    { name: 'Spoed Service', href: '/spoed' },
+    { name: 'Dakinspectie', href: '/dakinspectie' },
+    { name: 'Daklekkage', href: '/daklekkage' },
+    { name: 'Dakgoot Reiniging', href: '/dakgootreiniging' },
+    { name: 'Gevel Voegen', href: '/gevel-voegen' },
+    { name: 'Gevel Reinigen', href: '/gevel-reinigen' },
+    { name: 'Schoorsteen Renovatie', href: '/schoorsteenwerk-renovatie' }
   ];
 
   const handleNavClick = (href) => {
@@ -79,10 +88,10 @@ const Header = () => {
   const getHeaderClass = () => {
     if (isLegalPage || isThankYouPage) {
       // Always dark background for legal pages and thank you page
-      return 'bg-slate-900 shadow-xl';
+      return 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-xl';
     } else {
       // Original behavior for other pages
-      return isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-xl' : 'bg-transparent';
+      return isScrolled ? 'bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-md shadow-xl' : 'bg-transparent';
     }
   };
 
@@ -93,24 +102,25 @@ const Header = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo - Simplified for mobile */}
             <Link to="/" className="flex items-center space-x-2 sm:space-x-3">
-              <div className="w-14 h-12 sm:w-16 sm:h-14 lg:w-24 lg:h-20 flex items-center justify-center">
+              <div className="w-20 h-16 sm:w-24 sm:h-20 lg:w-32 lg:h-28 flex items-center justify-center">
                 <img 
-                  src="https://i.imgur.com/dFmopW3.png" 
-                  alt="EMT Logo" 
+                  src="https://imgur.com/Ol7kUug.png" 
+                  alt="Compleet Dakonderhoud Nederland Logo" 
                   className="w-full h-full object-contain"
+                  style={{ objectFit: 'contain', objectPosition: 'center' }}
                 />
               </div>
               {/* Only show company name on larger screens */}
               <div className="hidden sm:block">
-                <h1 className="text-white font-bold text-base sm:text-lg lg:text-xl">Aannemersbedrijf EMT</h1>
+                <h1 className="text-white font-bold text-base sm:text-lg lg:text-xl">Compleet Dakonderhoud Nederland</h1>
                 <p className="text-gray-300 text-xs lg:text-sm">
-                  Uw betrouwbare bouwpartner
+                  Uw specialist in dakonderhoud
                 </p>
               </div>
               {/* Simplified text for mobile */}
               <div className="block sm:hidden">
-                <h1 className="text-white font-bold text-base">EMT</h1>
-                <p className="text-gray-300 text-xs">Bouwpartner</p>
+                <h1 className="text-white font-bold text-base">Compleet Dak</h1>
+                <p className="text-gray-300 text-xs">Dakspecialist</p>
               </div>
             </Link>
 
@@ -121,7 +131,7 @@ const Header = () => {
                   <button
                     key={item.name}
                     onClick={() => handleNavClick(item.href)}
-                    className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+                    className="text-white hover:text-brand-400 transition-colors duration-300 font-medium"
                   >
                     {item.name}
                   </button>
@@ -129,7 +139,7 @@ const Header = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+                    className="text-white hover:text-brand-400 transition-colors duration-300 font-medium"
                   >
                     {item.name}
                   </Link>
@@ -141,7 +151,7 @@ const Header = () => {
                 <button
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
-                  className="flex items-center space-x-1 text-white hover:text-yellow-400 transition-colors duration-300 font-medium"
+                  className="flex items-center space-x-1 text-white hover:text-brand-400 transition-colors duration-300 font-medium"
                 >
                   <span>Diensten</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -160,7 +170,7 @@ const Header = () => {
                       <Link
                         key={service.name}
                         to={service.href}
-                        className="block px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600 transition-colors duration-200 border-b border-gray-100 last:border-b-0"
+                        className="block px-4 py-3 text-gray-700 hover:bg-brand-50 hover:text-brand-600 transition-colors duration-200 border-b border-gray-100 last:border-b-0"
                         onClick={() => setIsServicesOpen(false)}
                       >
                         <div className="font-medium">{service.name}</div>
@@ -175,21 +185,21 @@ const Header = () => {
             <div className="hidden lg:flex items-center space-x-6">
               <div className="flex items-center space-x-4 text-white">
                 <a 
-                  href="tel:0488234037"
-                  className="flex items-center space-x-2 hover:text-yellow-400 transition-colors"
+                  href="tel:0488234625"
+                  className="flex items-center space-x-2 hover:text-brand-400 transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-yellow-400" />
+                  <Phone className="w-4 h-4 text-brand-400" />
                   <div className="text-center">
-                    <div className="text-sm font-medium">0488 23 40 37</div>
+                    <div className="text-sm font-medium">0488 234 625</div>
                     <div className="text-xs text-gray-300">24/7 Bereikbaar</div>
                   </div>
                 </a>
                 <a 
-                  href="mailto:info@aannemersbedrijf-emt.nl"
-                  className="flex items-center space-x-2 hover:text-yellow-400 transition-colors"
+                  href="mailto:info@compleetdakonderhoudnederland.nl"
+                  className="flex items-center space-x-2 hover:text-brand-400 transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-yellow-400" />
-                  <span className="text-sm">info@aannemersbedrijf-emt.nl</span>
+                  <Mail className="w-4 h-4 text-brand-400" />
+                  <span className="text-sm">info@compleetdakonderhoudnederland.nl</span>
                 </a>
               </div>
             </div>
@@ -264,7 +274,7 @@ const Header = () => {
                     <Link
                       key={service.name}
                       to={service.href}
-                      className="block px-4 py-3 text-gray-600 hover:bg-yellow-50 hover:text-yellow-600 rounded-lg transition-colors duration-200 text-sm"
+                      className="block px-4 py-3 text-gray-600 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition-colors duration-200 text-sm"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {service.name}
@@ -278,30 +288,30 @@ const Header = () => {
             <div className="border-t border-gray-200 pt-4 mt-4">
               <div className="space-y-3">
                 <a 
-                  href="tel:0488234037"
+                  href="tel:0488234625"
                   className="flex items-center space-x-3 px-4 py-3 text-slate-900 hover:bg-gray-50 rounded-lg transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
                     <Phone className="w-4 h-4 text-white" />
                   </div>
                   <div>
                     <div className="font-medium text-sm">Bel Direct</div>
-                    <div className="text-xs text-gray-600">0488 23 40 37 - 24/7</div>
+                    <div className="text-xs text-gray-600">0488 234 625 - 24/7</div>
                   </div>
                 </a>
                 
                 <a 
-                  href="mailto:info@aannemersbedrijf-emt.nl"
+                  href="mailto:info@compleetdakonderhoudnederland.nl"
                   className="flex items-center space-x-3 px-4 py-3 text-slate-900 hover:bg-gray-50 rounded-lg transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <div className="w-8 h-8 bg-yellow-500 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
                     <Mail className="w-4 h-4 text-white" />
                   </div>
                   <div>
                     <div className="font-medium text-sm">Email Ons</div>
-                    <div className="text-xs text-gray-600">info@aannemersbedrijf-emt.nl</div>
+                    <div className="text-xs text-gray-600">info@compleetdakonderhoudnederland.nl</div>
                   </div>
                 </a>
               </div>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Home, CheckCircle, Star, Phone, Mail, ArrowRight, 
+  Home, CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Users, Calculator, Eye, Hammer, Sun, Wrench,
-  Send, User, MessageCircle, Calendar, Building2, MapPin
+  Send, User, MessageCircle, Calendar, Building2, MapPin, Building
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -17,14 +17,11 @@ const RoofingPage = () => {
     name: '',
     email: '',
     phone: '',
-    projectType: '',
-    message: '',
     stad: '',
     address: '',
     provincie: '',
-    address: '',
-    budget: '',
-    timeline: ''
+    timeline: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -79,23 +76,6 @@ const RoofingPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Hans",
-      text: "Snelle service en eerlijk advies, iets wat je tegenwoordig niet vaak meer ziet. Mijn dak ligt er weer strak bij. Zeer tevreden!",
-      rating: 5
-    },
-    {
-      name: "Herman Smits",
-      text: "Geen gezeur, gewoon doen wat beloofd is. Zo hoort het, en dat doen ze hier perfect.",
-      rating: 5
-    },
-    {
-      name: "Naomi Vos",
-      text: "Het verschil voor en na is echt enorm. Dak ziet eruit alsof het gisteren is aangelegd!",
-      rating: 5
-    }
-  ];
 
   const roofingProcess = [
     {
@@ -148,14 +128,11 @@ const RoofingPage = () => {
           name: '',
           email: '',
           phone: '',
-          projectType: '',
-          message: '',
           stad: '',
           address: '',
           provincie: '',
-          address: '',
-          budget: '',
-          timeline: ''
+          timeline: '',
+          message: ''
         });
         
         // Redirect to thank you page
@@ -179,14 +156,14 @@ const RoofingPage = () => {
     {
       icon: Phone,
       title: "Telefoon",
-      details: ["0488 23 40 37", "24/7 Bereikbaar"],
-      action: "tel:0488234037"
+      details: ["0488 234 625", "24/7 Bereikbaar"],
+      action: "tel:0488234625"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@aannemersbedrijf-emt.nl", "Reactie vaak binnen 2 uur"],
-      action: "mailto:info@aannemersbedrijf-emt.nl"
+      details: ["info@compleetdakonderhoudnederland.nl", "Reactie vaak binnen 2 uur"],
+      action: "mailto:info@compleetdakonderhoudnederland.nl"
     },
     {
       icon: MapPin,
@@ -226,25 +203,25 @@ const RoofingPage = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-yellow-400">Dakwerk & Dakdekken</span>
+              <span className="text-brand-400">Dakwerk & Dakdekken</span>
               <br />
               Vakkundig & Betrouwbaar
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Van pannendaken tot bitumen daken. EMT zorgt voor waterdicht 
+              Van pannendaken tot bitumen daken. Compleet Dakonderhoud Nederland zorgt voor waterdicht 
               en duurzaam dakwerk met 25+ jaar ervaring en volledige garantie.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button 
                 onClick={() => setIsContactPopupOpen(true)}
-                className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
               >
                 <span>Gratis Offerte & Dakinspectie</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
               <a 
-                href="tel:0488234037"
+                href="tel:0488234625"
                 className="border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
@@ -254,24 +231,24 @@ const RoofingPage = () => {
 
             {/* Summer Deal Banner */}
             <div className="mb-12">
-              <div className="bg-white/10 backdrop-blur-sm border border-yellow-400/30 rounded-2xl p-8 max-w-3xl mx-auto shadow-2xl">
+              <div className="bg-white/10 backdrop-blur-sm border border-brand-400/30 rounded-2xl p-8 max-w-3xl mx-auto shadow-2xl">
                 <div className="text-center">
                   <div className="inline-flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-brand-400 rounded-full flex items-center justify-center">
                       <Sun className="w-6 h-6 text-slate-900" />
                     </div>
-                    <div className="text-yellow-400 font-bold text-xl">Zomer Actie</div>
-                    <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center">
+                    <div className="text-brand-400 font-bold text-xl">Zomer Actie</div>
+                    <div className="w-12 h-12 bg-brand-400 rounded-full flex items-center justify-center">
                       <Sun className="w-6 h-6 text-slate-900" />
                     </div>
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-3">
-                    <span className="text-yellow-400">10%</span> Korting
+                    <span className="text-brand-400">10%</span> Korting
                   </div>
                   <div className="text-lg text-gray-200 mb-6">
                     Op alle dakwerkzaamheden
                   </div>
-                  <div className="inline-block bg-yellow-400 text-slate-900 px-6 py-2 rounded-full font-semibold text-sm">
+                  <div className="inline-block bg-brand-400 text-slate-900 px-6 py-2 rounded-full font-semibold text-sm">
                     Vraag nu uw offerte aan!
                   </div>
                 </div>
@@ -280,19 +257,19 @@ const RoofingPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="flex items-center justify-center space-x-2">
-                <Award className="w-6 h-6 text-yellow-400" />
+                <Award className="w-6 h-6 text-brand-400" />
                 <span>25+ Jaar Ervaring</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Shield className="w-6 h-6 text-yellow-400" />
+                <Shield className="w-6 h-6 text-brand-400" />
                 <span>Waterdichte Garantie</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Clock className="w-6 h-6 text-yellow-400" />
+                <Clock className="w-6 h-6 text-brand-400" />
                 <span>24/7 Bereikbaar</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Users className="w-6 h-6 text-yellow-400" />
+                <Users className="w-6 h-6 text-brand-400" />
                 <span>Vakkundige Dakdekkers</span>
               </div>
             </div>
@@ -305,7 +282,7 @@ const RoofingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Waarom Kiezen Voor <span className="text-yellow-500">EMT Dakwerk?</span>
+              Waarom Kiezen Voor <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Compleet Dakonderhoud Nederland?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Met 25+ jaar ervaring in dakwerk zorgen wij voor waterdichte en duurzame oplossingen 
@@ -316,7 +293,7 @@ const RoofingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="text-center p-8 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
@@ -371,7 +348,7 @@ const RoofingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Onze <span className="text-yellow-500">Dakwerk Specialisaties</span>
+              Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Dakwerk Specialisaties</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Van traditionele pannendaken tot moderne bitumen oplossingen, 
@@ -384,7 +361,7 @@ const RoofingPage = () => {
               <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="lg:w-1/2">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mr-6">
+                    <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center mr-6">
                       <type.icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
@@ -399,19 +376,19 @@ const RoofingPage = () => {
                     <h4 className="font-bold text-slate-900 mb-4">Wat is inbegrepen:</h4>
                     <ul className="space-y-2">
                       <li className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
                         <span className="text-gray-700">Grondige inspectie</span>
                       </li>
                       <li className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
                         <span className="text-gray-700">Kwaliteitsvolle materialen</span>
                       </li>
                       <li className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
                         <span className="text-gray-700">Vakkundige uitvoering</span>
                       </li>
                       <li className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
                         <span className="text-gray-700">Garantie op het werk</span>
                       </li>
                     </ul>
@@ -436,11 +413,11 @@ const RoofingPage = () => {
               spoedgevallen en acute dakproblemen.
             </p>
             <a 
-              href="tel:0488234037"
+              href="tel:0488234625"
               className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
             >
               <Phone className="w-5 h-5" />
-              <span>Bel Nu: 0488 23 40 37</span>
+              <span>Bel Nu: 0488 234 625</span>
             </a>
           </div>
 
@@ -472,7 +449,7 @@ const RoofingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Ons <span className="text-yellow-500">Dakwerk Proces</span>
+              Ons <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Dakwerk Proces</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Van inspectie tot oplevering begeleiden wij u professioneel 
@@ -483,7 +460,7 @@ const RoofingPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {roofingProcess.map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-brand-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
@@ -501,18 +478,18 @@ const RoofingPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-bold text-slate-900 mb-8">
-                Onze <span className="text-yellow-500">Dakwerk Diensten</span>
+                Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Dakwerk Diensten</span>
               </h2>
               <div className="space-y-6">
                 {roofingServices.map((service, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-brand-500 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 font-medium text-lg">{service}</span>
                   </div>
                 ))}
               </div>
-              <div className="mt-8 p-6 bg-yellow-50 border border-yellow-200 rounded-lg">
-                <h4 className="font-bold text-slate-900 mb-2">Waarom EMT Dakwerk?</h4>
+              <div className="mt-8 p-6 bg-brand-50 border border-brand-200 rounded-lg">
+                <h4 className="font-bold text-slate-900 mb-2">Waarom Compleet Dakonderhoud Nederland?</h4>
                 <p className="text-gray-700">
                   Van kleine reparaties tot complete dakvernieuwing. Wij zorgen voor waterdicht 
                   en duurzaam dakwerk met garantie en persoonlijke service.
@@ -530,46 +507,80 @@ const RoofingPage = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-white">
+      {/* Professional Testimonials */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header with Icon */}
           <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
+              <Users className="w-8 h-8 text-blue-600" />
+            </div>
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Tevreden <span className="text-yellow-500">Klanten</span>
+              Wat Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Klanten</span> Zeggen
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Met 25+ jaar ervaring hebben wij vele tevreden klanten geholpen met hun bouwprojecten.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Al meer dan 25 jaar zorgen wij voor vakkundig dakwerk. Onze klanten waarderen onze 
+              betrouwbaarheid, kwaliteit en persoonlijke service.
             </p>
           </div>
+          
+          {/* Enhanced Widget Container */}
+          <div className="relative w-full max-w-none mx-auto">
+            {/* Subtle background pattern */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl transform rotate-1"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl transform -rotate-1"></div>
+            
+            {/* Main container */}
+            <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-6 mx-4">
+              {/* Top accent */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-500 to-brand-600 rounded-b-full"></div>
+              
+              {/* Widget */}
+              <div 
+                className="overflow-hidden rounded-xl"
+                style={{ 
+                  minHeight: '300px',
+                  paddingBottom: '10px'
+                }}
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
+                    <iframe class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/bGV3Pxr7SBGEoFWh6kb3' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; height: 300px; border-radius: 12px; display: block; margin: 0; padding: 0; box-sizing: border-box;'></iframe>
+                  `
+                }}
+              />
+            </div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-lg">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-slate-900 mb-1">- {testimonial.name}</p>
-                </div>
+          {/* Clean Trust Footer */}
+          <div className="mt-12">
+            <div className="text-center">
+              <div className="inline-flex items-center space-x-1 text-xs text-gray-400 font-medium tracking-wide">
+                <Shield className="w-3 h-3" />
+                <span>VOLLEDIG VERZEKERD</span>
+                <span className="mx-3">•</span>
+                <Award className="w-3 h-3" />
+                <span>GECERTIFICEERD</span>
+                <span className="mx-3">•</span>
+                <Clock className="w-3 h-3" />
+                <span>25+ JAAR ERVARING</span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-900">
+      <Footer>
+        {/* Contact Section */}
+        <section id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-yellow-400 font-semibold text-lg tracking-wide uppercase">
+            <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent font-semibold text-lg tracking-wide uppercase">
               Contact
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6 leading-tight">
               Laten We Uw Dak
-              <span className="text-yellow-400"> Inspecteren</span>
+              <span className="text-brand-400"> Inspecteren</span>
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
               Klaar voor vakkundig dakwerk? Neem contact met ons op 
@@ -583,7 +594,7 @@ const RoofingPage = () => {
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-brand-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <info.icon className="w-6 h-6 text-slate-900" />
                     </div>
                     <div>
@@ -593,7 +604,7 @@ const RoofingPage = () => {
                           {info.action && detailIndex === 0 ? (
                             <a 
                               href={info.action} 
-                              className="hover:text-yellow-400 transition-colors"
+                              className="hover:text-brand-400 transition-colors"
                             >
                               {detail}
                             </a>
@@ -620,10 +631,10 @@ const RoofingPage = () => {
                 <h4 className="text-red-400 font-bold mb-2">24/7 Spoedservice</h4>
                 <p className="text-gray-300 mb-3">Voor acute dakproblemen</p>
                 <a 
-                  href="tel:0488234037" 
+                  href="tel:0488234625" 
                   className="text-red-400 font-semibold hover:text-red-300 transition-colors"
                 >
-                  0488 23 40 37
+                  0488 234 625
                 </a>
               </div>
             </div>
@@ -632,7 +643,7 @@ const RoofingPage = () => {
               <div className="bg-white rounded-2xl p-8 shadow-2xl">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">Vraag uw gratis offerte aan</h3>
                 
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                <div className="bg-brand-50 border border-brand-200 rounded-lg p-4 mb-6">
                   <h4 className="font-bold text-slate-900 mb-2">✓ Gratis dakinspectie</h4>
                   <h4 className="font-bold text-slate-900 mb-2">✓ Vrijblijvende offerte</h4>
                   <h4 className="font-bold text-slate-900">✓ Persoonlijk advies</h4>
@@ -665,7 +676,7 @@ const RoofingPage = () => {
                           type="text"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                           placeholder="Uw volledige naam"
                           required
                         />
@@ -681,8 +692,8 @@ const RoofingPage = () => {
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                          placeholder="uw@email.nl"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          placeholder="uw.email@example.nl"
                           required
                         />
                       </div>
@@ -692,7 +703,7 @@ const RoofingPage = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Telefoon
+                        Telefoon *
                       </label>
                       <div className="relative">
                         <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -700,94 +711,84 @@ const RoofingPage = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                          placeholder="0488 23 40 37"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          placeholder="0488 234 625"
+                          required
                         />
                       </div>
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Stad
+                        Stad *
                       </label>
-                      <input
-                        type="text"
-                        value={formData.stad}
-                        onChange={(e) => handleInputChange('stad', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                        placeholder="Bijv. Andelst"
-                      />
+                      <div className="relative">
+                        <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <input
+                          type="text"
+                          value={formData.stad}
+                          onChange={(e) => handleInputChange('stad', e.target.value)}
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          placeholder="Amsterdam"
+                          required
+                        />
+                      </div>
                     </div>
-                  </div>
-
-                  {/* Address Field */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Straatnaam + Huisnummer
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.address}
-                      onChange={(e) => handleInputChange('address', e.target.value)}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                      placeholder="Bijv. Geurdeland 17G"
-                    />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Provincie
+                        Straatnaam + Huisnummer *
                       </label>
-                      <input
-                        type="text"
-                        value={formData.provincie}
-                        onChange={(e) => handleInputChange('provincie', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                        placeholder="Bijv. Gelderland"
-                      />
+                      <div className="relative">
+                        <Building2 className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <input
+                          type="text"
+                          value={formData.address}
+                          onChange={(e) => handleInputChange('address', e.target.value)}
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          placeholder="Hoofdstraat 123"
+                          required
+                        />
+                      </div>
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Wanneer
+                        Provincie *
                       </label>
                       <div className="relative">
-                        <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                        <select
-                          value={formData.timeline}
-                          onChange={(e) => handleInputChange('timeline', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                        >
-                          <option value="">Selecteer timing</option>
-                          <option value="asap">Zo snel mogelijk</option>
-                          <option value="1week">Binnen 1 week</option>
-                          <option value="1month">Binnen 1 maand</option>
-                          <option value="3months">Binnen 3 maanden</option>
-                          <option value="flexible">Flexibel</option>
-                        </select>
+                        <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <input
+                          type="text"
+                          value={formData.provincie}
+                          onChange={(e) => handleInputChange('provincie', e.target.value)}
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          placeholder="Noord-Holland"
+                          required
+                        />
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-4">
-                      Type Project
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Gewenste startdatum *
                     </label>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      {projectTypes.map((type) => (
-                        <button
-                          key={type.id}
-                          type="button"
-                          onClick={() => handleInputChange('projectType', type.id)}
-                          className={`p-4 border-2 rounded-lg text-center transition-all duration-300 ${
-                            formData.projectType === type.id
-                              ? 'border-yellow-500 bg-yellow-50'
-                              : 'border-gray-200 hover:border-gray-300'
-                          }`}
-                        >
-                          <type.icon className="w-8 h-8 mx-auto mb-2 text-yellow-500" />
-                          <div className="font-medium text-slate-900">{type.label}</div>
-                        </button>
-                      ))}
+                    <div className="relative">
+                      <Calendar className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <select
+                        value={formData.timeline}
+                        onChange={(e) => handleInputChange('timeline', e.target.value)}
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                        required
+                      >
+                        <option value="">Selecteer timing</option>
+                        <option value="asap">Zo snel mogelijk</option>
+                        <option value="1-3months">1-3 maanden</option>
+                        <option value="3-6months">3-6 maanden</option>
+                        <option value="6-12months">6-12 maanden</option>
+                        <option value="flexible">Flexibel</option>
+                      </select>
                     </div>
                   </div>
 
@@ -801,7 +802,7 @@ const RoofingPage = () => {
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         rows={5}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 resize-none"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
                         placeholder="Beschrijf uw dakprobleem of project..."
                         required
                       />
@@ -814,13 +815,13 @@ const RoofingPage = () => {
                       disabled={isSubmitting}
                       className={`inline-flex items-center space-x-3 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ${
                         isSubmitting
-                          ? 'bg-gray-400 cursor-not-allowed'
-                          : 'bg-yellow-500 hover:bg-yellow-600 text-slate-900'
+                          ? 'bg-gray-400 cursor-not-allowed text-white'
+                          : 'bg-orange-500 hover:bg-orange-600 text-white'
                       }`}
                     >
                       {isSubmitting ? (
                         <>
-                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-slate-900"></div>
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                           <span>Verzenden...</span>
                         </>
                       ) : (
@@ -842,7 +843,7 @@ const RoofingPage = () => {
           </div>
 
           <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-brand-400 to-brand-600 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
                 Acute Dakproblemen?
               </h3>
@@ -851,17 +852,16 @@ const RoofingPage = () => {
                 Onze dakdekkers staan voor u klaar. Ook voor een gratis offerte met 10% zomerkorting!
               </p>
               <a
-                href="tel:0488234037"
+                href="tel:0488234625"
                 className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                Bel Nu: 0488 23 40 37
+                Bel Nu: 0488 234 625
               </a>
             </div>
           </div>
         </div>
       </section>
-
-      <Footer />
+      </Footer>
 
       <ContactPopup 
         isOpen={isContactPopupOpen}

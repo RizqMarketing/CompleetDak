@@ -12,10 +12,10 @@ const PrivacyPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
             <div className="text-center mb-12">
-              <Shield className="w-16 h-16 text-yellow-500 mx-auto mb-6" />
+              <Shield className="w-16 h-16 text-brand-500 mx-auto mb-6" />
               <h1 className="text-4xl font-bold text-slate-900 mb-4">Privacybeleid</h1>
               <p className="text-gray-600 text-lg">
-                Aannemersbedrijf EMT respecteert uw privacy en beschermt uw persoonlijke gegevens
+                Compleet Dakonderhoud Nederland respecteert uw privacy en beschermt uw persoonlijke gegevens
               </p>
               <div className="text-sm text-gray-500 mt-4">
                 Laatst bijgewerkt: {new Date().toLocaleDateString('nl-NL')}
@@ -25,7 +25,7 @@ const PrivacyPage = () => {
             <div className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-bold text-slate-900 mb-4">1. Wie zijn wij?</h2>
               <p className="text-gray-700 mb-6">
-                Aannemersbedrijf EMT is een aannemersbedrijf gevestigd te Andelst. Wij zijn 
+                Compleet Dakonderhoud Nederland is een aannemersbedrijf gevestigd te Andelst. Wij zijn 
                 verantwoordelijk voor de verwerking van uw persoonlijke gegevens zoals beschreven 
                 in dit privacybeleid.
               </p>
@@ -34,19 +34,19 @@ const PrivacyPage = () => {
                 <h3 className="font-bold text-slate-900 mb-4">Contactgegevens:</h3>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-yellow-500" />
+                    <MapPin className="w-5 h-5 text-brand-500" />
                     <span>Geurdeland 17G, 6673 DR Andelst</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-yellow-500" />
-                    <span>0488 23 40 37</span>
+                    <Phone className="w-5 h-5 text-brand-500" />
+                    <span>0488 234 625</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-yellow-500" />
-                    <span>info@aannemersbedrijf-emt.nl</span>
+                    <Mail className="w-5 h-5 text-brand-500" />
+                    <span>info@compleetdakonderhoudnederland.nl</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <span className="w-5 h-5 text-yellow-500 font-bold">KvK:</span>
+                    <span className="w-5 h-5 text-brand-500 font-bold">KvK:</span>
                     <span>94106819</span>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ const PrivacyPage = () => {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Cookies</h2>
               <p className="text-gray-700 mb-6">
                 Onze website gebruikt functionele cookies voor een goede werking. 
-                Voor meer informatie zie ons <a href="/cookiebeleid" className="text-yellow-600 hover:text-yellow-700">cookiebeleid</a>.
+                Voor meer informatie zie ons <a href="/cookiebeleid" className="text-brand-600 hover:text-brand-700">cookiebeleid</a>.
               </p>
 
               <h2 className="text-2xl font-bold text-slate-900 mb-4">10. Wijzigingen</h2>
@@ -139,18 +139,18 @@ const PrivacyPage = () => {
               <p className="text-gray-700 mb-4">
                 Voor vragen over dit privacybeleid of uw rechten kunt u contact met ons opnemen:
               </p>
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+              <div className="bg-brand-50 border border-brand-200 rounded-lg p-6">
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-yellow-600" />
-                    <a href="mailto:info@aannemersbedrijf-emt.nl" className="text-yellow-600 hover:text-yellow-700">
-                      info@aannemersbedrijf-emt.nl
+                    <Mail className="w-5 h-5 text-brand-600" />
+                    <a href="mailto:info@compleetdakonderhoudnederland.nl" className="text-brand-600 hover:text-brand-700">
+                      info@compleetdakonderhoudnederland.nl
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-yellow-600" />
-                    <a href="tel:0488234037" className="text-yellow-600 hover:text-yellow-700">
-                      0488 23 40 37
+                    <Phone className="w-5 h-5 text-brand-600" />
+                    <a href="tel:0488234625" className="text-brand-600 hover:text-brand-700">
+                      0488 234 625
                     </a>
                   </div>
                 </div>

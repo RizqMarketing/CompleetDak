@@ -137,12 +137,12 @@ const CostCalculator = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-yellow-500 font-semibold text-lg tracking-wide uppercase">
+          <span className="text-brand-500 font-semibold text-lg tracking-wide uppercase">
             Kostencalculator
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-4 mb-6 leading-tight">
             Bereken Uw
-            <span className="text-yellow-500"> Projectkosten</span>
+            <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent"> Projectkosten</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
             Krijg een indicatieve kostenraming voor uw bouwproject met onze geavanceerde calculator.
@@ -158,7 +158,7 @@ const CostCalculator = () => {
                   key={step}
                   className={`flex items-center justify-center w-10 h-10 rounded-full font-bold ${
                     step <= currentStep
-                      ? 'bg-yellow-500 text-white'
+                      ? 'bg-brand-500 text-white'
                       : 'bg-gray-200 text-gray-500'
                   }`}
                 >
@@ -168,7 +168,7 @@ const CostCalculator = () => {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div
-                className="bg-yellow-500 h-2 rounded-full transition-all duration-300"
+                className="bg-brand-500 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${(currentStep / 4) * 100}%` }}
               ></div>
             </div>
@@ -186,11 +186,11 @@ const CostCalculator = () => {
                       onClick={() => handleInputChange('projectType', type.id)}
                       className={`p-6 rounded-xl border-2 text-center transition-all duration-300 ${
                         formData.projectType === type.id
-                          ? 'border-yellow-500 bg-yellow-50'
+                          ? 'border-brand-500 bg-brand-50'
                           : 'border-gray-200 hover:border-gray-300'
                       }`}
                     >
-                      <type.icon className="w-12 h-12 mx-auto mb-4 text-yellow-500" />
+                      <type.icon className="w-12 h-12 mx-auto mb-4 text-brand-500" />
                       <div className="font-semibold text-slate-900">{type.label}</div>
                     </button>
                   ))}
@@ -214,7 +214,7 @@ const CostCalculator = () => {
                           onClick={() => handleInputChange('buildingType', type.id)}
                           className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-300 ${
                             formData.buildingType === type.id
-                              ? 'border-yellow-500 bg-yellow-50'
+                              ? 'border-brand-500 bg-brand-50'
                               : 'border-gray-200 hover:border-gray-300'
                           }`}
                         >
@@ -233,7 +233,7 @@ const CostCalculator = () => {
                       value={formData.size}
                       onChange={(e) => handleInputChange('size', e.target.value)}
                       placeholder="Bijv. 150"
-                      className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                      className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                     />
                   </div>
                 </div>
@@ -261,7 +261,7 @@ const CostCalculator = () => {
                             onClick={() => handleInputChange(`specifications.${specKey}`, option.id)}
                             className={`p-4 text-center rounded-lg border-2 transition-all duration-300 ${
                               formData.specifications[specKey] === option.id
-                                ? 'border-yellow-500 bg-yellow-50'
+                                ? 'border-brand-500 bg-brand-50'
                                 : 'border-gray-200 hover:border-gray-300'
                             }`}
                           >
@@ -283,7 +283,7 @@ const CostCalculator = () => {
                 {estimate && (
                   <div className="bg-white rounded-xl p-8 shadow-lg">
                     <div className="text-center mb-8">
-                      <div className="text-4xl font-bold text-yellow-500 mb-2">
+                      <div className="text-4xl font-bold text-brand-500 mb-2">
                         €{estimate.min.toLocaleString()} - €{estimate.max.toLocaleString()}
                       </div>
                       <div className="text-gray-600">Indicatieve kostenraming</div>
@@ -294,8 +294,8 @@ const CostCalculator = () => {
                         <div className="text-2xl font-bold text-green-600 mb-1">€{estimate.min.toLocaleString()}</div>
                         <div className="text-sm text-gray-600">Minimum</div>
                       </div>
-                      <div className="text-center p-4 bg-yellow-50 rounded-lg">
-                        <div className="text-2xl font-bold text-yellow-600 mb-1">€{estimate.average.toLocaleString()}</div>
+                      <div className="text-center p-4 bg-brand-50 rounded-lg">
+                        <div className="text-2xl font-bold text-brand-600 mb-1">€{estimate.average.toLocaleString()}</div>
                         <div className="text-sm text-gray-600">Gemiddeld</div>
                       </div>
                       <div className="text-center p-4 bg-gray-50 rounded-lg">
@@ -317,7 +317,7 @@ const CostCalculator = () => {
                     <div className="text-center">
                       <button 
                         onClick={handleRequestQuote}
-                        className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                        className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                       >
                         Vraag Exacte Offerte Aan
                       </button>
@@ -346,7 +346,7 @@ const CostCalculator = () => {
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
                   currentStep === 4
                     ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
-                    : 'bg-yellow-500 hover:bg-yellow-600 text-slate-900'
+                    : 'bg-brand-500 hover:bg-brand-600 text-slate-900'
                 }`}
               >
                 <span>{currentStep === 4 ? 'Voltooid' : 'Volgende'}</span>

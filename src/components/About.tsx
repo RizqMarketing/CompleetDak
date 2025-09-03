@@ -21,9 +21,9 @@ const About = () => {
   ];
 
   const achievements = [
-    "25+ jaar ervaring in de bouwsector",
+    "25+ jaar ervaring in dakonderhoud",
     "Gevestigd in Andelst, actief in heel Nederland",
-    "Specialisatie in woningbouw en renovatie",
+    "Specialisatie in dakwerk en dakrenovatie",
     "Persoonlijke aanpak voor elk project",
     "Transparante prijzen en duidelijke afspraken",
     "KvK geregistreerd (94106819)"
@@ -43,21 +43,21 @@ const About = () => {
           {/* Content */}
           <div>
             <div className="mb-8">
-              <span className="text-yellow-500 font-semibold text-lg tracking-wide uppercase">
-                Over Aannemersbedrijf EMT
+              <span className="text-brand-500 font-semibold text-lg tracking-wide uppercase">
+                Over Compleet Dakonderhoud Nederland
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-4 mb-6 leading-tight">
                 Uw betrouwbare
-                <span className="text-yellow-500"> bouwpartner</span>
+                <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent"> dakspecialist</span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Aannemersbedrijf EMT is gevestigd in Andelst met meer dan 
-                25 jaar ervaring in de bouwsector. Wij zijn actief in heel Nederland en 
-                gespecialiseerd in woningbouw, renovaties en verbouwingen voor particulieren en bedrijven.
+                Compleet Dakonderhoud Nederland is gevestigd in Andelst met meer dan 
+                25 jaar ervaring in dakonderhoud. Wij zijn actief in heel Nederland en 
+                gespecialiseerd in dakwerkzaamheden, dakreparaties en dakrenovaties voor particulieren en bedrijven.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Ons team van ervaren vakmensen werkt met zorg en aandacht aan elk project. 
-                Van kleine reparaties tot complete nieuwbouw - wij staan voor kwaliteit, 
+                Ons team van ervaren dakdekkers werkt met zorg en aandacht aan elk dakproject. 
+                Van kleine dakreparaties tot complete dakvernieuwing - wij staan voor kwaliteit, 
                 betrouwbaarheid en een persoonlijke aanpak.
               </p>
             </div>
@@ -66,7 +66,7 @@ const About = () => {
             <div className="space-y-4 mb-8">
               {achievements.map((achievement, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-6 h-6 text-brand-500 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 leading-relaxed">{achievement}</span>
                 </div>
               ))}
@@ -80,15 +80,39 @@ const About = () => {
             </button>
           </div>
 
-          {/* Image */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+          {/* Images */}
+          <div className="relative space-y-6">
+            {/* First Image */}
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
               <img
-                src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="EMT Construction Team"
-                className="w-full h-96 object-cover"
+                src="/house1-new.jpg"
+                alt="Prachtig modern huis met professioneel dakwerk"
+                className="w-full h-64 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <div className="text-sm font-semibold">Modern Dakontwerp</div>
+                <div className="text-xs text-gray-300">Professioneel uitgevoerd</div>
+              </div>
+            </div>
+
+            {/* Second Image */}
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300">
+              <img
+                src="/house3-new.jpg"
+                alt="Elegante woning met vakkundige dakinstallatie"
+                className="w-full h-64 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 text-white">
+                <div className="text-sm font-semibold">Vakkundig Onderhoud</div>
+                <div className="text-xs text-gray-300">Betrouwbare service</div>
+              </div>
+            </div>
+
+            {/* Floating Badge */}
+            <div className="absolute -top-4 -right-4 bg-brand-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg z-10">
+              ✓ 25+ Jaar Ervaring
             </div>
           </div>
         </div>
@@ -98,7 +122,7 @@ const About = () => {
           {features.map((feature, index) => (
             <div key={index} className="text-center p-8 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
               <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
               </div>

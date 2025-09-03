@@ -2,10 +2,14 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   Mail, Phone, MapPin, Facebook, Instagram, Linkedin, 
-  Youtube, Clock, Award, Shield, CheckCircle, ExternalLink 
+  Youtube, Clock, Award, Shield, CheckCircle, ExternalLink, Star, Euro, Timer, FileText 
 } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+  children?: React.ReactNode;
+}
+
+const Footer = ({ children }: FooterProps) => {
   const navigate = useNavigate();
   const currentYear = new Date().getFullYear();
 
@@ -22,11 +26,20 @@ const Footer = () => {
     { name: "Schoorsteenwerk", href: "/schoorsteenwerk" },
     { name: "Aanbouw & Uitbouw", href: "/aanbouw-uitbouw" },
     { name: "Airco's Monteren", href: "/aircos-monteren" },
-    { name: "Zonnepanelen", href: "/zonnepanelen" }
+    { name: "Zonnepanelen", href: "/zonnepanelen" },
+    { name: "Nokvorsten", href: "/nokvorsten" },
+    { name: "Loodreparaties", href: "/loodreparaties" },
+    { name: "Spoed Service", href: "/spoed" },
+    { name: "Dakinspectie", href: "/dakinspectie" },
+    { name: "Daklekkage", href: "/daklekkage" },
+    { name: "Dakgoot Reiniging", href: "/dakgootreiniging" },
+    { name: "Gevel Voegen", href: "/gevel-voegen" },
+    { name: "Gevel Reinigen", href: "/gevel-reinigen" },
+    { name: "Schoorsteen Renovatie", href: "/schoorsteenwerk-renovatie" }
   ];
 
   const quickLinks = [
-    { name: "Over EMT", href: "/#about" },
+    { name: "Over Ons", href: "/#about" },
     { name: "Kostencalculator", href: "/#cost-calculator" },
     { name: "Contact", href: "/#contact" }
   ];
@@ -65,59 +78,64 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      {/* Contact Content (if provided) */}
+      {children && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          {children}
+        </div>
+      )}
+      
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center space-x-4 mb-6">
-              <div className="w-24 h-20 flex items-center justify-center">
+            <Link to="/" className="block mb-6">
+              <div className="w-48 h-40 flex items-center justify-center mb-4">
                 <img 
-                  src="https://i.imgur.com/dFmopW3.png" 
-                  alt="EMT Logo" 
+                  src="https://imgur.com/vsRdlGh.png" 
+                  alt="Compleet Dakonderhoud Nederland Logo" 
                   className="w-full h-full object-contain"
                 />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Aannemersbedrijf EMT</h3>
-                <p className="text-gray-400 text-sm">Uw betrouwbare bouwpartner</p>
               </div>
             </Link>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Al meer dan 25 jaar uw betrouwbare partner voor hoogwaardige bouw- en 
-              renovatieprojecten in Nederland.
+              Al meer dan 25 jaar uw betrouwbare partner voor hoogwaardig dakonderhoud en 
+              dakrenovatieprojecten in Nederland.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                <Phone className="w-5 h-5 text-brand-400 flex-shrink-0" />
                 <div>
-                  <a href="tel:0488234037" className="text-gray-300 hover:text-yellow-400 transition-colors">
-                    0488 23 40 37
+                  <a href="tel:0488234625" className="text-gray-300 hover:text-brand-400 transition-colors">
+                    0488 234 625
                   </a>
                   <div className="text-xs text-gray-400">24/7 Bereikbaar</div>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                <a href="mailto:info@aannemersbedrijf-emt.nl" className="text-gray-300 hover:text-yellow-400 transition-colors">
-                  info@aannemersbedrijf-emt.nl
-                </a>
+              <div className="flex items-start space-x-3">
+                <Mail className="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5" />
+                <div className="min-w-0 flex-1">
+                  <a href="mailto:info@compleetdakonderhoudnederland.nl" className="text-gray-300 hover:text-brand-400 transition-colors break-words text-sm">
+                    info@compleetdakonderhoud<wbr/>nederland.nl
+                  </a>
+                </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-5 h-5 text-brand-400 flex-shrink-0 mt-0.5" />
                 <div className="text-gray-300">
                   <div>Geurdeland 17G</div>
                   <div>6673 DR Andelst</div>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                <Clock className="w-5 h-5 text-brand-400 flex-shrink-0" />
                 <div className="text-gray-300">
-                  <div className="font-medium text-yellow-400">24/7 Bereikbaar</div>
+                  <div className="font-medium text-brand-400">24/7 Bereikbaar</div>
                   <div className="text-sm">Voor al uw bouwprojecten</div>
                 </div>
               </div>
@@ -129,7 +147,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 hover:bg-yellow-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 bg-gray-800 hover:bg-brand-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5 text-gray-300 group-hover:text-slate-900 transition-colors" />
@@ -138,60 +156,62 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Services - First Column */}
           <div>
             <h4 className="text-lg font-bold mb-6">Onze Diensten</h4>
-            <ul className="space-y-3">
-              {services.map((service, index) => (
+            <ul className="space-y-3 mb-8">
+              {services.slice(0, Math.ceil(services.length / 2)).map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.href} 
-                    className="text-gray-300 hover:text-yellow-400 transition-colors flex items-center space-x-2"
+                    className="text-gray-300 hover:text-brand-400 transition-colors flex items-center space-x-2"
                   >
-                    <CheckCircle className="w-4 h-4 text-yellow-400" />
+                    <CheckCircle className="w-4 h-4 text-brand-400" />
                     <span>{service.name}</span>
                   </Link>
                 </li>
               ))}
             </ul>
+            
+            {/* Extra Services Info */}
+            <div className="mt-8 p-4 pb-6 bg-blue-900/20 border border-blue-500/30 rounded-lg">
+              <h5 className="font-bold text-blue-400 mb-2 flex items-center space-x-2">
+                <Star className="w-4 h-4" />
+                <span>Waarom Kiezen Voor Ons?</span>
+              </h5>
+              <ul className="text-gray-300 text-sm space-y-1">
+                <li>✓ 25+ jaar ervaring</li>
+                <li>✓ Vakkundig personeel</li>
+              </ul>
+            </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Services - Second Column */}
           <div>
-            <h4 className="text-lg font-bold mb-6">Snelle Links</h4>
+            <h4 className="text-lg font-bold mb-6">Onze Diensten</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  {link.href.startsWith('/#') ? (
-                    <button 
-                      onClick={() => handleAnchorClick(link.href)}
-                      className="text-gray-300 hover:text-yellow-400 transition-colors flex items-center space-x-2"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span>{link.name}</span>
-                    </button>
-                  ) : (
-                    <Link 
-                      to={link.href} 
-                      className="text-gray-300 hover:text-yellow-400 transition-colors flex items-center space-x-2"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      <span>{link.name}</span>
-                    </Link>
-                  )}
+              {services.slice(Math.ceil(services.length / 2)).map((service, index) => (
+                <li key={index + Math.ceil(services.length / 2)}>
+                  <Link 
+                    to={service.href} 
+                    className="text-gray-300 hover:text-brand-400 transition-colors flex items-center space-x-2"
+                  >
+                    <CheckCircle className="w-4 h-4 text-brand-400" />
+                    <span>{service.name}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
-
-            {/* Emergency Contact */}
+            
+            {/* Emergency Contact moved here */}
             <div className="mt-8 p-4 bg-red-900/20 border border-red-900/50 rounded-lg">
               <h5 className="font-bold text-red-400 mb-2">24/7 Spoedservice</h5>
               <p className="text-gray-300 text-sm mb-2">Voor urgente zaken</p>
               <a 
-                href="tel:0488234037" 
+                href="tel:0488234625" 
                 className="text-red-400 hover:text-red-300 font-semibold transition-colors"
               >
-                0488 23 40 37
+                0488 234 625
               </a>
             </div>
           </div>
@@ -202,11 +222,27 @@ const Footer = () => {
             <ul className="space-y-3 mb-8">
               {certifications.map((cert, index) => (
                 <li key={index} className="flex items-center space-x-2">
-                  <Award className="w-4 h-4 text-yellow-400 flex-shrink-0" />
+                  <Award className="w-4 h-4 text-brand-400 flex-shrink-0" />
                   <span className="text-gray-300 text-sm">{cert}</span>
                 </li>
               ))}
             </ul>
+
+            {/* Professional Certifications */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-2 text-green-400">
+                <Euro className="w-4 h-4" />
+                <span className="text-sm font-medium">Scherpe Prijzen</span>
+              </div>
+              <div className="flex items-center space-x-2 text-blue-400">
+                <Timer className="w-4 h-4" />
+                <span className="text-sm font-medium">Binnen 3 Uur Op Locatie</span>
+              </div>
+              <div className="flex items-center space-x-2 text-yellow-400">
+                <FileText className="w-4 h-4" />
+                <span className="text-sm font-medium">Gratis Offertes</span>
+              </div>
+            </div>
 
             {/* Trust Badges */}
             <div className="space-y-4">
@@ -218,7 +254,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2 p-3 bg-gray-800 rounded-lg">
-                <Award className="w-6 h-6 text-yellow-400" />
+                <Award className="w-6 h-6 text-brand-400" />
                 <div>
                   <div className="text-sm font-semibold">Kwaliteitsgarantie</div>
                   <div className="text-xs text-gray-400">Op al ons werk</div>
@@ -241,16 +277,16 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Aannemersbedrijf EMT. Alle rechten voorbehouden. KvK: 94106819
+              © {currentYear} Compleet Dakonderhoud Nederland. Alle rechten voorbehouden. KvK: 94106819
             </div>
             <div className="flex space-x-6 text-sm">
-              <Link to="/privacybeleid" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <Link to="/privacybeleid" className="text-gray-400 hover:text-brand-400 transition-colors">
                 Privacybeleid
               </Link>
-              <Link to="/algemene-voorwaarden" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <Link to="/algemene-voorwaarden" className="text-gray-400 hover:text-brand-400 transition-colors">
                 Algemene Voorwaarden
               </Link>
-              <Link to="/cookiebeleid" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <Link to="/cookiebeleid" className="text-gray-400 hover:text-brand-400 transition-colors">
                 Cookie Beleid
               </Link>
             </div>

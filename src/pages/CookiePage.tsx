@@ -12,7 +12,7 @@ const CookiePage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
             <div className="text-center mb-12">
-              <Cookie className="w-16 h-16 text-yellow-500 mx-auto mb-6" />
+              <Cookie className="w-16 h-16 text-brand-500 mx-auto mb-6" />
               <h1 className="text-4xl font-bold text-slate-900 mb-4">Cookiebeleid</h1>
               <p className="text-gray-600 text-lg">
                 Informatie over het gebruik van cookies op onze website
@@ -49,7 +49,7 @@ const CookiePage = () => {
                 </ul>
               </div>
 
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+              <div className="bg-brand-50 border border-brand-200 rounded-lg p-6 mb-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Marketing cookies (optioneel)</h3>
                 <p className="text-gray-700 mb-4">
                   Deze cookies helpen ons om relevante advertenties te tonen en de effectiviteit van onze marketingcampagnes te meten.
@@ -99,7 +99,7 @@ const CookiePage = () => {
                 </ul>
                 <p className="text-sm text-gray-600 mt-4">
                   Meer informatie over Facebook's privacybeleid vindt u op: 
-                  <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">
+                  <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">
                     https://www.facebook.com/policy.php
                   </a>
                 </p>
@@ -119,7 +119,7 @@ const CookiePage = () => {
                 </ul>
                 <p className="text-sm text-gray-600 mt-4">
                   Meer informatie over Google's privacybeleid vindt u op: 
-                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">
                     https://policies.google.com/privacy
                   </a>
                 </p>
@@ -136,13 +136,13 @@ const CookiePage = () => {
                 Hier vindt u instructies voor populaire browsers:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
-                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">Google Chrome</a></li>
-                <li><a href="https://support.mozilla.org/nl/kb/cookies-informatie-websites-computer-opgeslagen" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">Mozilla Firefox</a></li>
-                <li><a href="https://support.apple.com/nl-nl/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">Safari</a></li>
-                <li><a href="https://support.microsoft.com/nl-nl/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">Internet Explorer</a></li>
+                <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">Google Chrome</a></li>
+                <li><a href="https://support.mozilla.org/nl/kb/cookies-informatie-websites-computer-opgeslagen" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">Mozilla Firefox</a></li>
+                <li><a href="https://support.apple.com/nl-nl/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">Safari</a></li>
+                <li><a href="https://support.microsoft.com/nl-nl/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">Internet Explorer</a></li>
               </ul>
 
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+              <div className="bg-brand-50 border border-brand-200 rounded-lg p-6 mb-6">
                 <h3 className="font-bold text-slate-900 mb-2">Let op!</h3>
                 <p className="text-gray-700">
                   Als u alle cookies uitschakelt, werken sommige onderdelen van onze website 
@@ -186,10 +186,10 @@ const CookiePage = () => {
                 Voor meer informatie over cookies kunt u terecht bij:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
-                <li><a href="https://www.consumentenbond.nl/internet-privacy/cookies" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">Consumentenbond over cookies</a></li>
-                <li><a href="https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/internet-telefoon-tv-en-post/cookies" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">Autoriteit Persoonsgegevens</a></li>
-                <li><a href="https://www.facebook.com/business/help/471978536642445" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">Facebook Pixel informatie</a></li>
-                <li><a href="https://support.google.com/google-ads/answer/2407785" target="_blank" rel="noopener noreferrer" className="text-yellow-600 hover:text-yellow-700">Google Ads cookies</a></li>
+                <li><a href="https://www.consumentenbond.nl/internet-privacy/cookies" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">Consumentenbond over cookies</a></li>
+                <li><a href="https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/internet-telefoon-tv-en-post/cookies" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">Autoriteit Persoonsgegevens</a></li>
+                <li><a href="https://www.facebook.com/business/help/471978536642445" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">Facebook Pixel informatie</a></li>
+                <li><a href="https://support.google.com/google-ads/answer/2407785" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:text-brand-700">Google Ads cookies</a></li>
               </ul>
 
               <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
@@ -206,22 +206,22 @@ const CookiePage = () => {
                   Let op: het uitschakelen van cookies kan de functionaliteit van onze website en diensten beïnvloeden.
                 </p>
               </div>
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mt-8">
+              <div className="bg-brand-50 border border-brand-200 rounded-lg p-6 mt-8">
                 <h3 className="font-bold text-slate-900 mb-4">Vragen over cookies?</h3>
                 <p className="text-gray-700 mb-4">
                   Heeft u vragen over ons cookiebeleid? Neem gerust contact met ons op:
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-yellow-600" />
-                    <a href="mailto:info@aannemersbedrijf-emt.nl" className="text-yellow-600 hover:text-yellow-700">
-                      info@aannemersbedrijf-emt.nl
+                    <Mail className="w-5 h-5 text-brand-600" />
+                    <a href="mailto:info@compleetdakonderhoudnederland.nl" className="text-brand-600 hover:text-brand-700">
+                      info@compleetdakonderhoudnederland.nl
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-yellow-600" />
-                    <a href="tel:0488234037" className="text-yellow-600 hover:text-yellow-700">
-                      0488 23 40 37
+                    <Phone className="w-5 h-5 text-brand-600" />
+                    <a href="tel:0488234625" className="text-brand-600 hover:text-brand-700">
+                      0488 234 625
                     </a>
                   </div>
                 </div>

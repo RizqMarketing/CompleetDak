@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Routes, Route, useLocation, useNavigationType,
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import WorkArea from './components/WorkArea';
 import About from './components/About';
+import Coverage from './components/Coverage';
+import NicoContact from './components/NicoContact';
 import Testimonials from './components/Testimonials';
 import CostCalculator from './components/CostCalculator';
 import Contact from './components/Contact';
@@ -27,6 +30,17 @@ const ChimneyPage = React.lazy(() => import('./pages/ChimneyPage'));
 const ExtensionPage = React.lazy(() => import('./pages/ExtensionPage'));
 const AircoPage = React.lazy(() => import('./pages/AircoPage'));
 const SolarPanelPage = React.lazy(() => import('./pages/SolarPanelPage'));
+
+// Lazy load additional service pages
+const NokVorstenPage = React.lazy(() => import('./pages/NokVorstenPage'));
+const LoodReparatiePage = React.lazy(() => import('./pages/LoodReparatiePage'));
+const SpoedPage = React.lazy(() => import('./pages/SpoedPage'));
+const DakInspectiePage = React.lazy(() => import('./pages/DakInspectiePage'));
+const DakLekkagePage = React.lazy(() => import('./pages/DakLekkagePage'));
+const DakgootReinigingPage = React.lazy(() => import('./pages/DakgootReinigingPage'));
+const GevelVoegenPage = React.lazy(() => import('./pages/GevelVoegenPage'));
+const GevelReinigenPage = React.lazy(() => import('./pages/GevelReinigenPage'));
+const SchoorsteenPage = React.lazy(() => import('./pages/SchoorsteenPage'));
 
 // Lazy load legal pages
 const PrivacyPage = React.lazy(() => import('./pages/PrivacyPage'));
@@ -73,10 +87,13 @@ const HomePage = () => {
       <Header />
       <Hero />
       <About />
+      <NicoContact />
+      <Coverage />
       <Testimonials />
       <CostCalculator />
-      <Contact />
-      <Footer />
+      <Footer>
+        <Contact standalone={false} />
+      </Footer>
     </div>
   );
 };
@@ -106,6 +123,17 @@ function App() {
               <Route path="/aanbouw-uitbouw" element={<ExtensionPage />} />
               <Route path="/aircos-monteren" element={<AircoPage />} />
               <Route path="/zonnepanelen" element={<SolarPanelPage />} />
+              
+              {/* Additional Service Routes */}
+              <Route path="/nokvorsten" element={<NokVorstenPage />} />
+              <Route path="/loodreparaties" element={<LoodReparatiePage />} />
+              <Route path="/spoed" element={<SpoedPage />} />
+              <Route path="/dakinspectie" element={<DakInspectiePage />} />
+              <Route path="/daklekkage" element={<DakLekkagePage />} />
+              <Route path="/dakgootreiniging" element={<DakgootReinigingPage />} />
+              <Route path="/gevel-voegen" element={<GevelVoegenPage />} />
+              <Route path="/gevel-reinigen" element={<GevelReinigenPage />} />
+              <Route path="/schoorsteenwerk-renovatie" element={<SchoorsteenPage />} />
               
               {/* Legal Pages */}
               <Route path="/privacybeleid" element={<PrivacyPage />} />

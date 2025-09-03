@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Home, CheckCircle, Star, Phone, Mail, ArrowRight, 
+  Home, CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Users, Calculator, Eye, Building, Hammer, MapPin,
   Send, User, MessageCircle, Calendar, Building2, Wrench
 } from 'lucide-react';
@@ -80,23 +80,6 @@ const NewBuildPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Hans",
-      text: "Snelle service en eerlijk advies, iets wat je tegenwoordig niet vaak meer ziet. Mijn dak ligt er weer strak bij. Zeer tevreden!",
-      rating: 5
-    },
-    {
-      name: "Herman Smits",
-      text: "Geen gezeur, gewoon doen wat beloofd is. Zo hoort het, en dat doen ze hier perfect.",
-      rating: 5
-    },
-    {
-      name: "Naomi Vos",
-      text: "Het verschil voor en na is echt enorm. Dak ziet eruit alsof het gisteren is aangelegd!",
-      rating: 5
-    }
-  ];
 
   const specifications = [
     {
@@ -158,14 +141,14 @@ const NewBuildPage = () => {
     {
       icon: Phone,
       title: "Telefoon",
-      details: ["0488 23 40 37", "24/7 Bereikbaar"],
-      action: "tel:0488234037"
+      details: ["0488 234 625", "24/7 Bereikbaar"],
+      action: "tel:0488234625"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@aannemersbedrijf-emt.nl", "Reactie vaak binnen 2 uur"],
-      action: "mailto:info@aannemersbedrijf-emt.nl"
+      details: ["info@compleetdakonderhoudnederland.nl", "Reactie vaak binnen 2 uur"],
+      action: "mailto:info@compleetdakonderhoudnederland.nl"
     },
     {
       icon: MapPin,
@@ -205,25 +188,25 @@ const NewBuildPage = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-yellow-400">Nieuwbouw Woningen</span>
+              <span className="text-brand-400">Nieuwbouw Woningen</span>
               <br />
               Met Persoonlijke Aandacht
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Van droomhuis tot werkelijkheid. EMT bouwt uw nieuwe woning 
+              Van droomhuis tot werkelijkheid. Compleet Dakonderhoud Nederland bouwt uw nieuwe woning 
               met persoonlijke begeleiding, vakmanschap en oog voor detail.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button 
                 onClick={() => setIsContactPopupOpen(true)}
-                className="bg-yellow-500 hover:bg-yellow-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
               >
                 <span>Gratis Adviesgesprek</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
               <a 
-                href="tel:0488234037"
+                href="tel:0488234625"
                 className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
@@ -234,19 +217,19 @@ const NewBuildPage = () => {
             {/* Trust Indicators */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="flex items-center justify-center space-x-2">
-                <Award className="w-6 h-6 text-yellow-400" />
+                <Award className="w-6 h-6 text-brand-400" />
                 <span>25+ Jaar Ervaring</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Shield className="w-6 h-6 text-yellow-400" />
+                <Shield className="w-6 h-6 text-brand-400" />
                 <span>Volledig Verzekerd</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Clock className="w-6 h-6 text-yellow-400" />
+                <Clock className="w-6 h-6 text-brand-400" />
                 <span>24/7 Bereikbaar</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
-                <Users className="w-6 h-6 text-yellow-400" />
+                <Users className="w-6 h-6 text-brand-400" />
                 <span>Persoonlijke Aanpak</span>
               </div>
             </div>
@@ -259,7 +242,7 @@ const NewBuildPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Waarom Kiezen Voor <span className="text-yellow-500">EMT Nieuwbouw?</span>
+              Waarom Kiezen Voor <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Compleet Dakonderhoud Nederland Nieuwbouw?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Met meer dan 25 jaar ervaring in de nieuwbouw weten wij precies hoe we uw droomhuis 
@@ -270,7 +253,7 @@ const NewBuildPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="text-center p-8 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
-                <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
@@ -327,18 +310,18 @@ const NewBuildPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-bold text-slate-900 mb-8">
-                Uw Voordelen Bij <span className="text-yellow-500">EMT Nieuwbouw</span>
+                Uw Voordelen Bij <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Compleet Dakonderhoud Nederland Nieuwbouw</span>
               </h2>
               <div className="space-y-6">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-brand-500 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 font-medium text-lg">{benefit}</span>
                   </div>
                 ))}
               </div>
-              <div className="mt-8 p-6 bg-yellow-50 border border-yellow-200 rounded-lg">
-                <h4 className="font-bold text-slate-900 mb-2">Waarom EMT?</h4>
+              <div className="mt-8 p-6 bg-brand-50 border border-brand-200 rounded-lg">
+                <h4 className="font-bold text-slate-900 mb-2">Waarom Compleet Dakonderhoud Nederland?</h4>
                 <p className="text-gray-700">
                   Als lokaal aannemersbedrijf in Andelst combineren wij persoonlijke aandacht met vakmanschap. 
                   Onze ervaring van 25+ jaar garandeert kwaliteit en betrouwbaarheid voor uw nieuwbouwproject.
@@ -361,7 +344,7 @@ const NewBuildPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Ons <span className="text-yellow-500">Bouwproces</span>
+              Ons <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Bouwproces</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Van eerste gesprek tot sleuteloverdracht. Wij begeleiden u 
@@ -374,7 +357,7 @@ const NewBuildPage = () => {
               <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="lg:w-1/2">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-yellow-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-6">
+                    <div className="w-16 h-16 bg-brand-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mr-6">
                       {item.step}
                     </div>
                     <div>
@@ -387,7 +370,7 @@ const NewBuildPage = () => {
                 <div className="lg:w-1/2">
                   <div className="bg-gray-100 rounded-xl p-8 h-64 flex items-center justify-center">
                     <div className="text-center text-gray-500">
-                      <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-2xl font-bold text-white">{item.step}</span>
                       </div>
                       <p className="font-medium">{item.title}</p>
@@ -405,10 +388,10 @@ const NewBuildPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Wat Is <span className="text-yellow-500">Inbegrepen</span>
+              Wat Is <span className="text-brand-500">Inbegrepen</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Bij EMT nieuwbouw krijgt u een compleet pakket. Van fundering tot afwerking, 
+              Bij Compleet Dakonderhoud Nederland nieuwbouw krijgt u een compleet pakket. Van fundering tot afwerking, 
               alles wordt vakkundig uitgevoerd volgens onze kwaliteitsnormen.
             </p>
           </div>
@@ -420,7 +403,7 @@ const NewBuildPage = () => {
                 <ul className="space-y-3">
                   {spec.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-yellow-500 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
                       <span className="text-gray-700">{item}</span>
                     </li>
                   ))}
@@ -431,47 +414,81 @@ const NewBuildPage = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 bg-white">
+      {/* Professional Testimonials */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header with Icon */}
           <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
+              <Users className="w-8 h-8 text-blue-600" />
+            </div>
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Wat Onze <span className="text-yellow-500">Klanten Zeggen</span>
+              Wat Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Klanten</span> Zeggen
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Met 25+ jaar ervaring hebben wij vele tevreden klanten geholpen met hun bouwprojecten.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Al meer dan 25 jaar zorgen wij voor vakkundig dakwerk. Onze klanten waarderen onze 
+              betrouwbaarheid, kwaliteit en persoonlijke service.
             </p>
           </div>
+          
+          {/* Enhanced Widget Container */}
+          <div className="relative w-full max-w-none mx-auto">
+            {/* Subtle background pattern */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl transform rotate-1"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl transform -rotate-1"></div>
+            
+            {/* Main container */}
+            <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-6 mx-4">
+              {/* Top accent */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-500 to-brand-600 rounded-b-full"></div>
+              
+              {/* Widget */}
+              <div 
+                className="overflow-hidden rounded-xl"
+                style={{ 
+                  minHeight: '300px',
+                  paddingBottom: '10px'
+                }}
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
+                    <iframe class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/bGV3Pxr7SBGEoFWh6kb3' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; height: 300px; border-radius: 12px; display: block; margin: 0; padding: 0; box-sizing: border-box;'></iframe>
+                  `
+                }}
+              />
+            </div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-lg">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 italic leading-relaxed">"{testimonial.text}"</p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-slate-900 mb-1">- {testimonial.name}</p>
-                </div>
+          {/* Clean Trust Footer */}
+          <div className="mt-12">
+            <div className="text-center">
+              <div className="inline-flex items-center space-x-1 text-xs text-gray-400 font-medium tracking-wide">
+                <Shield className="w-3 h-3" />
+                <span>VOLLEDIG VERZEKERD</span>
+                <span className="mx-3">•</span>
+                <Award className="w-3 h-3" />
+                <span>GECERTIFICEERD</span>
+                <span className="mx-3">•</span>
+                <Clock className="w-3 h-3" />
+                <span>25+ JAAR ERVARING</span>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-slate-900">
+      <Footer>
+        {/* Contact Section */}
+        <section id="contact">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
-            <span className="text-yellow-400 font-semibold text-lg tracking-wide uppercase">
+            <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent font-semibold text-lg tracking-wide uppercase">
               Contact
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6 leading-tight">
               Laten We Uw Project
-              <span className="text-yellow-400"> Bespreken</span>
+              <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent"> Bespreken</span>
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
               Klaar om uw bouwdroom werkelijkheid te maken? Neem contact met ons op 
@@ -486,7 +503,7 @@ const NewBuildPage = () => {
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-brand-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <info.icon className="w-6 h-6 text-slate-900" />
                     </div>
                     <div>
@@ -496,7 +513,7 @@ const NewBuildPage = () => {
                           {info.action && detailIndex === 0 ? (
                             <a 
                               href={info.action} 
-                              className="hover:text-yellow-400 transition-colors"
+                              className="hover:text-brand-400 transition-colors"
                             >
                               {detail}
                             </a>
@@ -525,10 +542,10 @@ const NewBuildPage = () => {
                 <h4 className="text-red-400 font-bold mb-2">24/7 Spoedservice</h4>
                 <p className="text-gray-300 mb-3">Voor acute bouwproblemen</p>
                 <a 
-                  href="tel:0488234037" 
+                  href="tel:0488234625" 
                   className="text-red-400 font-semibold hover:text-red-300 transition-colors"
                 >
-                  0488 23 40 37
+                  0488 234 625
                 </a>
               </div>
             </div>
@@ -557,7 +574,7 @@ const NewBuildPage = () => {
                           type="text"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                           placeholder="Uw volledige naam"
                           required
                         />
@@ -573,7 +590,7 @@ const NewBuildPage = () => {
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                           placeholder="uw.email@example.nl"
                           required
                         />
@@ -592,8 +609,8 @@ const NewBuildPage = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                          placeholder="0488 23 40 37"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                          placeholder="0488 234 625"
                         />
                       </div>
                     </div>
@@ -604,7 +621,7 @@ const NewBuildPage = () => {
                       <select
                         value={formData.preferredContact}
                         onChange={(e) => handleInputChange('preferredContact', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                       >
                         <option value="email">Email</option>
                         <option value="phone">Telefoon</option>
@@ -626,11 +643,11 @@ const NewBuildPage = () => {
                           onClick={() => handleInputChange('projectType', type.id)}
                           className={`p-4 border-2 rounded-lg text-center transition-all duration-300 ${
                             formData.projectType === type.id
-                              ? 'border-yellow-500 bg-yellow-50'
+                              ? 'border-brand-500 bg-brand-50'
                               : 'border-gray-200 hover:border-gray-300'
                           }`}
                         >
-                          <type.icon className="w-8 h-8 mx-auto mb-2 text-yellow-500" />
+                          <type.icon className="w-8 h-8 mx-auto mb-2 text-brand-500" />
                           <div className="font-medium text-slate-900">{type.label}</div>
                         </button>
                       ))}
@@ -645,7 +662,7 @@ const NewBuildPage = () => {
                       <select
                         value={formData.budget}
                         onChange={(e) => handleInputChange('budget', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                       >
                         <option value="">Selecteer budget</option>
                         <option value="<200k">Onder €200.000</option>
@@ -664,7 +681,7 @@ const NewBuildPage = () => {
                         <select
                           value={formData.timeline}
                           onChange={(e) => handleInputChange('timeline', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                         >
                           <option value="">Selecteer timing</option>
                           <option value="asap">Zo snel mogelijk</option>
@@ -688,7 +705,7 @@ const NewBuildPage = () => {
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         rows={5}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 resize-none"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none"
                         placeholder="Beschrijf uw project, wensen en eventuele specifieke vragen..."
                         required
                       />
@@ -703,7 +720,7 @@ const NewBuildPage = () => {
                       className={`inline-flex items-center space-x-3 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ${
                         isSubmitting
                           ? 'bg-gray-400 cursor-not-allowed'
-                          : 'bg-yellow-500 hover:bg-yellow-600 text-slate-900'
+                          : 'bg-brand-500 hover:bg-brand-600 text-slate-900'
                       }`}
                     >
                       {isSubmitting ? (
@@ -731,7 +748,7 @@ const NewBuildPage = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-brand-400 to-brand-600 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
                 Spoedeisend Project?
               </h3>
@@ -740,18 +757,16 @@ const NewBuildPage = () => {
                 Onze experts staan 24/7 voor u klaar.
               </p>
               <a
-                href="tel:0488234037"
+                href="tel:0488234625"
                 className="inline-block bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
-                Bel Nu: 0488 23 40 37
+                Bel Nu: 0488 234 625
               </a>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <Footer />
+      </Footer>
 
       {/* Contact Popup */}
       <ContactPopup 

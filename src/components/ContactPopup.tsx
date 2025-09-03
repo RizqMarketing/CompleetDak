@@ -18,10 +18,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
     name: '',
     email: '',
     phone: '',
-    projectType: '',
     message: '',
-    preferredContact: 'email',
-    budget: '',
     stad: '',
     address: '',
     provincie: '',
@@ -38,7 +35,6 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
     try {
       const success = await sendEmail({
         ...formData,
-        projectType: formData.projectType || service || '',
         service: service || 'Algemene aanvraag'
       });
       
@@ -48,10 +44,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
           name: '',
           email: '',
           phone: '',
-          projectType: '',
           message: '',
-          preferredContact: 'email',
-          budget: '',
           stad: '',
           address: '',
           provincie: '',
@@ -76,11 +69,6 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const projectTypes = [
-    { id: 'newbuild', label: 'Nieuwbouw', icon: Building },
-    { id: 'renovation', label: 'Renovatie', icon: Wrench },
-    { id: 'extension', label: 'Uitbouw', icon: Home }
-  ];
 
   if (!isOpen) return null;
 
@@ -126,7 +114,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
                     type="text"
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                     placeholder="Uw volledige naam"
                     required
                   />
@@ -142,7 +130,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                     placeholder="uw.email@example.nl"
                     required
                   />
@@ -161,8 +149,8 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                    placeholder="0488 23 40 37"
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                    placeholder="0488 234 625"
                   />
                 </div>
               </div>
@@ -170,13 +158,16 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Stad
                 </label>
-                <input
-                  type="text"
-                  value={formData.stad}
-                  onChange={(e) => handleInputChange('stad', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                  placeholder="Bijv. Andelst"
-                />
+                <div className="relative">
+                  <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    value={formData.stad}
+                    onChange={(e) => handleInputChange('stad', e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                    placeholder="Bijv. Andelst"
+                  />
+                </div>
               </div>
             </div>
 
@@ -185,53 +176,34 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Straatnaam + Huisnummer
               </label>
-              <input
-                type="text"
-                value={formData.address}
-                onChange={(e) => handleInputChange('address', e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                placeholder="Bijv. Geurdeland 17G"
-              />
+              <div className="relative">
+                <Home className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  value={formData.address}
+                  onChange={(e) => handleInputChange('address', e.target.value)}
+                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                  placeholder="Bijv. Geurdeland 17G"
+                />
+              </div>
             </div>
 
-            {/* Project Information */}
-            {!service && (
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-4">
-                  Type Project
-                </label>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {projectTypes.map((type) => (
-                    <button
-                      key={type.id}
-                      type="button"
-                      onClick={() => handleInputChange('projectType', type.id)}
-                      className={`p-4 border-2 rounded-lg text-center transition-all duration-300 ${
-                        formData.projectType === type.id
-                          ? 'border-yellow-500 bg-yellow-50'
-                          : 'border-gray-200 hover:border-gray-300'
-                      }`}
-                    >
-                      <type.icon className="w-8 h-8 mx-auto mb-2 text-yellow-500" />
-                      <div className="font-medium text-slate-900">{type.label}</div>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Provincie
                 </label>
-                <input
-                  type="text"
-                  value={formData.provincie || ''}
-                  onChange={(e) => handleInputChange('provincie', e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                  placeholder="Bijv. Gelderland"
-                />
+                <div className="relative">
+                  <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                  <input
+                    type="text"
+                    value={formData.provincie || ''}
+                    onChange={(e) => handleInputChange('provincie', e.target.value)}
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                    placeholder="Bijv. Gelderland"
+                  />
+                </div>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -242,7 +214,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
                   <select
                     value={formData.timeline}
                     onChange={(e) => handleInputChange('timeline', e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
                   >
                     <option value="">Selecteer timing</option>
                     <option value="asap">Zo snel mogelijk</option>
@@ -266,7 +238,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   rows={4}
-                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 resize-none"
+                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none"
                   placeholder="Beschrijf uw project, wensen en eventuele specifieke vragen..."
                   required
                 />
@@ -288,7 +260,7 @@ const ContactPopup: React.FC<ContactPopupProps> = ({ isOpen, onClose, service, t
                 className={`flex-1 inline-flex items-center justify-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-yellow-500 hover:bg-yellow-600 text-slate-900'
+                    : 'bg-brand-500 hover:bg-brand-600 text-slate-900'
                 }`}
               >
                 {isSubmitting ? (

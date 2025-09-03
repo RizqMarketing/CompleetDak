@@ -85,12 +85,12 @@ const Portfolio = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-yellow-500 font-semibold text-lg tracking-wide uppercase">
+          <span className="text-brand-500 font-semibold text-lg tracking-wide uppercase">
             Ons Portfolio
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-4 mb-6 leading-tight">
             Uitgevoerde
-            <span className="text-yellow-500"> Projecten</span>
+            <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent"> Projecten</span>
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
             Ontdek onze selectie van premium bouwprojecten die onze expertise en 
@@ -106,7 +106,7 @@ const Portfolio = () => {
               onClick={() => setActiveFilter(filter.id)}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeFilter === filter.id
-                  ? 'bg-yellow-500 text-white shadow-lg transform scale-105'
+                  ? 'bg-brand-600 text-white shadow-lg transform scale-105'
                   : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
               }`}
             >
@@ -130,7 +130,7 @@ const Portfolio = () => {
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                <div className="absolute top-4 right-4 bg-brand-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                   {project.year}
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

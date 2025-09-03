@@ -12,10 +12,10 @@ const TermsPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
             <div className="text-center mb-12">
-              <FileText className="w-16 h-16 text-yellow-500 mx-auto mb-6" />
+              <FileText className="w-16 h-16 text-brand-500 mx-auto mb-6" />
               <h1 className="text-4xl font-bold text-slate-900 mb-4">Algemene Voorwaarden</h1>
               <p className="text-gray-600 text-lg">
-                Algemene voorwaarden van Aannemersbedrijf EMT
+                Algemene voorwaarden van Compleet Dakonderhoud Nederland
               </p>
               <div className="text-sm text-gray-500 mt-4">
                 Laatst bijgewerkt: {new Date().toLocaleDateString('nl-NL')}
@@ -28,7 +28,7 @@ const TermsPage = () => {
                 In deze algemene voorwaarden wordt verstaan onder:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
-                <li><strong>Aannemer:</strong> Aannemersbedrijf EMT, gevestigd te Geurdeland 17G, 6673 DR Andelst, KvK: 94106819</li>
+                <li><strong>Aannemer:</strong> Compleet Dakonderhoud Nederland, gevestigd te Geurdeland 17G, 6673 DR Andelst, KvK: 94106819</li>
                 <li><strong>Opdrachtgever:</strong> De natuurlijke of rechtspersoon die een opdracht verstrekt aan de aannemer</li>
                 <li><strong>Overeenkomst:</strong> De tussen aannemer en opdrachtgever gesloten overeenkomst</li>
                 <li><strong>Werk:</strong> Alle door de aannemer te verrichten werkzaamheden</li>
@@ -107,30 +107,30 @@ const TermsPage = () => {
                 voorgelegd aan de bevoegde rechter in het arrondissement waar aannemer is gevestigd.
               </p>
 
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mt-8">
+              <div className="bg-brand-50 border border-brand-200 rounded-lg p-6 mt-8">
                 <h3 className="font-bold text-slate-900 mb-4">Contact</h3>
                 <p className="text-gray-700 mb-4">
                   Voor vragen over deze algemene voorwaarden kunt u contact met ons opnemen:
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-yellow-600" />
+                    <MapPin className="w-5 h-5 text-brand-600" />
                     <span>Geurdeland 17G, 6673 DR Andelst</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Phone className="w-5 h-5 text-yellow-600" />
-                    <a href="tel:0488234037" className="text-yellow-600 hover:text-yellow-700">
-                      0488 23 40 37
+                    <Phone className="w-5 h-5 text-brand-600" />
+                    <a href="tel:0488234625" className="text-brand-600 hover:text-brand-700">
+                      0488 234 625
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <Mail className="w-5 h-5 text-yellow-600" />
-                    <a href="mailto:info@aannemersbedrijf-emt.nl" className="text-yellow-600 hover:text-yellow-700">
-                      info@aannemersbedrijf-emt.nl
+                    <Mail className="w-5 h-5 text-brand-600" />
+                    <a href="mailto:info@compleetdakonderhoudnederland.nl" className="text-brand-600 hover:text-brand-700">
+                      info@compleetdakonderhoudnederland.nl
                     </a>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <span className="w-5 h-5 text-yellow-600 font-bold">KvK:</span>
+                    <span className="w-5 h-5 text-brand-600 font-bold">KvK:</span>
                     <span>94106819</span>
                   </div>
                 </div>
