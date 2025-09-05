@@ -71,7 +71,6 @@ const TermsPage = () => {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Artikel 7 - Betaling</h2>
               <ul className="list-disc pl-6 text-gray-700 mb-6 space-y-2">
                 <li>Betaling dient te geschieden binnen 30 dagen na factuurdatum</li>
-                <li>Bij overschrijding van de betalingstermijn is rente verschuldigd</li>
                 <li>Aannemer kan vooruitbetaling of zekerheid verlangen</li>
                 <li>Bij niet-betaling kan aannemer de werkzaamheden opschorten</li>
               </ul>

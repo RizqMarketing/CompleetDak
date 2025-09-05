@@ -29,12 +29,16 @@ const ChimneyPage = () => {
   const chimneyServices = [
     "Schoorsteen renovatie en onderhoud",
     "Schoorsteen afbreken en verwijderen",
-    "Nokvorsten renovatie",
-    "Schoorsteen reparaties",
+    "Nokvorsten renovatie en reparatie",
+    "Schoorsteen reparaties en herstel",
     "Lood reparaties aan schoorstenen",
     "Schoorsteen inspectie en advies",
-    "Rookkanaal reiniging",
-    "Schoorsteenkap plaatsing"
+    "Rookkanaal reiniging en onderhoud",
+    "Rookkanaal renovatie en herstel",
+    "Schouw reparatie (woonkamer/dak)",
+    "Schouw renovatie en afdichting",
+    "Schouw verwijdering en afsluiting",
+    "Schoorsteenkap plaatsing en vervanging"
   ];
 
   const chimneyTypes = [
@@ -218,7 +222,7 @@ const ChimneyPage = () => {
               Veilig & Vakkundig
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Van renovatie tot verwijdering en onderhoud. Compleet Dakonderhoud Nederland zorgt voor veilig 
+              Van schoorsteenrenovatie tot rookkanaalonderhoud en schouwreparaties. Compleet Dakonderhoud Nederland zorgt voor veilig 
               en vakkundig schoorsteenwerk volgens alle normen en voorschriften.
             </p>
             
@@ -479,10 +483,21 @@ const ChimneyPage = () => {
               </div>
               <div className="mt-8 p-6 bg-brand-50 border border-brand-200 rounded-lg">
                 <h4 className="font-bold text-slate-900 mb-2">Waarom Compleet Dakonderhoud Nederland Schoorsteenwerk?</h4>
-                <p className="text-gray-700">
+                <p className="text-gray-700 mb-4">
                   Van kleine reparaties tot complete renovaties. Wij zorgen voor veilig 
                   en vakkundig schoorsteenwerk volgens alle geldende normen en voorschriften.
                 </p>
+                <div className="bg-white rounded-lg p-4 border border-brand-100">
+                  <h5 className="font-semibold text-slate-900 mb-2">Specialisaties:</h5>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-700">
+                    <div>• Rookkanalen (binnen & buiten)</div>
+                    <div>• Schouw (woonkamer tot dak)</div>
+                    <div>• Schouw verwijdering & afsluiting</div>
+                    <div>• Nokvorsten & loodwerk</div>
+                    <div>• Complete schoorsteenrenovatie</div>
+                    <div>• Veilige afbraak & afdichting</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="relative">
