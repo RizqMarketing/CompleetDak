@@ -56,13 +56,23 @@ const Testimonials = () => {
                     .group:hover .lc_reviews_widget {
                       animation-play-state: paused !important;
                     }
-                    /* Stop automatic transitions */
+                    /* Show only 1 review on mobile */
+                    @media (max-width: 768px) {
+                      .lc_reviews_widget iframe,
+                      .lc_reviews_widget .review-container {
+                        max-height: 150px !important;
+                        overflow: hidden !important;
+                      }
+                      .lc_reviews_widget .review-item:nth-child(n+2) {
+                        display: none !important;
+                      }
+                    }
                     .lc_reviews_widget * {
                       animation-duration: 10s !important; /* Slower auto-scroll */
                     }
                   </style>
                   <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
-                  <iframe class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/bGV3Pxr7SBGEoFWh6kb3' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; height: 300px; border-radius: 12px; display: block; margin: 0; padding: 0; box-sizing: border-box;'></iframe>
+                  <iframe class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/bGV3Pxr7SBGEoFWh6kb3' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; height: 350px; border-radius: 12px; display: block; margin: 0; padding: 0; box-sizing: border-box;'></iframe>
                 `
               }}
             />

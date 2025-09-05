@@ -52,7 +52,7 @@ const Hero = () => {
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover md:object-center object-[center_20%]"
             />
             <div className={`absolute inset-0 bg-gradient-to-br ${slide.overlay}`}></div>
           </div>

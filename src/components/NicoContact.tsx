@@ -75,7 +75,13 @@ const NicoContact = () => {
             <img 
               src="https://imgur.com/MIruK5o.png" 
               alt="Nico - Eigenaar EMT Dakdekkers"
-              className="w-full h-auto object-contain rounded-2xl"
+              className="w-full h-auto object-contain rounded-2xl md:hidden"
+              style={{ minHeight: '400px', maxHeight: '500px' }}
+            />
+            <img 
+              src="https://imgur.com/MIruK5o.png" 
+              alt="Nico - Eigenaar EMT Dakdekkers"
+              className="w-full h-auto object-contain rounded-2xl hidden md:block"
               style={{ minHeight: '700px', maxHeight: '800px' }}
             />
           </div>
