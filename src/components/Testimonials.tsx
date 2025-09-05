@@ -58,12 +58,20 @@ const Testimonials = () => {
                     }
                     /* Show only 1 review on mobile */
                     @media (max-width: 768px) {
-                      .lc_reviews_widget iframe,
-                      .lc_reviews_widget .review-container {
-                        max-height: 150px !important;
+                      .lc_reviews_widget iframe {
+                        height: 200px !important;
+                        max-height: 200px !important;
                         overflow: hidden !important;
                       }
-                      .lc_reviews_widget .review-item:nth-child(n+2) {
+                      .lc_reviews_widget .review-container,
+                      .lc_reviews_widget .reviews-container,
+                      .lc_reviews_widget .review-list {
+                        max-height: 180px !important;
+                        overflow: hidden !important;
+                      }
+                      .lc_reviews_widget .review-item:nth-child(n+2),
+                      .lc_reviews_widget .review:nth-child(n+2),
+                      .lc_reviews_widget [class*="review"]:nth-child(n+2) {
                         display: none !important;
                       }
                     }
