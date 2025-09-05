@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <!-- Homepage -->
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,84 +10,78 @@
   
   <!-- Main Services -->
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/nieuwbouw-woningen</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/nieuwbouw-woningen</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/dakwerk-dakdekken</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/dakwerk-dakdekken</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/renovatie-verbouwing</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/renovatie-verbouwing</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/tegelwerk</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/tegelwerk</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/schilderwerk-stukadoor</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/schilderwerk-stukadoor</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/aanbouw-uitbouw</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/aanbouw-uitbouw</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/commerciele-bouw</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/commerciele-bouw</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/projectmanagement</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/projectmanagement</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/duurzame-bouw</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/duurzame-bouw</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/onderhoud-reparatie</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/onderhoud-reparatie</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
-  <url>
-    <loc>https://aannemersbedrijf-emt.nl/schoorsteenwerk</loc>
-    <lastmod>2024-12-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/aircos-monteren</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/aircos-monteren</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -95,21 +89,21 @@
   
   <!-- Legal Pages -->
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/privacybeleid</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/privacybeleid</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/algemene-voorwaarden</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/algemene-voorwaarden</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   
   <url>
-    <loc>https://aannemersbedrijf-emt.nl/cookiebeleid</loc>
+    <loc>https://compleetdakonderhoudnederland.nl/cookiebeleid</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

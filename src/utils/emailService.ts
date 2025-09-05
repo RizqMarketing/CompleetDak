@@ -15,9 +15,12 @@ export interface FormData {
 }
 
 // EmailJS configuration
-const EMAILJS_SERVICE_ID = 'service_6ict4tl';
-const EMAILJS_TEMPLATE_ID = 'template_t9mklse';
+const EMAILJS_SERVICE_ID = 'service_t4ncsvd';
+const EMAILJS_TEMPLATE_ID = 'template_ep9ykkp';
 const EMAILJS_PUBLIC_KEY = 'SBdgnq76XT_rWqM9I';
+
+// GoHighLevel configuration
+const GOHIGHLEVEL_WEBHOOK_URL = 'YOUR_GOHIGHLEVEL_WEBHOOK_URL_HERE'; // Vervang dit met je echte webhook URL
 
 // Translation mappings for Dutch values
 const projectTypeTranslations: { [key: string]: string } = {
@@ -102,6 +105,57 @@ const timelineTranslations: { [key: string]: string } = {
   'flexible': 'Flexibel'
 };
 
+// Send to GoHighLevel webhook
+const sendToGoHighLevel = async (formData: FormData): Promise<boolean> => {
+  try {
+    // Skip if webhook URL not configured
+    if (GOHIGHLEVEL_WEBHOOK_URL === 'YOUR_GOHIGHLEVEL_WEBHOOK_URL_HERE') {
+      console.log('GoHighLevel webhook niet geconfigureerd');
+      return true; // Return true so form still works
+    }
+
+    // Translate form values to Dutch for consistency
+    const translatedProjectType = projectTypeTranslations[formData.projectType] || formData.projectType;
+    const translatedBudget = budgetTranslations[formData.budget] || formData.budget;
+    const translatedTimeline = timelineTranslations[formData.timeline] || formData.timeline;
+
+    const ghlData = {
+      // Standard GoHighLevel fields
+      firstName: formData.name.split(' ')[0] || formData.name,
+      lastName: formData.name.split(' ').slice(1).join(' ') || '',
+      email: formData.email,
+      phone: formData.phone,
+      
+      // Custom fields - pas deze aan naar je GoHighLevel setup
+      stad: formData.stad || '',
+      address: formData.address || '',
+      provincie: formData.provincie || '',
+      projectType: translatedProjectType || '',
+      budget: translatedBudget || '',
+      timeline: translatedTimeline || '',
+      service: formData.service || '',
+      message: formData.message,
+      
+      // Additional metadata
+      source: 'Website Contact Form',
+      dateSubmitted: new Date().toISOString()
+    };
+
+    const response = await fetch(GOHIGHLEVEL_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(ghlData)
+    });
+
+    return response.ok;
+  } catch (error) {
+    console.error('GoHighLevel Webhook Error:', error);
+    return false; // Don't fail the whole process if GHL fails
+  }
+};
+
 export const sendEmail = async (formData: FormData): Promise<boolean> => {
   try {
     // Translate form values to Dutch
@@ -125,16 +179,20 @@ export const sendEmail = async (formData: FormData): Promise<boolean> => {
       to_email: 'info@compleetdakonderhoudnederland.nl'
     };
 
-    const response = await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
-      templateParams,
-      EMAILJS_PUBLIC_KEY
-    );
+    // Send to both EmailJS and GoHighLevel in parallel
+    const [emailResult, ghlResult] = await Promise.allSettled([
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY),
+      sendToGoHighLevel(formData)
+    ]);
 
-    return response.status === 200;
+    // Log results for debugging
+    console.log('EmailJS Result:', emailResult);
+    console.log('GoHighLevel Result:', ghlResult);
+
+    // Return true if EmailJS succeeds (GHL is optional)
+    return emailResult.status === 'fulfilled' && emailResult.value.status === 200;
   } catch (error) {
-    console.error('EmailJS Error:', error);
+    console.error('Email Service Error:', error);
     return false;
   }
 };

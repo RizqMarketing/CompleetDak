@@ -233,7 +233,7 @@ const CostCalculator = () => {
                       value={formData.size}
                       onChange={(e) => handleInputChange('size', e.target.value)}
                       placeholder="Bijv. 150"
-                      className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                      className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                     />
                   </div>
                 </div>

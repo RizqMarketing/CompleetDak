@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Home, CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Users, Calculator, Eye, Hammer, Sun, Wrench,
-  Send, User, MessageCircle, Calendar, Building2, MapPin, AlertTriangle, Droplets, Leaf, Filter
+  Send, User, Calendar, Building2, MapPin, AlertTriangle, Droplets, Leaf, Filter
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -107,28 +107,6 @@ const DakgootReinigingPage = () => {
     }
   ];
 
-  const faqItems = [
-    {
-      question: "Hoe vaak moeten dakgoten gereinigd worden?",
-      answer: "We adviseren dakgoten minimaal 2 keer per jaar te reinigen: in het voorjaar en najaar. Bij veel bomen in de buurt mogelijk vaker."
-    },
-    {
-      question: "Wat kost dakgoot reiniging?",
-      answer: "Kosten variëren van €3-6 per meter dakgoot, afhankelijk van hoogte, toegankelijkheid en vervuiling. Vanaf €75 voor een gemiddelde woning."
-    },
-    {
-      question: "Wordt het vuil ook afgevoerd?",
-      answer: "Ja, wij voeren alle bladeren en vuil af en zorgen voor milieuvriendelijke verwerking. Dit is inbegrepen in de prijs."
-    },
-    {
-      question: "Kunnen jullie ook kleine reparaties uitvoeren?",
-      answer: "Ja, tijdens de reiniging controleren we de goten op schade en kunnen kleine reparaties direct uitvoeren."
-    },
-    {
-      question: "Bieden jullie ook onderhoudscontracten aan?",
-      answer: "Ja, we bieden onderhoudscontracten aan met korting. Hiermee wordt uw dakgoot automatisch 2x per jaar onderhouden."
-    }
-  ];
 
   const projectTypes = [
     { id: 'standaard-reiniging', label: 'Standaard Reiniging', icon: Droplets },
@@ -179,7 +157,7 @@ const DakgootReinigingPage = () => {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1920')] bg-cover bg-center opacity-25"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920')] bg-cover bg-center opacity-25"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -469,43 +447,6 @@ const DakgootReinigingPage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pt-8 pb-20 bg-gradient-to-br from-white via-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-brand-50 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-md">
-              <MessageCircle className="w-4 h-4 text-blue-600" />
-              <span>Vaak Gevraagd</span>
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Veelgestelde <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Vragen</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Hier vind je antwoorden op de meest gestelde vragen over onze dakgoot reiniging services
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {faqItems.map((item, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-brand-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-white font-bold text-sm">?</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                        {item.question}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed text-sm">{item.answer}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="h-1 bg-gradient-to-r from-blue-500 to-brand-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-2xl"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer>
         <Contact standalone={false} />

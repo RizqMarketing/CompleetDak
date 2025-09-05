@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   Home, CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Users, Calculator, Eye, Hammer, Sun, Wrench,
-  AlertTriangle, Droplets, MessageCircle
+  AlertTriangle, Droplets
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -90,24 +90,6 @@ const LoodReparatiePage = () => {
     }
   ];
 
-  const faqItems = [
-    {
-      question: "Hoe lang gaat loodwerk mee?",
-      answer: "Goed onderhouden loodwerk gaat 40-60 jaar mee. Lood is zeer duurzaam maar heeft wel onderhoud nodig."
-    },
-    {
-      question: "Wanneer moet loodwerk vervangen worden?",
-      answer: "Bij scheuren, gaten, loslating van aansluitingen of wanneer lood te dun is geworden door slijtage."
-    },
-    {
-      question: "Is loodwerk schadelijk voor de gezondheid?",
-      answer: "Modern loodwerk op daken vormt geen gezondheidsrisico. We werken volgens alle veiligheidsnormen."
-    },
-    {
-      question: "Kan loodwerk preventief onderhouden worden?",
-      answer: "Ja, jaarlijkse inspectie en kleine reparaties voorkomen grote problemen en verlengen de levensduur aanzienlijk."
-    }
-  ];
 
   const projectTypes = [
     { id: 'loodslab-reparatie', label: 'Loodslab Reparatie', icon: Shield },
@@ -122,7 +104,7 @@ const LoodReparatiePage = () => {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920')] bg-cover bg-center opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -333,43 +315,6 @@ const LoodReparatiePage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pt-8 pb-20 bg-gradient-to-br from-white via-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-brand-50 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-md">
-              <MessageCircle className="w-4 h-4 text-blue-600" />
-              <span>Vaak Gevraagd</span>
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Veelgestelde <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Vragen</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Hier vind je antwoorden op de meest gestelde vragen over onze lood reparatie services
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {faqItems.map((item, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-brand-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-white font-bold text-sm">?</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                        {item.question}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed text-sm">{item.answer}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="h-1 bg-gradient-to-r from-blue-500 to-brand-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-2xl"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer>
         <Contact standalone={false} />

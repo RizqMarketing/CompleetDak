@@ -50,7 +50,6 @@ const Header = () => {
     { name: 'Dakgoot Reiniging', href: '/dakgootreiniging' },
     { name: 'Gevel Voegen', href: '/gevel-voegen' },
     { name: 'Gevel Reinigen', href: '/gevel-reinigen' },
-    { name: 'Schoorsteen Renovatie', href: '/schoorsteenwerk-renovatie' }
   ];
 
   const handleNavClick = (href) => {

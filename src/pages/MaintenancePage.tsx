@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Wrench, CheckCircle, Phone, Mail, ArrowRight, 
+  CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Users, Calculator, Eye, AlertTriangle, Settings, Home,
   Send, User, MessageCircle, Calendar, Building2, MapPin
 } from 'lucide-react';
@@ -17,10 +17,10 @@ const MaintenancePage = () => {
     name: '',
     email: '',
     phone: '',
-    projectType: '',
     message: '',
-    preferredContact: 'email',
-    budget: '',
+    stad: '',
+    address: '',
+    provincie: '',
     timeline: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -141,10 +141,10 @@ const MaintenancePage = () => {
           name: '',
           email: '',
           phone: '',
-          projectType: '',
           message: '',
-          preferredContact: 'email',
-          budget: '',
+          stad: '',
+          address: '',
+          provincie: '',
           timeline: ''
         });
         
@@ -192,11 +192,6 @@ const MaintenancePage = () => {
     }
   ];
 
-  const projectTypes = [
-    { id: 'maintenance', label: 'Onderhoud', icon: Settings },
-    { id: 'repair', label: 'Reparatie', icon: Wrench },
-    { id: 'emergency', label: 'Spoedservice', icon: AlertTriangle }
-  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -688,7 +683,7 @@ const MaintenancePage = () => {
                           type="text"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                           placeholder="Uw volledige naam"
                           required
                         />
@@ -704,7 +699,7 @@ const MaintenancePage = () => {
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                           placeholder="uw.email@example.nl"
                           required
                         />
@@ -723,68 +718,59 @@ const MaintenancePage = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                           placeholder="0488 234 625"
                         />
                       </div>
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Voorkeurscontact
+                        Stad
                       </label>
-                      <select
-                        value={formData.preferredContact}
-                        onChange={(e) => handleInputChange('preferredContact', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
-                      >
-                        <option value="email">Email</option>
-                        <option value="phone">Telefoon</option>
-                        <option value="both">Beide</option>
-                      </select>
+                      <div className="relative">
+                        <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <input
+                          type="text"
+                          value={formData.stad}
+                          onChange={(e) => handleInputChange('stad', e.target.value)}
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
+                          placeholder="Bijv. Andelst"
+                        />
+                      </div>
                     </div>
                   </div>
 
-                  {/* Project Information */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-4">
-                      Type Project
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Straatnaam + Huisnummer
                     </label>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                      {projectTypes.map((type) => (
-                        <button
-                          key={type.id}
-                          type="button"
-                          onClick={() => handleInputChange('projectType', type.id)}
-                          className={`p-4 border-2 rounded-lg text-center transition-all duration-300 ${
-                            formData.projectType === type.id
-                              ? 'border-brand-500 bg-brand-50'
-                              : 'border-gray-200 hover:border-gray-300'
-                          }`}
-                        >
-                          <type.icon className="w-8 h-8 mx-auto mb-2 text-brand-500" />
-                          <div className="font-medium text-slate-900">{type.label}</div>
-                        </button>
-                      ))}
+                    <div className="relative">
+                      <Home className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                      <input
+                        type="text"
+                        value={formData.address}
+                        onChange={(e) => handleInputChange('address', e.target.value)}
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
+                        placeholder="Bijv. Geurdeland 17G"
+                      />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Budget (indicatief)
+                        Provincie
                       </label>
-                      <select
-                        value={formData.budget}
-                        onChange={(e) => handleInputChange('budget', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
-                      >
-                        <option value="">Selecteer budget</option>
-                        <option value="<500">Onder €500</option>
-                        <option value="500-1k">€500 - €1.000</option>
-                        <option value="1k-2.5k">€1.000 - €2.500</option>
-                        <option value="2.5k-5k">€2.500 - €5.000</option>
-                        <option value="5k+">Boven €5.000</option>
-                      </select>
+                      <div className="relative">
+                        <Building2 className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <input
+                          type="text"
+                          value={formData.provincie}
+                          onChange={(e) => handleInputChange('provincie', e.target.value)}
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
+                          placeholder="Bijv. Gelderland"
+                        />
+                      </div>
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -795,14 +781,14 @@ const MaintenancePage = () => {
                         <select
                           value={formData.timeline}
                           onChange={(e) => handleInputChange('timeline', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                         >
                           <option value="">Selecteer timing</option>
-                          <option value="asap">Zo snel mogelijk</option>
-                          <option value="1week">Binnen 1 week</option>
-                          <option value="1month">Binnen 1 maand</option>
-                          <option value="3months">Binnen 3 maanden</option>
-                          <option value="flexible">Flexibel</option>
+                          <option value="Zo snel mogelijk">Zo snel mogelijk</option>
+                          <option value="1-3 maanden">1-3 maanden</option>
+                          <option value="3-6 maanden">3-6 maanden</option>
+                          <option value="6-12 maanden">6-12 maanden</option>
+                          <option value="Flexibel">Flexibel</option>
                         </select>
                       </div>
                     </div>
@@ -819,7 +805,7 @@ const MaintenancePage = () => {
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         rows={5}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none text-gray-900"
                         placeholder="Beschrijf uw project, wensen en eventuele specifieke vragen..."
                         required
                       />

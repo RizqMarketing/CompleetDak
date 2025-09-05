@@ -28,7 +28,7 @@ const Coverage = () => {
           <div className="relative flex items-center justify-center h-full">
             <img 
               src="https://imgur.com/mmmmGwh.png" 
-              alt="Nederland kaart met provincies - EMT Dakdekkers" 
+              alt="Nederland kaart met provincies - Compleet Dakonderhoud Nederland" 
               className="h-auto"
               style={{ width: '125%', height: 'auto', maxWidth: 'none' }}
             />

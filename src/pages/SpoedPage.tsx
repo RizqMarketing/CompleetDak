@@ -90,24 +90,6 @@ const SpoedPage = () => {
     }
   ];
 
-  const faqItems = [
-    {
-      question: "Hoe snel kunnen jullie er zijn bij een noodgeval?",
-      answer: "Bij acute lekkages en spoedeisende reparaties zijn we binnen 2 uur ter plaatse, 24 uur per dag, 7 dagen per week."
-    },
-    {
-      question: "Wat kost een spoedservice?",
-      answer: "Spoedservice heeft een toeslag, maar wordt vaak vergoed door uw verzekering. We geven altijd vooraf duidelijkheid over kosten."
-    },
-    {
-      question: "Helpen jullie ook met verzekeringsclaims?",
-      answer: "Ja, we hebben veel ervaring met verzekeringszaken en helpen graag bij het indienen van claims en communicatie."
-    },
-    {
-      question: "Wat gebeurt er na de noodreparatie?",
-      answer: "Na de directe reparatie plannen we zo snel mogelijk een afspraak voor de definitieve reparatie, vaak binnen 48 uur."
-    }
-  ];
 
   const projectTypes = [
     { id: 'acute-lekkage', label: 'Acute Lekkage', icon: Droplets },
@@ -121,12 +103,12 @@ const SpoedPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-red-900 via-red-800 to-slate-900">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=1920')] bg-cover bg-center opacity-20"></div>
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920')] bg-cover bg-center opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              <span className="text-red-400">24/7</span> Dakspoed Service
+              <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">24/7</span> Dakspoed Service
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Acute lekkage? Storm schade? Wij zijn er binnen 2 uur. Professionele noodservice voor alle dakproblemen.
@@ -134,7 +116,7 @@ const SpoedPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:0488234625"
-                className="bg-red-500 hover:bg-red-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center text-lg"
+                className="bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center text-lg"
               >
                 <Phone className="w-6 h-6 mr-2" />
                 SPOED: 0488 234 625
@@ -152,15 +134,16 @@ const SpoedPage = () => {
       </section>
 
       {/* Emergency Alert Banner */}
-      <section className="bg-red-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-center space-x-3">
-            <Zap className="w-8 h-8 animate-pulse" />
-            <div className="text-center">
-              <div className="text-2xl font-bold">NOODSERVICE ACTIEF</div>
-              <div className="text-lg">Bel nu voor directe hulp: 0488 234 625</div>
-            </div>
-            <Zap className="w-8 h-8 animate-pulse" />
+      <section className="bg-gradient-to-r from-brand-50 to-blue-50 border-y border-brand-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex items-center justify-center space-x-2 text-brand-900">
+            <Clock className="w-5 h-5 text-brand-600" />
+            <span className="font-semibold">24/7 Spoedservice beschikbaar</span>
+            <span className="mx-2">•</span>
+            <Phone className="w-4 h-4 text-brand-600" />
+            <a href="tel:0488234625" className="hover:text-brand-600 transition-colors font-medium">
+              0488 234 625
+            </a>
           </div>
         </div>
       </section>
@@ -170,7 +153,7 @@ const SpoedPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Onze <span className="text-red-500">Spoeddiensten</span>
+              Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Spoeddiensten</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               24/7 beschikbaar voor alle dakgerelateerde noodgevallen
@@ -178,9 +161,9 @@ const SpoedPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {spoedTypes.map((type, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-red-500">
-                <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                  <type.icon className="w-8 h-8 text-red-600" />
+              <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-brand-500">
+                <div className="w-16 h-16 bg-brand-100 rounded-lg flex items-center justify-center mb-6">
+                  <type.icon className="w-8 h-8 text-brand-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">{type.title}</h3>
                 <p className="text-gray-600 mb-4">{type.description}</p>
@@ -196,13 +179,13 @@ const SpoedPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Waarom Onze <span className="text-red-400">Spoed Service</span>?
+              Waarom Onze <span className="text-brand-400">Spoed Service</span>?
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 bg-brand-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -219,12 +202,12 @@ const SpoedPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-slate-900 mb-8">
-                Complete <span className="text-red-500">Noodservice</span>
+                Complete <span className="text-brand-500">Noodservice</span>
               </h2>
               <div className="space-y-4">
                 {spoedServices.map((service, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-brand-500 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700 text-lg">{service}</span>
                   </div>
                 ))}
@@ -236,7 +219,7 @@ const SpoedPage = () => {
                 alt="Spoed dakwerkzaamheden" 
                 className="rounded-xl shadow-2xl"
               />
-              <div className="absolute -bottom-6 -right-6 bg-red-500 text-white p-6 rounded-lg shadow-xl">
+              <div className="absolute -bottom-6 -right-6 bg-brand-500 text-white p-6 rounded-lg shadow-xl">
                 <div className="text-3xl font-bold">24/7</div>
                 <div className="text-sm">Beschikbaar</div>
               </div>
@@ -250,7 +233,7 @@ const SpoedPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Ons <span className="text-red-500">Noodprotocol</span>
+              Ons <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Noodprotocol</span>
             </h2>
             <p className="text-xl text-gray-600">Van noodoproep tot definitieve oplossing</p>
           </div>
@@ -258,7 +241,7 @@ const SpoedPage = () => {
             {spoedProcess.map((item, index) => (
               <div key={index} className="relative">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                  <div className="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
                     {item.step}
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
@@ -336,43 +319,6 @@ const SpoedPage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pt-8 pb-20 bg-gradient-to-br from-white via-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-brand-50 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-md">
-              <MessageCircle className="w-4 h-4 text-blue-600" />
-              <span>Vaak Gevraagd</span>
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Veelgestelde <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Vragen</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Hier vind je antwoorden op de meest gestelde vragen over onze spoed services
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {faqItems.map((item, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-brand-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-white font-bold text-sm">?</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                        {item.question}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed text-sm">{item.answer}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="h-1 bg-gradient-to-r from-blue-500 to-brand-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-2xl"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer>
         <Contact standalone={false} />

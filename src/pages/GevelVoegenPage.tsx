@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Home, CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Users, Calculator, Eye, Hammer, Sun, Wrench,
-  Send, User, MessageCircle, Calendar, Building2, MapPin, AlertTriangle, Droplets, Brush, Layers, Leaf
+  Send, User, Calendar, Building2, MapPin, AlertTriangle, Droplets, Brush, Layers, Leaf
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -107,28 +107,6 @@ const GevelVoegenPage = () => {
     }
   ];
 
-  const faqItems = [
-    {
-      question: "Hoe lang gaat voegwerk mee?",
-      answer: "Goed uitgevoerd voegwerk gaat 15-25 jaar mee, afhankelijk van weersomstandigheden en geveloriëntatie. Regelmatige controle verlengt de levensduur."
-    },
-    {
-      question: "Wanneer moet voegwerk vernieuwd worden?",
-      answer: "Bij scheuren, uitvallende voegmortel, vochtproblemen of wanneer voegen poreus zijn geworden. Ook bij renovaties is het vaak nodig."
-    },
-    {
-      question: "Kunt u de kleur van bestaand voegwerk matchen?",
-      answer: "Ja, wij kunnen vrijwel elke kleur voegmortel matchen. We nemen monsters mee voor kleuranalyse en maken testvoegen."
-    },
-    {
-      question: "Wat kost gevel voegen per m2?",
-      answer: "Kosten variëren van €25-45 per m2, afhankelijk van type voegwerk, toegankelijkheid en hoeveelheid werk. Offerte is altijd vrijblijvend."
-    },
-    {
-      question: "Kunnen jullie ook in de winter voegen?",
-      answer: "Voegwerk kan bijna het hele jaar, behalve bij vorst. Ideaal is droog weer tussen 5-25°C. Wij adviseren het beste moment."
-    }
-  ];
 
   const projectTypes = [
     { id: 'voeg-renovatie', label: 'Voeg Renovatie', icon: Hammer },
@@ -461,43 +439,6 @@ const GevelVoegenPage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pt-8 pb-20 bg-gradient-to-br from-white via-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-brand-50 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-md">
-              <MessageCircle className="w-4 h-4 text-blue-600" />
-              <span>Vaak Gevraagd</span>
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Veelgestelde <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Vragen</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Hier vind je antwoorden op de meest gestelde vragen over onze gevel voegen services
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {faqItems.map((item, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-brand-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-white font-bold text-sm">?</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                        {item.question}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed text-sm">{item.answer}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="h-1 bg-gradient-to-r from-blue-500 to-brand-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-2xl"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
       <Footer>

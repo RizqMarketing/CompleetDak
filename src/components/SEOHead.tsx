@@ -11,11 +11,11 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Aannemersbedrijf EMT - Betrouwbare Bouwpartner in Andelst | 25+ Jaar Ervaring",
-  description = "Aannemersbedrijf EMT uit Andelst: uw specialist voor nieuwbouw, renovatie, dakwerk en verbouwingen. 25+ jaar ervaring, volledig verzekerd. Gratis offerte!",
-  keywords = "aannemer, aannemersbedrijf, bouw, nieuwbouw, renovatie, dakwerk, verbouwing, Andelst, Gelderland, EMT",
-  canonicalUrl = "https://aannemersbedrijf-emt.nl/",
-  ogImage = "https://aannemersbedrijf-emt.nl/og-image.jpg",
+  title = "Compleet Dakonderhoud Nederland - Specialist in Dakwerk & Bouw | 25+ Jaar Ervaring",
+  description = "Compleet Dakonderhoud Nederland uit Andelst: uw specialist voor dakwerk, renovatie, nieuwbouw en verbouwingen. 25+ jaar ervaring, volledig verzekerd. Gratis offerte!",
+  keywords = "dakonderhoud, dakwerk, dakdekker, aannemer, bouw, nieuwbouw, renovatie, verbouwing, Andelst, Gelderland, daklekkage, dakgoot",
+  canonicalUrl = "https://compleetdakonderhoudnederland.nl/",
+  ogImage = "https://compleetdakonderhoudnederland.nl/og-image.jpg",
   structuredData
 }) => {
   return (

@@ -194,7 +194,7 @@ const Contact = ({ standalone = true }: ContactProps) => {
                         type="text"
                         value={formData.name}
                         onChange={(e) => handleInputChange('name', e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                         placeholder="Uw volledige naam"
                         required
                       />
@@ -210,7 +210,7 @@ const Contact = ({ standalone = true }: ContactProps) => {
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                         placeholder="uw.email@example.nl"
                         required
                       />
@@ -229,7 +229,7 @@ const Contact = ({ standalone = true }: ContactProps) => {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                         placeholder="0488 234 625"
                       />
                     </div>
@@ -244,7 +244,7 @@ const Contact = ({ standalone = true }: ContactProps) => {
                         type="text"
                         value={formData.stad}
                         onChange={(e) => handleInputChange('stad', e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                         placeholder="Bijv. Andelst"
                       />
                     </div>
@@ -261,7 +261,7 @@ const Contact = ({ standalone = true }: ContactProps) => {
                       type="text"
                       value={formData.address}
                       onChange={(e) => handleInputChange('address', e.target.value)}
-                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                       placeholder="Bijv. Geurdeland 17G"
                     />
                   </div>
@@ -278,7 +278,7 @@ const Contact = ({ standalone = true }: ContactProps) => {
                         type="text"
                         value={formData.provincie}
                         onChange={(e) => handleInputChange('provincie', e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                         placeholder="Bijv. Gelderland"
                       />
                     </div>
@@ -292,7 +292,7 @@ const Contact = ({ standalone = true }: ContactProps) => {
                       <select
                         value={formData.timeline}
                         onChange={(e) => handleInputChange('timeline', e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                       >
                         <option value="">Selecteer timing</option>
                         <option value="asap">Zo snel mogelijk</option>
@@ -316,7 +316,7 @@ const Contact = ({ standalone = true }: ContactProps) => {
                       value={formData.message}
                       onChange={(e) => handleInputChange('message', e.target.value)}
                       rows={5}
-                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none"
+                      className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none text-gray-900"
                       placeholder="Beschrijf uw project, wensen en eventuele specifieke vragen..."
                       required
                     />

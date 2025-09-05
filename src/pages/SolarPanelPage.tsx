@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { 
   Sun, CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Users, Calculator, Eye, Zap, Battery, Leaf,
-  Send, User, MessageCircle, Calendar, Building2, Home, MapPin, Building
+  Send, User, Calendar, Building2, Home, MapPin, Building, MessageCircle
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Header from '../components/Header';
@@ -106,24 +106,6 @@ const SolarPanelPage = () => {
     }
   ];
 
-  const solarFAQs = [
-    {
-      question: "Hoeveel zonnepanelen heb ik nodig?",
-      answer: "Het aantal benodigde zonnepanelen hangt af van uw energieverbruik, beschikbaar dakoppervlak en budget. Gemiddeld heeft een huishouden met een verbruik van 3.500 kWh per jaar ongeveer 10-12 zonnepanelen nodig."
-    },
-    {
-      question: "Wat is de terugverdientijd van zonnepanelen?",
-      answer: "De gemiddelde terugverdientijd van zonnepanelen ligt tussen de 5 en 7 jaar, afhankelijk van uw energieverbruik, de oriëntatie van uw dak en eventuele subsidies. Daarna levert het systeem nog minstens 18 jaar pure winst op."
-    },
-    {
-      question: "Kan ik subsidie krijgen voor zonnepanelen?",
-      answer: "Ja, voor zonnepanelen kunt u de BTW terugvragen via de Belastingdienst. Daarnaast zijn er soms lokale subsidies beschikbaar. Wij helpen u graag bij het aanvragen van alle beschikbare subsidies."
-    },
-    {
-      question: "Hoe lang gaan zonnepanelen mee?",
-      answer: "Moderne zonnepanelen hebben een levensduur van minimaal 25 jaar. De opbrengst neemt over de jaren licht af (ongeveer 0,5% per jaar), maar na 25 jaar produceren de panelen nog steeds ongeveer 85% van hun oorspronkelijke capaciteit."
-    }
-  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -497,56 +479,6 @@ const SolarPanelPage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pt-8 pb-20 bg-gradient-to-br from-white via-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-brand-50 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-md">
-              <MessageCircle className="w-4 h-4 text-blue-600" />
-              <span>Vaak Gevraagd</span>
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Veelgestelde <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Vragen</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Hier vind je antwoorden op de meest gestelde vragen over onze zonnepaneel services
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {solarFAQs.map((faq, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-brand-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-white font-bold text-sm">?</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                        {faq.question}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed text-sm">{faq.answer}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="h-1 bg-gradient-to-r from-blue-500 to-brand-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-2xl"></div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-6">
-              Heeft u een andere vraag? Neem gerust contact met ons op voor persoonlijk advies.
-            </p>
-            <button 
-              onClick={() => setIsContactPopupOpen(true)}
-              className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
-            >
-              <span>Stel Uw Vraag</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* Professional Testimonials */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
@@ -691,7 +623,7 @@ const SolarPanelPage = () => {
                           type="text"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900"
                           placeholder="Uw volledige naam"
                           required
                         />
@@ -707,7 +639,7 @@ const SolarPanelPage = () => {
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900"
                           placeholder="uw.email@example.nl"
                           required
                         />
@@ -726,7 +658,7 @@ const SolarPanelPage = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900"
                           placeholder="0488 234 625"
                           required
                         />
@@ -742,7 +674,7 @@ const SolarPanelPage = () => {
                           type="text"
                           value={formData.stad}
                           onChange={(e) => handleInputChange('stad', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900"
                           placeholder="Amsterdam"
                           required
                         />
@@ -761,7 +693,7 @@ const SolarPanelPage = () => {
                           type="text"
                           value={formData.address}
                           onChange={(e) => handleInputChange('address', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900"
                           placeholder="Hoofdstraat 123"
                           required
                         />
@@ -777,7 +709,7 @@ const SolarPanelPage = () => {
                           type="text"
                           value={formData.provincie}
                           onChange={(e) => handleInputChange('provincie', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900"
                           placeholder="Noord-Holland"
                           required
                         />
@@ -794,7 +726,7 @@ const SolarPanelPage = () => {
                       <select
                         value={formData.timeline}
                         onChange={(e) => handleInputChange('timeline', e.target.value)}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 text-gray-900"
                         required
                       >
                         <option value="">Selecteer timing</option>
@@ -817,7 +749,7 @@ const SolarPanelPage = () => {
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         rows={5}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none text-gray-900"
                         placeholder="Beschrijf uw wensen voor zonnepanelen..."
                         required
                       />

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   Home, CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Users, Calculator, Eye, Hammer, Sun, Wrench,
-  Send, User, MessageCircle, Calendar, Building2, MapPin, AlertTriangle, Droplets, Search, Zap
+  Send, User, Calendar, Building2, MapPin, AlertTriangle, Droplets, Search, Zap
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -90,24 +90,6 @@ const DakLekkagePage = () => {
     }
   ];
 
-  const faqItems = [
-    {
-      question: "Hoe snel kunnen jullie komen bij een acute lekkage?",
-      answer: "Bij spoedeisende situaties zijn we binnen 2 uur ter plaatse, 24/7. We zorgen eerst voor een tijdelijke oplossing om verdere waterschade te voorkomen."
-    },
-    {
-      question: "Wat kost lekkage opsporing en reparatie?",
-      answer: "Kosten variëren per situatie. Lekkage opsporing start vanaf €150. Spoedservice heeft een toeslag maar wordt vaak door verzekeringen vergoed."
-    },
-    {
-      question: "Geven jullie garantie op de reparaties?",
-      answer: "Ja, we geven altijd garantie op onze reparaties. De garantieperiode hangt af van het type reparatie en de gebruikte materialen."
-    },
-    {
-      question: "Helpen jullie ook met waterschade afhandeling?",
-      answer: "We helpen graag bij contact met uw verzekeringsmaatschappij en leveren de benodigde documentatie voor schademeldingen."
-    }
-  ];
 
   const projectTypes = [
     { id: 'lekkage-opsporing', label: 'Lekkage Opsporing', icon: Search },
@@ -122,7 +104,7 @@ const DakLekkagePage = () => {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-red-900 via-blue-800 to-slate-900">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920')] bg-cover bg-center opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -334,43 +316,6 @@ const DakLekkagePage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pt-8 pb-20 bg-gradient-to-br from-white via-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-brand-50 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-md">
-              <MessageCircle className="w-4 h-4 text-blue-600" />
-              <span>Vaak Gevraagd</span>
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Veelgestelde <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Vragen</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Hier vind je antwoorden op de meest gestelde vragen over onze lekkage services
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {faqItems.map((item, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-brand-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-white font-bold text-sm">?</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                        {item.question}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed text-sm">{item.answer}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="h-1 bg-gradient-to-r from-blue-500 to-brand-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-2xl"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer>
         <Contact standalone={false} />

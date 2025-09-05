@@ -620,7 +620,7 @@ const ExtensionPage = () => {
                           type="text"
                           value={formData.name}
                           onChange={(e) => handleInputChange('name', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                           placeholder="Uw volledige naam"
                           required
                         />
@@ -636,7 +636,7 @@ const ExtensionPage = () => {
                           type="email"
                           value={formData.email}
                           onChange={(e) => handleInputChange('email', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                           placeholder="uw.email@example.nl"
                           required
                         />
@@ -655,7 +655,7 @@ const ExtensionPage = () => {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange('phone', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                           placeholder="0488 234 625"
                         />
                       </div>
@@ -667,7 +667,7 @@ const ExtensionPage = () => {
                       <select
                         value={formData.preferredContact}
                         onChange={(e) => handleInputChange('preferredContact', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                       >
                         <option value="email">Email</option>
                         <option value="phone">Telefoon</option>
@@ -707,7 +707,7 @@ const ExtensionPage = () => {
                       <select
                         value={formData.budget}
                         onChange={(e) => handleInputChange('budget', e.target.value)}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                       >
                         <option value="">Selecteer budget</option>
                         <option value="<25k">Onder €25.000</option>
@@ -726,7 +726,7 @@ const ExtensionPage = () => {
                         <select
                           value={formData.timeline}
                           onChange={(e) => handleInputChange('timeline', e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500"
+                          className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                         >
                           <option value="">Selecteer timing</option>
                           <option value="asap">Zo snel mogelijk</option>
@@ -749,7 +749,7 @@ const ExtensionPage = () => {
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         rows={5}
-                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none"
+                        className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none text-gray-900"
                         placeholder="Beschrijf uw aanbouw wensen..."
                         required
                       />

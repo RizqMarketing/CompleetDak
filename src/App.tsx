@@ -40,7 +40,6 @@ const DakLekkagePage = React.lazy(() => import('./pages/DakLekkagePage'));
 const DakgootReinigingPage = React.lazy(() => import('./pages/DakgootReinigingPage'));
 const GevelVoegenPage = React.lazy(() => import('./pages/GevelVoegenPage'));
 const GevelReinigenPage = React.lazy(() => import('./pages/GevelReinigenPage'));
-const SchoorsteenPage = React.lazy(() => import('./pages/SchoorsteenPage'));
 
 // Lazy load legal pages
 const PrivacyPage = React.lazy(() => import('./pages/PrivacyPage'));
@@ -133,7 +132,6 @@ function App() {
               <Route path="/dakgootreiniging" element={<DakgootReinigingPage />} />
               <Route path="/gevel-voegen" element={<GevelVoegenPage />} />
               <Route path="/gevel-reinigen" element={<GevelReinigenPage />} />
-              <Route path="/schoorsteenwerk-renovatie" element={<SchoorsteenPage />} />
               
               {/* Legal Pages */}
               <Route path="/privacybeleid" element={<PrivacyPage />} />

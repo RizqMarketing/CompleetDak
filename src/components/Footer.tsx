@@ -35,7 +35,6 @@ const Footer = ({ children }: FooterProps) => {
     { name: "Dakgoot Reiniging", href: "/dakgootreiniging" },
     { name: "Gevel Voegen", href: "/gevel-voegen" },
     { name: "Gevel Reinigen", href: "/gevel-reinigen" },
-    { name: "Schoorsteen Renovatie", href: "/schoorsteenwerk-renovatie" }
   ];
 
   const quickLinks = [
@@ -203,8 +202,11 @@ const Footer = ({ children }: FooterProps) => {
               ))}
             </ul>
             
-            {/* Emergency Contact moved here */}
-            <div className="mt-8 p-4 bg-red-900/20 border border-red-900/50 rounded-lg">
+            {/* Extra spacing to align with right column */}
+            <div className="mt-8 mb-16"></div>
+            
+            {/* Emergency Contact moved here - positioned to align with blue box */}
+            <div className="p-4 bg-red-900/20 border border-red-900/50 rounded-lg">
               <h5 className="font-bold text-red-400 mb-2">24/7 Spoedservice</h5>
               <p className="text-gray-300 text-sm mb-2">Voor urgente zaken</p>
               <a 

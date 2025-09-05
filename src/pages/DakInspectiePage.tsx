@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { 
   Home, CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Users, Calculator, Eye, Hammer, Sun, Wrench,
-  Send, User, MessageCircle, Calendar, Building2, MapPin, AlertTriangle, Droplets, FileText, Search
+  Send, User, Calendar, Building2, MapPin, AlertTriangle, Droplets, FileText, Search
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -90,28 +90,6 @@ const DakInspectiePage = () => {
     }
   ];
 
-  const faqItems = [
-    {
-      question: "Hoe vaak moet mijn dak geïnspecteerd worden?",
-      answer: "We adviseren een professionele dakinspectie elke 3-5 jaar, of na extreme weersomstandigheden zoals storm of hagel."
-    },
-    {
-      question: "Wat kost een dakinspectie?",
-      answer: "De kosten variëren van €150 voor een basis inspectie tot €350 voor een uitgebreide technische inspectie inclusief rapport."
-    },
-    {
-      question: "Hoe lang duurt een dakinspectie?",
-      answer: "Een standaard inspectie duurt 1-2 uur, afhankelijk van de grootte en complexiteit van uw dak."
-    },
-    {
-      question: "Krijg ik altijd een schriftelijk rapport?",
-      answer: "Ja, u ontvangt altijd een gedetailleerd rapport met foto's, bevindingen en onderhoudstips binnen 48 uur."
-    },
-    {
-      question: "Kunnen jullie ook voor verzekeringen inspecteren?",
-      answer: "Ja, wij voeren ook officiële inspectie uit voor verzekeringsdoeleinden en bij koop/verkoop van woningen."
-    }
-  ];
 
   const projectTypes = [
     { id: 'basis-inspectie', label: 'Basis Inspectie', icon: Eye },
@@ -391,43 +369,6 @@ const DakInspectiePage = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pt-8 pb-20 bg-gradient-to-br from-white via-slate-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-brand-50 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6 shadow-md">
-              <MessageCircle className="w-4 h-4 text-blue-600" />
-              <span>Vaak Gevraagd</span>
-            </div>
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Veelgestelde <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Vragen</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Hier vind je antwoorden op de meest gestelde vragen over onze dakinspectie services
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {faqItems.map((item, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1">
-                <div className="p-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-brand-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-white font-bold text-sm">?</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                        {item.question}
-                      </h3>
-                      <p className="text-gray-700 leading-relaxed text-sm">{item.answer}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="h-1 bg-gradient-to-r from-blue-500 to-brand-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-2xl"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <Footer>
         <Contact standalone={false} />
