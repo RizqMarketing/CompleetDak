@@ -56,23 +56,44 @@ const Testimonials = () => {
                     .group:hover .lc_reviews_widget {
                       animation-play-state: paused !important;
                     }
-                    /* Show only 1 review on mobile */
-                    @media (max-width: 768px) {
+                    /* Force single review display on mobile */
+                    @media screen and (max-width: 768px) {
                       .lc_reviews_widget iframe {
-                        height: 200px !important;
-                        max-height: 200px !important;
+                        height: 280px !important;
+                        max-height: 280px !important;
                         overflow: hidden !important;
                       }
-                      .lc_reviews_widget .review-container,
-                      .lc_reviews_widget .reviews-container,
-                      .lc_reviews_widget .review-list {
-                        max-height: 180px !important;
+                      .lc_reviews_widget * {
                         overflow: hidden !important;
                       }
-                      .lc_reviews_widget .review-item:nth-child(n+2),
-                      .lc_reviews_widget .review:nth-child(n+2),
-                      .lc_reviews_widget [class*="review"]:nth-child(n+2) {
+                      /* Hide pagination and multi-review elements */
+                      .lc_reviews_widget .pagination,
+                      .lc_reviews_widget .page-nav,
+                      .lc_reviews_widget .next,
+                      .lc_reviews_widget .prev {
                         display: none !important;
+                      }
+                      /* Force single column layout */
+                      .lc_reviews_widget,
+                      .lc_reviews_widget > div,
+                      .lc_reviews_widget * {
+                        flex-direction: column !important;
+                        flex-wrap: nowrap !important;
+                      }
+                      /* Hide reviews beyond first */
+                      .lc_reviews_widget [class*="review"]:not(:first-child),
+                      .lc_reviews_widget .review:not(:first-child),
+                      .lc_reviews_widget .review-item:not(:first-child) {
+                        display: none !important;
+                      }
+                      /* Ensure first review takes full width */
+                      .lc_reviews_widget .review:first-child,
+                      .lc_reviews_widget .review-item:first-child,
+                      .lc_reviews_widget [class*="review"]:first-child {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        margin: 0 auto !important;
+                        flex: 1 !important;
                       }
                     }
                     .lc_reviews_widget * {
