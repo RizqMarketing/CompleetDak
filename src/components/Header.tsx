@@ -228,7 +228,7 @@ const Header = () => {
         <div className={`relative bg-white shadow-2xl transform transition-transform duration-300 ${
           isMenuOpen ? 'translate-y-0' : '-translate-y-full'
         }`}>
-          <div className="px-4 py-6 max-h-[calc(100vh-80px)] overflow-y-auto">
+          <div className="px-4 py-6 max-h-[calc(100vh-80px)] overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300">
             {/* Main Navigation */}
             <div className="space-y-1 mb-6">
               {navigation.map((item) => (
@@ -266,9 +266,9 @@ const Header = () => {
               </button>
               
               <div className={`overflow-hidden transition-all duration-300 ${
-                isMobileServicesOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
+                isMobileServicesOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'
               }`}>
-                <div className="pl-2 pt-2 space-y-1">
+                <div className="pl-2 pt-2 space-y-1 max-h-[500px] overflow-y-auto">
                   {services.map((service) => (
                     <Link
                       key={service.name}
