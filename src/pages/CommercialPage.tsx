@@ -704,7 +704,8 @@ const CommercialPage = () => {
           </div>
         </div>
       </section>
-      </Footer>
+      
+      <Footer />
 
       {/* Contact Popup */}
       <ContactPopup 
