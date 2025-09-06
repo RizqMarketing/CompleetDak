@@ -13,6 +13,7 @@ const Header = () => {
   // Check if current page is a legal page or thank you page
   const isLegalPage = ['/privacybeleid', '/algemene-voorwaarden', '/cookiebeleid'].includes(location.pathname);
   const isThankYouPage = location.pathname === '/bedankt';
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,6 +89,9 @@ const Header = () => {
     if (isLegalPage || isThankYouPage) {
       // Always dark background for legal pages and thank you page
       return 'bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 shadow-xl';
+    } else if (isHomePage) {
+      // More transparent on homepage for better integration with hero
+      return isScrolled ? 'bg-gradient-to-br from-slate-900/90 via-slate-800/90 to-slate-900/90 backdrop-blur-md shadow-lg' : 'bg-gradient-to-br from-slate-900/20 via-slate-800/20 to-slate-900/20 backdrop-blur-sm';
     } else {
       // Original behavior for other pages
       return isScrolled ? 'bg-gradient-to-br from-slate-900/95 via-slate-800/95 to-slate-900/95 backdrop-blur-md shadow-xl' : 'bg-transparent';
@@ -99,9 +103,9 @@ const Header = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center py-4">
-            {/* Logo - Simplified for mobile */}
+            {/* Logo - Minimal on homepage mobile */}
             <Link to="/" className="flex items-center space-x-2 sm:space-x-3">
-              <div className="w-20 h-16 sm:w-24 sm:h-20 lg:w-32 lg:h-28 flex items-center justify-center">
+              <div className={`${isHomePage ? 'w-16 h-12 sm:w-24 sm:h-20' : 'w-20 h-16 sm:w-24 sm:h-20'} lg:w-32 lg:h-28 flex items-center justify-center`}>
                 <img 
                   src="https://imgur.com/Ol7kUug.png" 
                   alt="Compleet Dakonderhoud Nederland Logo" 
@@ -116,11 +120,13 @@ const Header = () => {
                   Uw specialist in dakonderhoud
                 </p>
               </div>
-              {/* Simplified text for mobile */}
-              <div className="block sm:hidden">
-                <h1 className="text-white font-bold text-base">Compleet Dak</h1>
-                <p className="text-gray-300 text-xs">Dakspecialist</p>
-              </div>
+              {/* Hide text completely on homepage mobile, show on other pages */}
+              {!isHomePage && (
+                <div className="block sm:hidden">
+                  <h1 className="text-white font-bold text-base">Compleet Dak</h1>
+                  <p className="text-gray-300 text-xs">Dakspecialist</p>
+                </div>
+              )}
             </Link>
 
             {/* Desktop Navigation */}
