@@ -67,7 +67,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 text-center text-white w-full px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative z-10 text-center text-white w-full px-4 sm:px-6 lg:px-8 py-20 lg:pt-28">
         <div className="max-w-6xl mx-auto">
           {/* Company Name */}
           <div className="mb-8 sm:mb-12">

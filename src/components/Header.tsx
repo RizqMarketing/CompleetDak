@@ -99,7 +99,7 @@ const Header = () => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${getHeaderClass()}`}>
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center py-4">
+          <div className="flex justify-between items-center py-4 lg:py-6">
             {/* Logo - Simplified for mobile */}
             <Link to="/" className="flex items-center space-x-2 sm:space-x-3">
               <div className="w-20 h-16 sm:w-24 sm:h-20 lg:w-32 lg:h-28 flex items-center justify-center">

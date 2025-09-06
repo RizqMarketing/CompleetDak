@@ -9,7 +9,7 @@ const ThankYouPage = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
       
-      <section className="py-20 pt-32">
+      <section className="py-20 pt-32 lg:pt-40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
             <div className="mb-8">

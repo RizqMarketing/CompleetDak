@@ -147,7 +147,7 @@ const GevelReinigenPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-slate-900 md:bg-gradient-to-br md:from-blue-900 md:via-blue-800 md:to-slate-900">
+      <section className="relative pt-32 lg:pt-40 pb-20 bg-slate-900 md:bg-gradient-to-br md:from-blue-900 md:via-blue-800 md:to-slate-900">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920')] bg-cover bg-center opacity-25"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
