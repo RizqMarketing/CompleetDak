@@ -52,9 +52,49 @@ const ThankYouPage = React.lazy(() => import('./pages/ThankYouPage'));
 // Loading component
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+      <p className="text-gray-600">Pagina laden...</p>
+    </div>
   </div>
 );
+
+// Error Boundary Component
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Page load error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Oeps! Er ging iets mis</h2>
+            <p className="text-gray-600 mb-6">De pagina kon niet geladen worden.</p>
+            <button 
+              onClick={() => window.location.href = '/'}
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Ga naar homepage
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
 
 // Home Page Component with scroll handling
 const HomePage = () => {
@@ -104,44 +144,46 @@ function App() {
         <Router>
           <ScrollToTop />
           <FacebookPixelPageView />
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/nieuwbouw-woningen" element={<NewBuildPage />} />
-              <Route path="/commerciele-bouw" element={<CommercialPage />} />
-              <Route path="/renovatie-verbouwing" element={<RenovationPage />} />
-              <Route path="/projectmanagement" element={<ProjectManagementPage />} />
-              <Route path="/duurzame-bouw" element={<SustainableBuildingPage />} />
-              <Route path="/onderhoud-reparatie" element={<MaintenancePage />} />
-              
-              {/* New Service Routes */}
-              <Route path="/dakwerk-dakdekken" element={<RoofingPage />} />
-              <Route path="/schilderwerk-stukadoor" element={<PaintingPage />} />
-              <Route path="/tegelwerk" element={<TilingPage />} />
-              <Route path="/schoorsteenwerk" element={<ChimneyPage />} />
-              <Route path="/aanbouw-uitbouw" element={<ExtensionPage />} />
-              <Route path="/aircos-monteren" element={<AircoPage />} />
-              <Route path="/zonnepanelen" element={<SolarPanelPage />} />
-              
-              {/* Additional Service Routes */}
-              <Route path="/nokvorsten" element={<NokVorstenPage />} />
-              <Route path="/loodreparaties" element={<LoodReparatiePage />} />
-              <Route path="/spoed" element={<SpoedPage />} />
-              <Route path="/dakinspectie" element={<DakInspectiePage />} />
-              <Route path="/daklekkage" element={<DakLekkagePage />} />
-              <Route path="/dakgootreiniging" element={<DakgootReinigingPage />} />
-              <Route path="/gevel-voegen" element={<GevelVoegenPage />} />
-              <Route path="/gevel-reinigen" element={<GevelReinigenPage />} />
-              
-              {/* Legal Pages */}
-              <Route path="/privacybeleid" element={<PrivacyPage />} />
-              <Route path="/algemene-voorwaarden" element={<TermsPage />} />
-              <Route path="/cookiebeleid" element={<CookiePage />} />
-              
-              {/* Thank You Page */}
-              <Route path="/bedankt" element={<ThankYouPage />} />
-            </Routes>
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/nieuwbouw-woningen" element={<NewBuildPage />} />
+                <Route path="/commerciele-bouw" element={<CommercialPage />} />
+                <Route path="/renovatie-verbouwing" element={<RenovationPage />} />
+                <Route path="/projectmanagement" element={<ProjectManagementPage />} />
+                <Route path="/duurzame-bouw" element={<SustainableBuildingPage />} />
+                <Route path="/onderhoud-reparatie" element={<MaintenancePage />} />
+                
+                {/* New Service Routes */}
+                <Route path="/dakwerk-dakdekken" element={<RoofingPage />} />
+                <Route path="/schilderwerk-stukadoor" element={<PaintingPage />} />
+                <Route path="/tegelwerk" element={<TilingPage />} />
+                <Route path="/schoorsteenwerk" element={<ChimneyPage />} />
+                <Route path="/aanbouw-uitbouw" element={<ExtensionPage />} />
+                <Route path="/aircos-monteren" element={<AircoPage />} />
+                <Route path="/zonnepanelen" element={<SolarPanelPage />} />
+                
+                {/* Additional Service Routes */}
+                <Route path="/nokvorsten" element={<NokVorstenPage />} />
+                <Route path="/loodreparaties" element={<LoodReparatiePage />} />
+                <Route path="/spoed" element={<SpoedPage />} />
+                <Route path="/dakinspectie" element={<DakInspectiePage />} />
+                <Route path="/daklekkage" element={<DakLekkagePage />} />
+                <Route path="/dakgootreiniging" element={<DakgootReinigingPage />} />
+                <Route path="/gevel-voegen" element={<GevelVoegenPage />} />
+                <Route path="/gevel-reinigen" element={<GevelReinigenPage />} />
+                
+                {/* Legal Pages */}
+                <Route path="/privacybeleid" element={<PrivacyPage />} />
+                <Route path="/algemene-voorwaarden" element={<TermsPage />} />
+                <Route path="/cookiebeleid" element={<CookiePage />} />
+                
+                {/* Thank You Page */}
+                <Route path="/bedankt" element={<ThankYouPage />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
         </Router>
       </HelmetProvider>
     </div>

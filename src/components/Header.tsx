@@ -13,6 +13,7 @@ const Header = () => {
   // Check if current page is a legal page or thank you page
   const isLegalPage = ['/privacybeleid', '/algemene-voorwaarden', '/cookiebeleid'].includes(location.pathname);
   const isThankYouPage = location.pathname === '/bedankt';
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,11 +117,13 @@ const Header = () => {
                   Uw specialist in dakonderhoud
                 </p>
               </div>
-              {/* Simplified text for mobile */}
-              <div className="block sm:hidden">
-                <h1 className="text-white font-bold text-base">Compleet Dak</h1>
-                <p className="text-gray-300 text-xs">Dakspecialist</p>
-              </div>
+              {/* Hide text on homepage mobile, show on other pages */}
+              {!isHomePage && (
+                <div className="block sm:hidden">
+                  <h1 className="text-white font-bold text-base">Compleet Dak</h1>
+                  <p className="text-gray-300 text-xs">Dakspecialist</p>
+                </div>
+              )}
             </Link>
 
             {/* Desktop Navigation */}
