@@ -40,19 +40,37 @@ const CommercialPage = () => {
       title: "Kantoorpanden",
       description: "Functionele werkruimtes voor kleine tot middelgrote bedrijven",
       icon: Building2,
-      details: "Van kleine kantoorruimtes tot bedrijfspanden. Wij realiseren praktische en representatieve werkruimtes die bij uw bedrijf passen."
+      details: "Van kleine kantoorruimtes tot bedrijfspanden. Wij realiseren praktische en representatieve werkruimtes die bij uw bedrijf passen.",
+      projects: [
+        "Kleine kantoorpanden (50-500m²)",
+        "Praktijkruimtes voor zorgverleners",
+        "Co-working spaces",
+        "Bedrijfsverzamelgebouwen"
+      ]
     },
     {
       title: "Retail & Winkels", 
       description: "Aantrekkelijke winkelruimtes en horecagelegenheden",
       icon: Store,
-      details: "Winkels, restaurants en andere commerciële ruimtes die uw klanten aantrekken en uw bedrijf laten groeien."
+      details: "Winkels, restaurants en andere commerciële ruimtes die uw klanten aantrekken en uw bedrijf laten groeien.",
+      projects: [
+        "Winkelruimtes en showrooms",
+        "Restaurants en cafés",
+        "Kapperszaken en schoonheidssalons",
+        "Lokale supermarkten"
+      ]
     },
     {
       title: "Werkplaatsen & Opslag",
       description: "Praktische ruimtes voor productie, reparatie en opslag", 
       icon: Factory,
-      details: "Werkplaatsen, garages en opslagruimtes gebouwd voor functionaliteit en efficiency."
+      details: "Werkplaatsen, garages en opslagruimtes gebouwd voor functionaliteit en efficiency.",
+      projects: [
+        "Autogarages en werkplaatsen",
+        "Opslagfaciliteiten",
+        "Productiehallen (kleinschalig)",
+        "Reparatiebedrijven"
+      ]
     }
   ];
 
@@ -311,7 +329,7 @@ const CommercialPage = () => {
                   <div className="bg-white rounded-xl p-8 shadow-lg">
                     <h4 className="font-bold text-slate-900 mb-4">Projectvoorbeelden:</h4>
                     <ul className="space-y-2">
-                      {projectTypes[index]?.projects.map((project, projectIndex) => (
+                      {sectors[index]?.projects.map((project, projectIndex) => (
                         <li key={projectIndex} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
                           <span className="text-gray-700">{project}</span>
@@ -425,7 +443,7 @@ const CommercialPage = () => {
       </section>
 
       {/* Contact Section */}
-        <section id="contact">
+        <section id="contact" className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16">
