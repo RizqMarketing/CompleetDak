@@ -273,7 +273,7 @@ const Header = () => {
                     <Link
                       key={service.name}
                       to={service.href}
-                      className="block px-4 py-3 text-gray-600 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition-colors duration-200 text-sm"
+                      className="block px-4 py-3 text-slate-700 hover:bg-brand-50 hover:text-brand-600 rounded-lg transition-colors duration-200 text-sm font-medium"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {service.name}

@@ -34,14 +34,14 @@ const Coverage = () => {
             />
             
             {/* Premium badges */}
-            <div className="absolute top-6 -right-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-lg text-xs font-semibold shadow-xl border border-green-400/30 backdrop-blur-sm">
+            <div className="absolute top-6 md:top-6 top-2 -right-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-3 py-1 rounded-lg text-xs font-semibold shadow-xl border border-green-400/30 backdrop-blur-sm">
               <span className="flex items-center space-x-1">
                 <span className="w-1.5 h-1.5 bg-green-300 rounded-full animate-pulse"></span>
                 <span>Alle Provincies</span>
               </span>
             </div>
             
-            <div className="absolute bottom-24 left-6 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-lg text-xs font-semibold shadow-xl border border-blue-400/30 backdrop-blur-sm">
+            <div className="absolute bottom-24 md:bottom-24 bottom-16 left-6 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-lg text-xs font-semibold shadow-xl border border-blue-400/30 backdrop-blur-sm">
               <span className="flex items-center space-x-1">
                 <span className="w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse"></span>
                 <span>25+ Jaar Ervaring</span>
