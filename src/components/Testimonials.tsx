@@ -68,7 +68,7 @@ const Testimonials = () => {
 
         {/* Clean Trust Footer */}
         <div className="mt-12">
-          <div className="text-center">
+          <div className="text-center space-y-6">
             <div className="inline-flex items-center space-x-6 text-xs text-gray-400 font-medium tracking-wide">
               <span className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -82,6 +82,22 @@ const Testimonials = () => {
                 <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                 <span>25+ JAAR ERVARING</span>
               </span>
+            </div>
+            
+            {/* Trustpilot Logo */}
+            <div className="pt-2">
+              <a 
+                href="https://nl.trustpilot.com/review/www.compleetdakonderhoudnederland.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block hover:scale-105 transition-transform duration-200"
+              >
+                <img 
+                  src="https://imgur.com/C39BM5j.png" 
+                  alt="Trustpilot Reviews - Bekijk onze beoordelingen" 
+                  className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                />
+              </a>
             </div>
           </div>
         </div>

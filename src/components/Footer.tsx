@@ -173,9 +173,8 @@ const Footer = ({ children }: FooterProps) => {
             </ul>
             
             {/* Trustpilot Reviews */}
-            <div className="mt-8 p-4 pb-5 bg-green-900/20 border border-green-500/30 rounded-lg">
-              <h5 className="font-bold text-green-400 mb-2">Klantbeoordelingen</h5>
-              <div className="text-center">
+            <div className="mt-8 p-5 pb-7 bg-green-900/20 border border-green-500/30 rounded-lg">
+              <div className="flex items-center justify-center h-full">
                 <a 
                   href="https://nl.trustpilot.com/review/www.compleetdakonderhoudnederland.nl"
                   target="_blank"
@@ -185,7 +184,7 @@ const Footer = ({ children }: FooterProps) => {
                   <img 
                     src="https://imgur.com/C39BM5j.png" 
                     alt="Trustpilot Reviews" 
-                    className="h-9 w-auto mx-auto opacity-90 hover:opacity-100 transition-opacity"
+                    className="h-14 w-auto mx-auto opacity-90 hover:opacity-100 transition-opacity"
                   />
                 </a>
               </div>
