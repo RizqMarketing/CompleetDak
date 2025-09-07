@@ -172,16 +172,23 @@ const Footer = ({ children }: FooterProps) => {
               ))}
             </ul>
             
-            {/* Extra Services Info */}
-            <div className="mt-8 p-4 pb-6 bg-blue-900/20 border border-blue-500/30 rounded-lg">
-              <h5 className="font-bold text-blue-400 mb-2 flex items-center space-x-2">
-                <Star className="w-4 h-4" />
-                <span>Waarom Kiezen Voor Ons?</span>
-              </h5>
-              <ul className="text-gray-300 text-sm space-y-1">
-                <li>✓ 25+ jaar ervaring</li>
-                <li>✓ Vakkundig personeel</li>
-              </ul>
+            {/* Trustpilot Reviews */}
+            <div className="mt-8 p-4 pb-5 bg-green-900/20 border border-green-500/30 rounded-lg">
+              <h5 className="font-bold text-green-400 mb-2">Klantbeoordelingen</h5>
+              <div className="text-center">
+                <a 
+                  href="https://nl.trustpilot.com/review/www.compleetdakonderhoudnederland.nl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block hover:scale-105 transition-transform duration-200"
+                >
+                  <img 
+                    src="https://imgur.com/C39BM5j.png" 
+                    alt="Trustpilot Reviews" 
+                    className="h-9 w-auto mx-auto opacity-90 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+              </div>
             </div>
           </div>
 
