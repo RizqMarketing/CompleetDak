@@ -95,7 +95,7 @@ const Testimonials = () => {
                 <img 
                   src="https://imgur.com/C39BM5j.png" 
                   alt="Trustpilot Reviews - Bekijk onze beoordelingen" 
-                  className="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                  className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
                 />
               </a>
             </div>

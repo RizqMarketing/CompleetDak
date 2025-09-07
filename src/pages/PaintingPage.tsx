@@ -517,7 +517,7 @@ const PaintingPage = () => {
 
           {/* Clean Trust Footer */}
           <div className="mt-12">
-            <div className="text-center">
+            <div className="text-center space-y-6">
               <div className="inline-flex items-center space-x-1 text-xs text-gray-400 font-medium tracking-wide">
                 <Shield className="w-3 h-3" />
                 <span>VOLLEDIG VERZEKERD</span>
@@ -527,6 +527,22 @@ const PaintingPage = () => {
                 <span className="mx-3">•</span>
                 <Clock className="w-3 h-3" />
                 <span>25+ JAAR ERVARING</span>
+              </div>
+              
+              {/* Trustpilot Logo */}
+              <div className="pt-2">
+                <a 
+                  href="https://nl.trustpilot.com/review/www.compleetdakonderhoudnederland.nl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block hover:scale-105 transition-transform duration-200"
+                >
+                  <img 
+                    src="https://imgur.com/ZKUY57s.png" 
+                    alt="Trustpilot Reviews - Bekijk onze beoordelingen" 
+                    className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                  />
+                </a>
               </div>
             </div>
           </div>

@@ -1,27 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run build:*)",
-      "Bash(curl:*)",
-      "Bash(node:*)",
-      "Bash(rg:*)",
-      "Bash(find:*)",
-      "Bash(npm run dev:*)",
-      "Bash(gh repo create:*)",
-      "Bash(gh auth login:*)",
-      "Bash(git remote remove:*)",
-      "Bash(gh auth:*)",
-      "Bash(git remote add:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(rm:*)",
-      "Bash(sed:*)",
-      "Read(/C:\\Users\\mazin\\Downloads/**)",
-      "Bash(for:*)",
-      "Bash(do)",
-      "Bash(done)",
-      "Bash(git revert:*)"
+      "Bash(grep:*)",
+      "Bash(! grep -q \"space-y-6\" \"$file\")",
+      "Bash(then echo \"✓ $file\")"
     ],
     "deny": [],
     "ask": []
