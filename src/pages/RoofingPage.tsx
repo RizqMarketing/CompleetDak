@@ -832,7 +832,7 @@ const RoofingPage = () => {
                       className={`inline-flex items-center space-x-3 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg ${
                         isSubmitting
                           ? 'bg-gray-400 cursor-not-allowed text-white'
-                          : 'bg-orange-500 hover:bg-orange-600 text-white'
+                          : 'bg-brand-500 hover:bg-brand-600 text-white'
                       }`}
                     >
                       {isSubmitting ? (
