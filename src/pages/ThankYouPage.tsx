@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CheckCircle, ArrowLeft, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const ThankYouPage = () => {
+  useEffect(() => {
+    // Google Ads conversion tracking
+    declare global {
+      interface Window {
+        gtag?: (...args: unknown[]) => void;
+      }
+    }
+    
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {'send_to': 'AW-16710991729/6FimCN2d59oZEPH-taA-'});
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
