@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Flame, CheckCircle, Phone, Mail, ArrowRight, 
-  Award, Shield, Clock, Users, Calculator, Eye, Wrench, AlertTriangle, Hammer,
-  Send, User, MessageCircle, Calendar, Building2, MapPin, Building, Home
+import {
+  Hammer, CheckCircle, Phone, Mail, ArrowRight,
+  Award, Shield, Clock, Users, Calculator, Eye, Wrench, AlertTriangle,
+  Send, User, MessageCircle, Calendar, Building2, MapPin, Building, Home, Sparkles
 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ContactPopup from '../components/ContactPopup';
 import { sendEmail } from '../utils/emailService';
 
-const ChimneyPage = () => {
+const ChimneyRenovationPage = () => {
   const navigate = useNavigate();
   const [isContactPopupOpen, setIsContactPopupOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -26,108 +26,107 @@ const ChimneyPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
 
-  const chimneyServices = [
-    "Complete schoorsteen verwijdering van A tot Z",
-    "Schouw verwijderen uit woonkamer tot dak",
-    "Rookkanaal permanent afsluiten",
-    "Herstel dakbedekking na verwijdering",
-    "Afvoer van alle puin en materialen",
-    "Waterdicht maken van het dak",
-    "Isolatie aanbrengen waar nodig",
-    "Afwerking van muren en plafonds",
-    "Nokvorsten herstellen of verwijderen",
-    "Loodwerk vervangen of repareren",
-    "10 jaar garantie op alle werkzaamheden",
-    "24/7 service bij spoedgevallen"
+  const renovationServices = [
+    "Complete schoorsteen renovatie",
+    "Schouw renovatie en modernisering",
+    "Rookkanaal renovatie en herstel",
+    "Nokvorsten vervangen en herstellen",
+    "Loodwerk vernieuwen bij schoorsteen",
+    "Voegwerk herstellen en vernieuwen",
+    "Schoorsteenkap plaatsen of vervangen",
+    "Waterdicht maken van schoorsteen",
+    "Isolatie aanbrengen in rookkanaal",
+    "Scheuren repareren in schoorsteen",
+    "Schoorsteenmantel restaureren",
+    "Ventilatie verbeteren in rookkanaal"
   ];
 
-  const chimneyTypes = [
+  const renovationTypes = [
     {
-      title: "Complete Schoorsteen Verwijdering",
-      description: "Van dak tot fundering - wij verwijderen alles veilig",
-      icon: AlertTriangle,
-      details: "Complete verwijdering inclusief afvoer puin, herstel dakbedekking en garantie. Geen verrassingen achteraf!"
+      title: "Complete Schoorsteen Renovatie",
+      description: "Van kap tot fundering - complete vernieuwing",
+      icon: Hammer,
+      details: "Volledige renovatie van uw schoorsteen met moderne materialen voor jarenlang probleemloos gebruik."
     },
     {
-      title: "Schouw Verwijderen",
-      description: "Schouw uit woonkamer tot aan het dak professioneel verwijderen",
+      title: "Schouw Renovatie",
+      description: "Moderne, veilige en energiezuinige schouw",
       icon: Home,
-      details: "Vakkundige verwijdering van uw schouw, inclusief afwerking van muren, plafond en dak. Alles netjes afgewerkt!"
+      details: "Complete renovatie van uw schouw, van woonkamer tot dak. Mooi, veilig en volgens alle normen."
     },
     {
-      title: "Rookkanaal Afsluiten",
-      description: "Rookkanaal permanent en veilig afsluiten",
+      title: "Rookkanaal Herstel",
+      description: "Veilig en efficiënt rookkanaal voor optimale trek",
       icon: Shield,
-      details: "Professioneel afsluiten van rookkanalen om tocht, vocht en energieverlies te voorkomen. Met garantie!"
+      details: "Professioneel herstel en renovatie van rookkanalen voor veilige afvoer van rookgassen."
     }
   ];
 
   const features = [
     {
-      title: "Gratis Inspectie",
-      description: "Eerst kijken, dan pas beslissen - geheel vrijblijvend",
-      icon: Eye
+      title: "Behoud Karakter",
+      description: "Wij behouden het authentieke karakter van uw woning",
+      icon: Sparkles
     },
     {
-      title: "Vaste Lage Prijs",
-      description: "Geen verrassingen - u weet vooraf wat het kost",
-      icon: Calculator
+      title: "Moderne Technieken",
+      description: "Gebruik van de nieuwste materialen en technieken",
+      icon: Wrench
     },
     {
       title: "10 Jaar Garantie",
-      description: "Volledige garantie op alle verwijderingswerkzaamheden",
+      description: "Uitgebreide garantie op alle renovatiewerkzaamheden",
       icon: Shield
     }
   ];
 
-
-  const chimneyProcess = [
+  const renovationProcess = [
     {
       step: "1",
       title: "Gratis Inspectie",
-      description: "We komen vrijblijvend langs voor een inspectie",
-      details: "Binnen 24 uur bij u thuis. Geen voorrijkosten, geen verplichtingen!"
+      description: "Uitgebreide inspectie van uw schoorsteen",
+      details: "We beoordelen de staat en maken een renovatieplan op maat."
     },
     {
       step: "2",
-      title: "Vaste Prijs Offerte",
-      description: "U krijgt direct een eerlijke, vaste prijs",
-      details: "Geen verrassingen achteraf. U weet precies waar u aan toe bent!"
+      title: "Renovatieplan & Offerte",
+      description: "Gedetailleerd plan met vaste prijs",
+      details: "U krijgt een helder plan met alle werkzaamheden en kosten."
     },
     {
       step: "3",
-      title: "Professionele Verwijdering",
-      description: "Wij verwijderen uw schoorsteen volledig",
-      details: "Inclusief afvoer puin, herstel dakbedekking en schoonmaak!"
+      title: "Professionele Uitvoering",
+      description: "Vakkundige renovatie door specialisten",
+      details: "Ervaren vakmensen renoveren uw schoorsteen met oog voor detail."
     },
     {
       step: "4",
-      title: "10 Jaar Garantie",
-      description: "U krijgt 5 jaar volledige garantie",
-      details: "Waterdicht dak gegarandeerd. Nooit meer zorgen om uw oude schoorsteen!"
+      title: "Oplevering & Garantie",
+      description: "Perfecte afwerking met 10 jaar garantie",
+      details: "Complete oplevering met garantiecertificaat voor uw zekerheid."
     }
   ];
 
-  const chimneyProblems = [
+  const renovationBenefits = [
     {
-      problem: "Lekkende schoorsteen/schouw",
-      solution: "Definitief verwijderen = nooit meer lekkage!",
-      urgency: "Direct Oplossen"
+      problem: "Lekkende schoorsteen",
+      solution: "Waterdicht gemaakt met nieuwe technieken",
+      result: "Nooit Meer Lekkage"
     },
     {
-      problem: "Scheuren in schoorsteen",
-      solution: "Verwijderen voorkomt instortingsgevaar",
-      urgency: "Urgent"
+      problem: "Slechte trek in schoorsteen",
+      solution: "Rookkanaal gerenoveerd voor optimale trek",
+      result: "Perfect Werkend"
     },
     {
-      problem: "Tocht en warmteverlies",
-      solution: "Verwijderen bespaart energie & geld",
-      urgency: "Bespaar Nu"
+      problem: "Oude, lelijke schoorsteen",
+      solution: "Volledig gerenoveerd en gemoderniseerd",
+      result: "Als Nieuw"
     },
     {
-      problem: "Vochtproblemen via schoorsteen",
-      solution: "Complete verwijdering = droog huis",
-      urgency: "Direct Aanpakken"
+      problem: "Energieverlies via schoorsteen",
+      solution: "Geïsoleerd en afgedicht",
+      result: "Energie Besparing"
     }
   ];
 
@@ -135,15 +134,14 @@ const ChimneyPage = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
-    
+
     try {
       const success = await sendEmail({
         ...formData,
-        service: 'Schoorsteenwerk'
+        service: 'Schoorsteen Renovatie'
       });
-      
+
       if (success) {
-        // Reset form
         setFormData({
           name: '',
           email: '',
@@ -154,8 +152,6 @@ const ChimneyPage = () => {
           timeline: '',
           message: ''
         });
-        
-        // Redirect to thank you page
         navigate('/bedankt');
       } else {
         setError('Er is een fout opgetreden bij het verzenden. Probeer het opnieuw of bel ons direct.');
@@ -194,11 +190,10 @@ const ChimneyPage = () => {
     {
       icon: Clock,
       title: "Beschikbaarheid",
-      details: ["24/7 Bereikbaar", "Voor al uw bouwprojecten"],
+      details: ["24/7 Bereikbaar", "Voor al uw renovatieprojecten"],
       action: null
     }
   ];
-
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -221,21 +216,20 @@ const ChimneyPage = () => {
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
                   <span className="text-white font-semibold text-sm tracking-wide">
-                    Gecertificeerd Specialist in Schoorsteen Verwijdering
+                    Gecertificeerd Specialist in Schoorsteen Renovatie
                   </span>
                   <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
                 </div>
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Laat Uw <span className="text-brand-400">Schoorsteen of Schouw</span>
+              <span className="text-brand-400">Schoorsteen & Schouw</span>
               <br />
-              <span className="text-brand-400">Professioneel Verwijderen!</span>
+              <span className="text-brand-400">Professioneel Renoveren!</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Schoorsteen laten verwijderen? Reken op onze expertise!
-              Veilig, snel en zonder schade aan uw dak.
-              <span className="text-brand-400 font-bold"> Gratis inspectie & eerlijke prijzen!</span>
+              Geef uw schoorsteen een tweede leven! Van kleine reparaties tot complete renovatie.
+              <span className="text-brand-400 font-bold"> 10 jaar garantie & vaste prijzen!</span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -244,26 +238,26 @@ const ChimneyPage = () => {
                 className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 text-lg animate-pulse"
               >
                 <Calculator className="w-6 h-6" />
-                <span>GRATIS OFFERTE AANVRAGEN</span>
+                <span>GRATIS RENOVATIE OFFERTE</span>
               </button>
               <a
                 href="tel:0488234625"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 text-lg"
               >
                 <Phone className="w-6 h-6" />
-                <span>DIRECT BELLEN</span>
+                <span>DIRECT ADVIES: 0488 234 625</span>
               </a>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
               <div className="flex items-center justify-center space-x-2 mb-4">
                 <CheckCircle className="w-6 h-6 text-brand-400" />
-                <p className="text-lg font-semibold text-brand-400">Waarom kiezen voor ons?</p>
+                <p className="text-lg font-semibold text-brand-400">Waarom kiezen voor renovatie?</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div className="flex items-center justify-center space-x-2">
                   <CheckCircle className="w-6 h-6 text-green-400" />
-                  <span>Gratis Inspectie</span>
+                  <span>Behoud Karakter Woning</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <CheckCircle className="w-6 h-6 text-green-400" />
@@ -271,11 +265,11 @@ const ChimneyPage = () => {
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <CheckCircle className="w-6 h-6 text-green-400" />
-                  <span>Geen Voorrijkosten</span>
+                  <span>Energiebesparing</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <CheckCircle className="w-6 h-6 text-green-400" />
-                  <span>Binnen 3 Uur Ter Plaatse</span>
+                  <span>Waardeverhoging Woning</span>
                 </div>
               </div>
             </div>
@@ -288,18 +282,18 @@ const ChimneyPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Waarom Uw <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Schoorsteen Laten Verwijderen?</span>
+              Waarom <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Schoorsteen Renoveren?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Een oude of ongebruikte schoorsteen kan leiden tot lekkages, warmteverlies en hoge onderhoudskosten.
-              Wij verwijderen uw schoorsteen veilig en professioneel!
+              Een gerenoveerde schoorsteen werkt beter, ziet er mooier uit en verhoogt de waarde van uw woning.
+              Plus: geen lekkages meer en lagere energiekosten!
             </p>
             <button
               onClick={() => setIsContactPopupOpen(true)}
               className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
             >
               <ArrowRight className="w-5 h-5" />
-              <span>Vraag Nu Een Gratis Offerte Aan</span>
+              <span>Ontdek De Mogelijkheden</span>
             </button>
           </div>
 
@@ -324,63 +318,63 @@ const ChimneyPage = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 text-white">
-                <h4 className="font-bold">Renovatie</h4>
-                <p className="text-sm">Veilig en duurzaam</p>
+                <h4 className="font-bold">Voor Renovatie</h4>
+                <p className="text-sm">Oude, beschadigde staat</p>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg">
               <img
                 src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
-                alt="Schoorsteen verwijdering"
+                alt="Schoorsteen renovatie"
                 className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 text-white">
-                <h4 className="font-bold">Verwijdering</h4>
-                <p className="text-sm">Veilige afbraak</p>
+                <h4 className="font-bold">Tijdens Renovatie</h4>
+                <p className="text-sm">Vakkundig werk</p>
               </div>
             </div>
             <div className="relative overflow-hidden rounded-xl shadow-lg">
               <img
                 src="https://imgur.com/Zcx7Pq6.jpg"
-                alt="Schoorsteen onderhoud"
+                alt="Gerenoveerde schoorsteen"
                 className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
               <div className="absolute bottom-4 left-4 text-white">
-                <h4 className="font-bold">Onderhoud</h4>
-                <p className="text-sm">Preventief en curatief</p>
+                <h4 className="font-bold">Na Renovatie</h4>
+                <p className="text-sm">Perfect resultaat!</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Chimney Types Section */}
+      {/* Renovation Types Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Schoorsteen Verwijdering Services</span>
+              Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Renovatie Services</span>
             </h2>
             <p className="text-xl text-gray-700 font-semibold max-w-3xl mx-auto mb-2">
-              ✅ Complete verwijdering van A tot Z
+              ✅ Complete renovatie van A tot Z
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Wij verwijderen elke schoorsteen of schouw veilig, snel en zonder rommel.
-              Inclusief afvoer, dakdichting en garantie!
+              Van kleine reparaties tot complete renovatie. Alles is mogelijk!
+              Met behoud van het karakter van uw woning.
             </p>
             <button
               onClick={() => setIsContactPopupOpen(true)}
               className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
             >
               <Calculator className="w-5 h-5" />
-              <span>VRAAG GRATIS OFFERTE AAN</span>
+              <span>BEREKEN RENOVATIEKOSTEN</span>
             </button>
           </div>
 
           <div className="space-y-12">
-            {chimneyTypes.map((type, index) => (
+            {renovationTypes.map((type, index) => (
               <div key={index} className={`flex flex-col lg:flex-row items-center gap-12 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="lg:w-1/2">
                   <div className="flex items-center mb-6">
@@ -392,7 +386,14 @@ const ChimneyPage = () => {
                       <p className="text-gray-600 text-lg">{type.description}</p>
                     </div>
                   </div>
-                  <p className="text-gray-700 leading-relaxed">{type.details}</p>
+                  <p className="text-gray-700 leading-relaxed mb-4">{type.details}</p>
+                  <button
+                    onClick={() => setIsContactPopupOpen(true)}
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 inline-flex items-center space-x-2"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>Vraag Offerte Aan</span>
+                  </button>
                 </div>
                 <div className="lg:w-1/2">
                   <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -400,19 +401,19 @@ const ChimneyPage = () => {
                     <ul className="space-y-2">
                       <li className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
-                        <span className="text-gray-700">Veiligheidsinspectie</span>
+                        <span className="text-gray-700">Gratis inspectie vooraf</span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
-                        <span className="text-gray-700">Professioneel advies</span>
+                        <span className="text-gray-700">Vaste prijs, geen verrassingen</span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
-                        <span className="text-gray-700">Vakkundige uitvoering</span>
+                        <span className="text-gray-700">Hoogwaardige materialen</span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0" />
-                        <span className="text-gray-700">Garantie op het werk</span>
+                        <span className="text-gray-700">10 jaar garantie</span>
                       </li>
                     </ul>
                   </div>
@@ -423,38 +424,38 @@ const ChimneyPage = () => {
         </div>
       </section>
 
-      {/* Problems Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-6 animate-pulse" />
+            <Sparkles className="w-16 h-16 text-green-500 mx-auto mb-6 animate-pulse" />
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              <span className="text-red-600">Herkenbare Problemen Met Uw Schoorsteen?</span>
+              <span className="text-green-600">De Voordelen Van Renovatie</span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-4">
-              <strong>Stop met dure reparaties!</strong> Een oude schoorsteen kost u alleen maar geld.
+            <p className="text-xl text-gray-700 font-semibold max-w-3xl mx-auto mb-4">
+              Stop de problemen, behoud het karakter!
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Lekkages? Scheuren? Tocht? Warmteverlies? Wij hebben de oplossing!
+              Een gerenoveerde schoorsteen is veiliger, mooier en energiezuiniger
             </p>
           </div>
 
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-            <div className="px-6 py-4 bg-red-500 text-white">
-              <h3 className="text-xl font-bold">Veelvoorkomende Schoorsteenproblemen</h3>
+            <div className="px-6 py-4 bg-green-500 text-white">
+              <h3 className="text-xl font-bold">Wat Renovatie Voor U Betekent</h3>
             </div>
             <div className="divide-y divide-gray-200">
-              {chimneyProblems.map((item, index) => (
+              {renovationBenefits.map((item, index) => (
                 <div key={index} className="px-6 py-4 flex justify-between items-center">
                   <div className="font-medium text-slate-900">{item.problem}</div>
                   <div className="text-center">
                     <div className="text-sm text-gray-600">Oplossing</div>
-                    <div className="font-bold text-green-600">{item.solution}</div>
+                    <div className="font-bold text-blue-600">{item.solution}</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-sm text-gray-600">Actie</div>
-                    <div className="font-bold text-red-600 animate-pulse">
-                      {item.urgency}
+                    <div className="text-sm text-gray-600">Resultaat</div>
+                    <div className="font-bold text-green-600 animate-pulse">
+                      {item.result}
                     </div>
                   </div>
                 </div>
@@ -464,7 +465,7 @@ const ChimneyPage = () => {
 
           <div className="text-center mt-8 space-y-4">
             <p className="text-lg font-semibold text-gray-700">
-              Waarom langer wachten? Elke dag met een problematische schoorsteen kost u geld!
+              Investeer in kwaliteit en geniet jarenlang zonder zorgen!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -472,7 +473,7 @@ const ChimneyPage = () => {
                 className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center space-x-2 text-lg"
               >
                 <Calculator className="w-6 h-6" />
-                <span>BEREKEN UW BESPARING</span>
+                <span>BEREKEN UW INVESTERING</span>
               </button>
               <a
                 href="tel:0488234625"
@@ -491,13 +492,13 @@ const ChimneyPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Hoe Wij Uw <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Schoorsteen Verwijderen</span>
+              Hoe Wij Uw <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Schoorsteen Renoveren</span>
             </h2>
             <p className="text-xl text-gray-700 font-semibold max-w-3xl mx-auto mb-2">
-              In 4 Simpele Stappen Naar Een Schoorsteenvrij Dak!
+              In 4 Stappen Naar Een Als Nieuwe Schoorsteen!
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Snel, veilig en zonder zorgen - wij regelen alles voor u
+              Professioneel, betrouwbaar en met oog voor detail
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button
@@ -505,20 +506,20 @@ const ChimneyPage = () => {
                 className="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
-                <span>START VANDAAG NOG!</span>
+                <span>START UW RENOVATIE</span>
               </button>
               <a
                 href="tel:0488234625"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
               >
                 <Clock className="w-5 h-5" />
-                <span>BINNEN 24 UUR INSPECTIE</span>
+                <span>GRATIS INSPECTIE PLANNEN</span>
               </a>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {chimneyProcess.map((item, index) => (
+            {renovationProcess.map((item, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-brand-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {item.step}
@@ -538,10 +539,10 @@ const ChimneyPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-bold text-slate-900 mb-8">
-                Waarom <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Schoorsteen Verwijderen?</span>
+                Waarom <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Renoveren Ipv Verwijderen?</span>
               </h2>
               <div className="space-y-6">
-                {chimneyServices.map((service, index) => (
+                {renovationServices.map((service, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-brand-500 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 font-medium text-lg">{service}</span>
@@ -551,27 +552,27 @@ const ChimneyPage = () => {
               <div className="mt-8">
                 <div className="p-6 bg-gradient-to-br from-brand-50 to-blue-50 border-2 border-brand-400 rounded-lg mb-6">
                   <h4 className="font-bold text-slate-900 mb-4 text-xl">
-                    💰 Bespaar Direct Op Uw Energierekening!
+                    💎 Verhoog De Waarde Van Uw Woning!
                   </h4>
                   <p className="text-gray-700 mb-4">
-                    Een oude schoorsteen zorgt voor warmteverlies en hoge stookkosten.
-                    Door verwijdering bespaart u gemiddeld <strong>€300-500 per jaar!</strong>
+                    Een gerenoveerde schoorsteen verhoogt de waarde van uw woning
+                    met gemiddeld <strong>€5.000 - €15.000!</strong>
                   </p>
                   <button
                     onClick={() => setIsContactPopupOpen(true)}
                     className="w-full bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
-                    BEREKEN UW BESPARING →
+                    ONTDEK DE MOGELIJKHEDEN →
                   </button>
                 </div>
                 <div className="bg-white rounded-lg p-4 border-2 border-gray-200">
-                  <h5 className="font-bold text-slate-900 mb-3 text-lg">✅ Direct Voordeel:</h5>
+                  <h5 className="font-bold text-slate-900 mb-3 text-lg">✅ Voordelen Renovatie:</h5>
                   <div className="space-y-2 text-gray-700">
-                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Nooit meer lekkages</div>
-                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Lagere energierekening</div>
-                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Geen onderhoudskosten</div>
-                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Meer woonruimte</div>
-                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Hogere woningwaarde</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Behoud authentiek karakter</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Waardeverhoging woning</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Energiebesparing</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Veilig & betrouwbaar</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />10 jaar garantie</div>
                   </div>
                 </div>
               </div>
@@ -579,9 +580,12 @@ const ChimneyPage = () => {
             <div className="relative">
               <img
                 src="https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-                alt="Schoorsteenwerk in uitvoering"
+                alt="Schoorsteen renovatie"
                 className="w-full h-96 object-cover rounded-xl shadow-lg"
               />
+              <div className="absolute top-4 right-4 bg-brand-500 text-slate-900 font-bold px-4 py-2 rounded-lg">
+                10 JAAR GARANTIE
+              </div>
             </div>
           </div>
         </div>
@@ -590,7 +594,6 @@ const ChimneyPage = () => {
       {/* Professional Testimonials */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header with Icon */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
               <Users className="w-8 h-8 text-blue-600" />
@@ -599,26 +602,21 @@ const ChimneyPage = () => {
               Wat Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Klanten</span> Zeggen
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Al meer dan 25 jaar zorgen wij voor vakkundig dakwerk. Onze klanten waarderen onze 
-              betrouwbaarheid, kwaliteit en persoonlijke service.
+              Al meer dan 25 jaar renoveren wij schoorstenen. Onze klanten waarderen onze
+              vakmanschap, betrouwbaarheid en de kwaliteit van ons werk.
             </p>
           </div>
-          
-          {/* Enhanced Widget Container */}
+
           <div className="relative w-full max-w-none mx-auto">
-            {/* Subtle background pattern */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-slate-50 rounded-2xl transform rotate-1"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl transform -rotate-1"></div>
-            
-            {/* Main container */}
+
             <div className="relative bg-white rounded-2xl shadow-xl border border-gray-200 p-4 sm:p-6 mx-2 sm:mx-4">
-              {/* Top accent */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-500 to-brand-600 rounded-b-full"></div>
-              
-              {/* Widget */}
-              <div 
+
+              <div
                 className="overflow-hidden rounded-xl"
-                style={{ 
+                style={{
                   minHeight: '400px',
                   paddingBottom: '10px'
                 }}
@@ -632,7 +630,6 @@ const ChimneyPage = () => {
             </div>
           </div>
 
-          {/* Clean Trust Footer */}
           <div className="mt-12">
             <div className="text-center space-y-6">
               <div className="inline-flex items-center space-x-1 text-xs text-gray-400 font-medium tracking-wide">
@@ -645,18 +642,17 @@ const ChimneyPage = () => {
                 <Clock className="w-3 h-3" />
                 <span>25+ JAAR ERVARING</span>
               </div>
-              
-              {/* Trustpilot Logo */}
+
               <div className="pt-2">
-                <a 
+                <a
                   href="https://nl.trustpilot.com/review/www.compleetdakonderhoudnederland.nl"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block hover:scale-105 transition-transform duration-200"
                 >
-                  <img 
-                    src="https://imgur.com/ZKUY57s.png" 
-                    alt="Trustpilot Reviews - Bekijk onze beoordelingen" 
+                  <img
+                    src="https://imgur.com/ZKUY57s.png"
+                    alt="Trustpilot Reviews - Bekijk onze beoordelingen"
                     className="h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
                   />
                 </a>
@@ -676,11 +672,11 @@ const ChimneyPage = () => {
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6 leading-tight">
               Laten We Uw Schoorsteen
-              <span className="text-brand-400"> Inspecteren</span>
+              <span className="text-brand-400"> Renoveren</span>
             </h2>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
-              Klaar voor vakkundig schoorsteenwerk? Neem contact met ons op 
-              voor een gratis inspectie en advies.
+              Klaar voor een gerenoveerde schoorsteen? Neem contact met ons op
+              voor een gratis inspectie en renovatie-advies.
             </p>
           </div>
 
@@ -698,8 +694,8 @@ const ChimneyPage = () => {
                       {info.details.map((detail, detailIndex) => (
                         <p key={detailIndex} className="text-gray-300">
                           {info.action && detailIndex === 0 ? (
-                            <a 
-                              href={info.action} 
+                            <a
+                              href={info.action}
                               className="hover:text-brand-400 transition-colors"
                             >
                               {detail}
@@ -723,12 +719,12 @@ const ChimneyPage = () => {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-red-900/20 border border-red-900/50 rounded-xl">
-                <h4 className="text-red-400 font-bold mb-2">24/7 Spoedservice</h4>
-                <p className="text-gray-300 mb-3">Voor urgente schoorsteenproblemen</p>
-                <a 
-                  href="tel:0488234625" 
-                  className="text-red-400 font-semibold hover:text-red-300 transition-colors"
+              <div className="mt-8 p-6 bg-green-900/20 border border-green-900/50 rounded-xl">
+                <h4 className="text-green-400 font-bold mb-2">Renovatie Specialist</h4>
+                <p className="text-gray-300 mb-3">Voor advies over renovatie</p>
+                <a
+                  href="tel:0488234625"
+                  className="text-green-400 font-semibold hover:text-green-300 transition-colors"
                 >
                   0488 234 625
                 </a>
@@ -737,14 +733,14 @@ const ChimneyPage = () => {
 
             <div className="lg:col-span-2">
               <div className="bg-white rounded-2xl p-8 shadow-2xl">
-                <h3 className="text-2xl font-bold text-slate-900 mb-8">Stuur ons een bericht</h3>
-                
+                <h3 className="text-2xl font-bold text-slate-900 mb-8">Vraag een gratis renovatie-offerte aan</h3>
+
                 {error && (
                   <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                     <p className="text-red-600">{error}</p>
                   </div>
                 )}
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -879,7 +875,7 @@ const ChimneyPage = () => {
                         onChange={(e) => handleInputChange('message', e.target.value)}
                         rows={5}
                         className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 resize-none text-gray-900"
-                        placeholder="Beschrijf uw schoorsteenprobleem of project..."
+                        placeholder="Beschrijf uw schoorsteen renovatie wensen..."
                         required
                       />
                     </div>
@@ -910,7 +906,7 @@ const ChimneyPage = () => {
                   </div>
 
                   <p className="text-gray-600 text-sm text-center">
-                    Door dit formulier te verzenden gaat u akkoord met ons privacybeleid. 
+                    Door dit formulier te verzenden gaat u akkoord met ons privacybeleid.
                     Wij nemen binnen 24 uur contact met u op.
                   </p>
                 </form>
@@ -921,11 +917,11 @@ const ChimneyPage = () => {
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-brand-400 to-brand-600 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                Schoorsteenproblemen?
+                Klaar Voor Een Gerenoveerde Schoorsteen?
               </h3>
               <p className="text-slate-800 mb-6 max-w-2xl mx-auto">
-                Voor urgente schoorsteenproblemen of veiligheidskwesties kunt u ons direct bellen. 
-                Onze specialisten staan 24/7 voor u klaar.
+                Laat uw schoorsteen renoveren door specialisten.
+                Gratis inspectie, eerlijke prijzen, 10 jaar garantie!
               </p>
               <a
                 href="tel:0488234625"
@@ -939,14 +935,14 @@ const ChimneyPage = () => {
       </section>
       </Footer>
 
-      <ContactPopup 
+      <ContactPopup
         isOpen={isContactPopupOpen}
         onClose={() => setIsContactPopupOpen(false)}
-        service="Schoorsteenwerk"
-        title="Gratis Schoorsteen Inspectie"
+        service="Schoorsteen Renovatie"
+        title="Gratis Renovatie Inspectie"
       />
     </div>
   );
 };
 
-export default ChimneyPage;
+export default ChimneyRenovationPage;

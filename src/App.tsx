@@ -27,6 +27,7 @@ const RoofingPage = React.lazy(() => import('./pages/RoofingPage'));
 const PaintingPage = React.lazy(() => import('./pages/PaintingPage'));
 const TilingPage = React.lazy(() => import('./pages/TilingPage'));
 const ChimneyPage = React.lazy(() => import('./pages/ChimneyPage'));
+const ChimneyRenovationPage = React.lazy(() => import('./pages/ChimneyRenovationPage'));
 const ExtensionPage = React.lazy(() => import('./pages/ExtensionPage'));
 const AircoPage = React.lazy(() => import('./pages/AircoPage'));
 const SolarPanelPage = React.lazy(() => import('./pages/SolarPanelPage'));
@@ -159,7 +160,8 @@ function App() {
                 <Route path="/dakwerk-dakdekken" element={<RoofingPage />} />
                 <Route path="/schilderwerk-stukadoor" element={<PaintingPage />} />
                 <Route path="/tegelwerk" element={<TilingPage />} />
-                <Route path="/schoorsteenwerk" element={<ChimneyPage />} />
+                <Route path="/schoorsteen-verwijderen" element={<ChimneyPage />} />
+                <Route path="/schoorsteen-renovatie" element={<ChimneyRenovationPage />} />
                 <Route path="/aanbouw-uitbouw" element={<ExtensionPage />} />
                 <Route path="/aircos-monteren" element={<AircoPage />} />
                 <Route path="/zonnepanelen" element={<SolarPanelPage />} />

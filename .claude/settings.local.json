@@ -3,7 +3,14 @@
     "allow": [
       "Bash(grep:*)",
       "Bash(! grep -q \"space-y-6\" \"$file\")",
-      "Bash(then echo \"✓ $file\")"
+      "Bash(then echo \"✓ $file\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:mtddaken.nl)"
     ],
     "deny": [],
     "ask": []
