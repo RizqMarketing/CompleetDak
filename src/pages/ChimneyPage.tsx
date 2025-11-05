@@ -555,7 +555,7 @@ const ChimneyPage = () => {
                   </h4>
                   <p className="text-gray-700 mb-4">
                     Een oude schoorsteen zorgt voor warmteverlies en hoge stookkosten.
-                    Door verwijdering bespaart u gemiddeld <strong>€300-500 per jaar!</strong>
+                    Door verwijdering bespaart u <strong>aanzienlijk op uw energierekening!</strong>
                   </p>
                   <button
                     onClick={() => setIsContactPopupOpen(true)}

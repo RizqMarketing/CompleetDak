@@ -113,7 +113,7 @@ const ExtensionPage = () => {
     {
       benefit: "Waardestijging",
       description: "Hogere woningwaarde",
-      value: "15-25%"
+      value: "Substantieel"
     },
     {
       benefit: "Energiezuinig",
@@ -217,37 +217,69 @@ const ExtensionPage = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="relative inline-block mb-6">
+              <div className="bg-gradient-to-r from-white/20 to-brand-400/30 backdrop-blur-sm rounded-full px-6 py-3 border border-brand-400/40 shadow-xl">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
+                  <span className="text-white font-semibold text-sm tracking-wide">
+                    Gecertificeerd Specialist in Aanbouw & Uitbouw
+                  </span>
+                  <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
+                </div>
+              </div>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-brand-400">Aanbouw & Uitbouw</span>
+              Professionele <span className="text-brand-400">Aanbouw & Uitbouw</span>
               <br />
-              Meer Ruimte, Meer Comfort
+              <span className="text-brand-400">Meer Ruimte Zonder Verhuizen!</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Van dakkapellen tot complete aanbouwen. Compleet Dakonderhoud Nederland realiseert extra woonruimte 
-              die naadloos aansluit bij uw bestaande woning.
+              Van dakkapellen tot complete aanbouwen - wij realiseren uw droomruimte!
+              <span className="text-brand-400 font-bold"> Gratis ontwerp en 10 jaar garantie!</span>
+              Vakkundige uitvoering met alle vergunningen.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button 
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button
                 onClick={() => setIsContactPopupOpen(true)}
-                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 text-lg animate-pulse"
               >
-                <span>Gratis Ontwerp Gesprek</span>
-                <ArrowRight className="w-5 h-5" />
+                <Calculator className="w-6 h-6" />
+                <span>GRATIS OFFERTE AANVRAGEN</span>
               </button>
-              <a 
+              <a
                 href="tel:0488234625"
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 text-lg"
               >
-                <Phone className="w-5 h-5" />
-                <span>Direct Bellen</span>
+                <Phone className="w-6 h-6" />
+                <span>DIRECT BELLEN</span>
               </a>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="flex items-center justify-center space-x-2">
-                <Award className="w-6 h-6 text-brand-400" />
-                <span>25+ Jaar Ervaring</span>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <CheckCircle className="w-6 h-6 text-brand-400" />
+                <p className="text-lg font-semibold text-brand-400">Waarom kiezen voor ons?</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>Gratis Ontwerp</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>10 Jaar Garantie</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>Alle Vergunningen</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>Vaste Lage Prijs</span>
+                </div>
+              </div>
+            </div>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <Shield className="w-6 h-6 text-brand-400" />
@@ -726,11 +758,11 @@ const ExtensionPage = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                       >
                         <option value="">Selecteer budget</option>
-                        <option value="<25k">Onder €25.000</option>
-                        <option value="25k-50k">€25.000 - €50.000</option>
-                        <option value="50k-75k">€50.000 - €75.000</option>
-                        <option value="75k-100k">€75.000 - €100.000</option>
-                        <option value="100k+">Boven €100.000</option>
+                        <option value="<25k">Lage Kosten</option>
+                        <option value="25k-50k">Gemiddelde Kosten</option>
+                        <option value="50k-75k">Hoge Kosten</option>
+                        <option value="75k-100k">Zeer Hoge Kosten</option>
+                        <option value="100k+">Zeer Hoge Kosten</option>
                       </select>
                     </div>
                     <div>

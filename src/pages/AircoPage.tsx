@@ -120,7 +120,7 @@ const AircoPage = () => {
   ];
 
   const aircoAdvantages = [
-    { advantage: "Energiebesparing", value: "30%", description: "Lagere energiekosten" },
+    { advantage: "Energiebesparing", value: "Aanzienlijk", description: "Lagere energiekosten" },
     { advantage: "Comfort", value: "365", description: "Dagen per jaar" },
     { advantage: "Stille Werking", value: "19dB", description: "Fluistertechnologie" },
     { advantage: "Snelle Koeling", value: "5min", description: "Tot gewenste temperatuur" }
@@ -703,11 +703,11 @@ const AircoPage = () => {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 text-gray-900"
                       >
                         <option value="">Selecteer budget</option>
-                        <option value="<2k">Onder €2.000</option>
-                        <option value="2k-4k">€2.000 - €4.000</option>
-                        <option value="4k-6k">€4.000 - €6.000</option>
-                        <option value="6k-10k">€6.000 - €10.000</option>
-                        <option value="10k+">Boven €10.000</option>
+                        <option value="<2k">Gemiddelde Kosten</option>
+                        <option value="2k-4k">Gemiddelde Kosten</option>
+                        <option value="4k-6k">Hoge Kosten</option>
+                        <option value="6k-10k">Hoge Kosten</option>
+                        <option value="10k+">Zeer Hoge Kosten</option>
                       </select>
                     </div>
                     <div>

@@ -204,49 +204,67 @@ const PaintingPage = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="relative inline-block mb-6">
+              <div className="bg-gradient-to-r from-white/20 to-brand-400/30 backdrop-blur-sm rounded-full px-6 py-3 border border-brand-400/40 shadow-xl">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
+                  <span className="text-white font-semibold text-sm tracking-wide">
+                    Gecertificeerd Specialist in Schilderwerk
+                  </span>
+                  <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
+                </div>
+              </div>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-brand-400">Schilderwerk & Stukadoor</span>
+              Professioneel <span className="text-brand-400">Schilderwerk & Stukadoor</span>
               <br />
-              Vakkundig & Netjes
+              <span className="text-brand-400">Uw Woning Verdient Het Beste!</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Van binnen- tot buitenschilderwerk en stukadoorwerk. Compleet Dakonderhoud Nederland zorgt voor 
-              een perfecte afwerking met kwaliteitsverf en vakkundig werk.
+              Van binnen- tot buitenschilderwerk - wij zorgen voor perfecte afwerking!
+              <span className="text-brand-400 font-bold"> Gratis kleuradvies en 10 jaar garantie!</span>
+              Vakkundige schilders met A-merk verven.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button 
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button
                 onClick={() => setIsContactPopupOpen(true)}
-                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 text-lg animate-pulse"
               >
-                <span>Gratis Kleuradvies</span>
-                <ArrowRight className="w-5 h-5" />
+                <Calculator className="w-6 h-6" />
+                <span>GRATIS OFFERTE AANVRAGEN</span>
               </button>
-              <a 
+              <a
                 href="tel:0488234625"
-                className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 text-lg"
               >
-                <Phone className="w-5 h-5" />
-                <span>Direct Bellen</span>
+                <Phone className="w-6 h-6" />
+                <span>DIRECT BELLEN</span>
               </a>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="flex items-center justify-center space-x-2">
-                <Award className="w-6 h-6 text-brand-400" />
-                <span>25+ Jaar Ervaring</span>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <CheckCircle className="w-6 h-6 text-brand-400" />
+                <p className="text-lg font-semibold text-brand-400">Waarom kiezen voor ons?</p>
               </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Shield className="w-6 h-6 text-brand-400" />
-                <span>A-merk Verven</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Clock className="w-6 h-6 text-brand-400" />
-                <span>24/7 Bereikbaar</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Users className="w-6 h-6 text-brand-400" />
-                <span>Vakkundige Schilders</span>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>Gratis Kleuradvies</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>10 Jaar Garantie</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>A-merk Verven</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>Transparante Prijzen</span>
+                </div>
               </div>
             </div>
           </div>
@@ -258,12 +276,19 @@ const PaintingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Waarom Kiezen Voor <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Compleet Dakonderhoud Nederland Schilderwerk?</span>
+              Waarom Uw <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Woning Laten Schilderen?</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Met 25+ jaar ervaring in schilderwerk zorgen wij voor een perfecte afwerking 
-              met kwaliteitsverf en vakkundige uitvoering.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Oude verf beschermt uw woning niet meer tegen vocht en weersinvloeden.
+              Wij zorgen voor duurzame bescherming met kwaliteitsverf en 10 jaar garantie!
             </p>
+            <button
+              onClick={() => setIsContactPopupOpen(true)}
+              className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
+            >
+              <ArrowRight className="w-5 h-5" />
+              <span>Vraag Nu Een Gratis Offerte Aan</span>
+            </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -326,10 +351,20 @@ const PaintingPage = () => {
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
               Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Schilderwerk Specialisaties</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Van binnen- tot buitenschilderwerk en stukadoorwerk, 
-              wij hebben de expertise voor alle schilderklussen.
+            <p className="text-xl text-gray-700 font-semibold max-w-3xl mx-auto mb-2">
+              ✅ Complete schilderprojecten van A tot Z
             </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Van binnen- tot buitenschilderwerk en stukadoorwerk.
+              Inclusief kleuradvies, A-merk verven en 10 jaar garantie!
+            </p>
+            <button
+              onClick={() => setIsContactPopupOpen(true)}
+              className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
+            >
+              <Calculator className="w-5 h-5" />
+              <span>VRAAG GRATIS OFFERTE AAN</span>
+            </button>
           </div>
 
           <div className="space-y-12">
@@ -376,17 +411,116 @@ const PaintingPage = () => {
         </div>
       </section>
 
+      {/* Urgency Section */}
+      <section className="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Paintbrush className="w-16 h-16 text-red-500 mx-auto mb-6 animate-pulse" />
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">
+              <span className="text-red-600">Schilderwerk Wachten Niet!</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-4">
+              <strong>Bescherm uw woning nu!</strong> Oude verf laat vocht toe en kost u duizenden.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Wacht niet langer - elke dag uitstellen verhoogt het risico op schade!
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div className="px-6 py-4 bg-red-500 text-white">
+              <h3 className="text-xl font-bold">Herkenbare Schilderproblemen</h3>
+            </div>
+            <div className="divide-y divide-gray-200">
+              <div className="px-6 py-4 flex justify-between items-center">
+                <div className="font-medium text-slate-900">Afbladderende verf</div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Gevolg</div>
+                  <div className="font-bold text-red-600">Vochtschade binnen maanden</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Actie</div>
+                  <div className="font-bold text-green-600">Direct Herschilderen</div>
+                </div>
+              </div>
+              <div className="px-6 py-4 flex justify-between items-center">
+                <div className="font-medium text-slate-900">Verkleurde buitenverf</div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Gevolg</div>
+                  <div className="font-bold text-red-600">Lagere woningwaarde</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Actie</div>
+                  <div className="font-bold text-green-600">Urgent Schilderen</div>
+                </div>
+              </div>
+              <div className="px-6 py-4 flex justify-between items-center">
+                <div className="font-medium text-slate-900">Schimmel op muren</div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Gevolg</div>
+                  <div className="font-bold text-red-600">Gezondheidsrisico's</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Actie</div>
+                  <div className="font-bold text-green-600">Direct Behandelen</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center space-y-4">
+            <p className="text-lg font-semibold text-gray-700">
+              Waarom langer wachten? Elke dag dat u uitstelt kost u meer geld!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => setIsContactPopupOpen(true)}
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center space-x-2 text-lg"
+              >
+                <Calculator className="w-6 h-6" />
+                <span>BEREKEN UW SCHADE</span>
+              </button>
+              <a
+                href="tel:0488234625"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center space-x-2 text-lg"
+              >
+                <Phone className="w-6 h-6" />
+                <span>0488 234 625 - BEL NU!</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Process Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Ons <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Schilderwerk Proces</span>
+              Hoe Wij Uw <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Woning Schilderen</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Van voorbereiding tot afwerking zorgen wij voor een 
-              professioneel proces en perfect eindresultaat.
+            <p className="text-xl text-gray-700 font-semibold max-w-3xl mx-auto mb-2">
+              In 4 Simpele Stappen Naar Een Prachtig Geschilderde Woning!
             </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Vakkundig, netjes en met oog voor detail - wij regelen alles voor u
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <button
+                onClick={() => setIsContactPopupOpen(true)}
+                className="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>START VANDAAG NOG!</span>
+              </button>
+              <a
+                href="tel:0488234625"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
+              >
+                <Clock className="w-5 h-5" />
+                <span>GRATIS KLEURADVIES</span>
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -420,12 +554,32 @@ const PaintingPage = () => {
                   </div>
                 ))}
               </div>
-              <div className="mt-8 p-6 bg-brand-50 border border-brand-200 rounded-lg">
-                <h4 className="font-bold text-slate-900 mb-2">Waarom Compleet Dakonderhoud Nederland Schilderwerk?</h4>
-                <p className="text-gray-700">
-                  Van kleine reparaties tot complete schilderprojecten. Wij zorgen voor vakkundig 
-                  schilderwerk met kwaliteitsverf en perfecte afwerking.
-                </p>
+              <div className="mt-8">
+                <div className="p-6 bg-gradient-to-br from-brand-50 to-blue-50 border-2 border-brand-400 rounded-lg mb-6">
+                  <h4 className="font-bold text-slate-900 mb-4 text-xl">
+                    🎨 Verhoog Uw Woningwaarde!
+                  </h4>
+                  <p className="text-gray-700 mb-4">
+                    Vakkundig schilderwerk verhoogt uw woningwaarde <strong>aanzienlijk</strong>.
+                    Een investering die zich direct terugbetaalt!
+                  </p>
+                  <button
+                    onClick={() => setIsContactPopupOpen(true)}
+                    className="w-full bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    BEREKEN UW WAARDESTIJGING →
+                  </button>
+                </div>
+                <div className="bg-white rounded-lg p-4 border-2 border-gray-200">
+                  <h5 className="font-bold text-slate-900 mb-3 text-lg">✅ Direct Voordeel:</h5>
+                  <div className="space-y-2 text-gray-700">
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Gratis kleuradvies</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />A-merk kwaliteitsverf</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />10 jaar garantie</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Transparante prijzen</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Hogere woningwaarde</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="relative">

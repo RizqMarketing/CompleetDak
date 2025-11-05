@@ -556,7 +556,7 @@ const ChimneyRenovationPage = () => {
                   </h4>
                   <p className="text-gray-700 mb-4">
                     Een gerenoveerde schoorsteen verhoogt de waarde van uw woning
-                    met gemiddeld <strong>€5.000 - €15.000!</strong>
+                    <strong>aanzienlijk!</strong>
                   </p>
                   <button
                     onClick={() => setIsContactPopupOpen(true)}

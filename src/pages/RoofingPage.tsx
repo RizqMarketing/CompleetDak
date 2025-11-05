@@ -202,75 +202,69 @@ const RoofingPage = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="relative inline-block mb-6">
+              <div className="bg-gradient-to-r from-white/20 to-brand-400/30 backdrop-blur-sm rounded-full px-6 py-3 border border-brand-400/40 shadow-xl">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
+                  <span className="text-white font-semibold text-sm tracking-wide">
+                    Gecertificeerd Specialist in Dakwerk & Dakdekken
+                  </span>
+                  <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
+                </div>
+              </div>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-brand-400">Dakwerk & Dakdekken</span>
+              Professioneel <span className="text-brand-400">Dakwerk & Dakdekken</span>
               <br />
-              Vakkundig & Betrouwbaar
+              <span className="text-brand-400">Uw Dak Verdient Het Beste!</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              Van pannendaken tot bitumen daken. Compleet Dakonderhoud Nederland zorgt voor waterdicht 
-              en duurzaam dakwerk met 25+ jaar ervaring en volledige garantie.
+              Van pannendaken tot bitumen daken - wij zorgen voor waterdicht dakwerk!
+              <span className="text-brand-400 font-bold"> URGENTE dakproblemen? Binnen 3 uur ter plaatse!</span>
+              Gratis inspectie & 10 jaar garantie op al ons werk.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button 
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button
                 onClick={() => setIsContactPopupOpen(true)}
-                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 text-lg animate-pulse"
               >
-                <span>Gratis Offerte & Dakinspectie</span>
-                <ArrowRight className="w-5 h-5" />
+                <Calculator className="w-6 h-6" />
+                <span>GRATIS OFFERTE AANVRAGEN</span>
               </button>
-              <a 
+              <a
                 href="tel:0488234625"
-                className="border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center space-x-2 text-lg"
               >
-                <Phone className="w-5 h-5" />
-                <span>24/7 Spoedservice</span>
+                <Phone className="w-6 h-6" />
+                <span>DIRECT BELLEN</span>
               </a>
             </div>
 
             {/* Summer Deal Banner */}
-            <div className="mb-12">
-              <div className="bg-white/10 backdrop-blur-sm border border-brand-400/30 rounded-2xl p-8 max-w-3xl mx-auto shadow-2xl">
-                <div className="text-center">
-                  <div className="inline-flex items-center space-x-3 mb-4">
-                    <div className="w-12 h-12 bg-brand-400 rounded-full flex items-center justify-center">
-                      <Sun className="w-6 h-6 text-slate-900" />
-                    </div>
-                    <div className="text-brand-400 font-bold text-xl">Zomer Actie</div>
-                    <div className="w-12 h-12 bg-brand-400 rounded-full flex items-center justify-center">
-                      <Sun className="w-6 h-6 text-slate-900" />
-                    </div>
-                  </div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-3">
-                    <span className="text-brand-400">10%</span> Korting
-                  </div>
-                  <div className="text-lg text-gray-200 mb-6">
-                    Op alle dakwerkzaamheden
-                  </div>
-                  <div className="inline-block bg-brand-400 text-slate-900 px-6 py-2 rounded-full font-semibold text-sm">
-                    Vraag nu uw offerte aan!
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="flex items-center justify-center space-x-2">
-                <Award className="w-6 h-6 text-brand-400" />
-                <span>25+ Jaar Ervaring</span>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <CheckCircle className="w-6 h-6 text-brand-400" />
+                <p className="text-lg font-semibold text-brand-400">Waarom kiezen voor ons?</p>
               </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Shield className="w-6 h-6 text-brand-400" />
-                <span>Waterdichte Garantie</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Clock className="w-6 h-6 text-brand-400" />
-                <span>24/7 Bereikbaar</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Users className="w-6 h-6 text-brand-400" />
-                <span>Vakkundige Dakdekkers</span>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>Gratis Inspectie</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>10 Jaar Garantie</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>Geen Voorrijkosten</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span>Binnen 3 Uur Ter Plaatse</span>
+                </div>
               </div>
             </div>
           </div>
@@ -282,12 +276,19 @@ const RoofingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Waarom Kiezen Voor <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Compleet Dakonderhoud Nederland?</span>
+              Waarom Uw <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Dak Laten Repareren?</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Met 25+ jaar ervaring in dakwerk zorgen wij voor waterdichte en duurzame oplossingen 
-              voor alle soorten daken met volledige garantie.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Een lek dak kan binnen weken duizenden euro's schade veroorzaken aan uw woning.
+              Wij zorgen voor waterdichte en duurzame oplossingen met 10 jaar garantie!
             </p>
+            <button
+              onClick={() => setIsContactPopupOpen(true)}
+              className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
+            >
+              <ArrowRight className="w-5 h-5" />
+              <span>Vraag Nu Een Gratis Offerte Aan</span>
+            </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -350,10 +351,20 @@ const RoofingPage = () => {
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
               Onze <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Dakwerk Specialisaties</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Van traditionele pannendaken tot moderne bitumen oplossingen, 
-              wij hebben de expertise voor alle soorten dakwerkzaamheden.
+            <p className="text-xl text-gray-700 font-semibold max-w-3xl mx-auto mb-2">
+              ✅ Complete dakwerkzaamheden van A tot Z
             </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Van traditionale pannendaken tot moderne bitumen oplossingen.
+              Inclusief dakkapellen, isolatie en 10 jaar garantie!
+            </p>
+            <button
+              onClick={() => setIsContactPopupOpen(true)}
+              className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
+            >
+              <Calculator className="w-5 h-5" />
+              <span>VRAAG GRATIS OFFERTE AAN</span>
+            </button>
           </div>
 
           <div className="space-y-12">
@@ -396,6 +407,87 @@ const RoofingPage = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Urgency Section */}
+      <section className="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <Wrench className="w-16 h-16 text-red-500 mx-auto mb-6 animate-pulse" />
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">
+              <span className="text-red-600">Dakproblemen Wachten Niet!</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-4">
+              <strong>Elke dag uitstellen kost u geld!</strong> Lekkages veroorzaken snel waterschade.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Urgente dakproblemen? Binnen 3 uur ter plaatse! Preventief onderhoud bespaart duizenden euro's.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div className="px-6 py-4 bg-red-500 text-white">
+              <h3 className="text-xl font-bold">Herkenbare Dakproblemen</h3>
+            </div>
+            <div className="divide-y divide-gray-200">
+              <div className="px-6 py-4 flex justify-between items-center">
+                <div className="font-medium text-slate-900">Lekkende dakpannen</div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Gevolg</div>
+                  <div className="font-bold text-red-600">Waterschade binnen weken</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Actie</div>
+                  <div className="font-bold text-green-600">Direct Repareren</div>
+                </div>
+              </div>
+              <div className="px-6 py-4 flex justify-between items-center">
+                <div className="font-medium text-slate-900">Kapotte nokvorsten</div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Gevolg</div>
+                  <div className="font-bold text-red-600">Wind- en regenschade</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Actie</div>
+                  <div className="font-bold text-green-600">Urgent Vervangen</div>
+                </div>
+              </div>
+              <div className="px-6 py-4 flex justify-between items-center">
+                <div className="font-medium text-slate-900">Verouderde dakbedekking</div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Gevolg</div>
+                  <div className="font-bold text-red-600">Energieverlies & lekkages</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Actie</div>
+                  <div className="font-bold text-green-600">Vernieuwen Nu</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center space-y-4">
+            <p className="text-lg font-semibold text-gray-700">
+              Waarom langer wachten? Elk lek dat u uitstelt wordt duurder!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => setIsContactPopupOpen(true)}
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center space-x-2 text-lg"
+              >
+                <Calculator className="w-6 h-6" />
+                <span>BEREKEN UW SCHADE</span>
+              </button>
+              <a
+                href="tel:0488234625"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center space-x-2 text-lg"
+              >
+                <Phone className="w-6 h-6" />
+                <span>0488 234 625 - BEL NU!</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -449,12 +541,30 @@ const RoofingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Ons <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Dakwerk Proces</span>
+              Hoe Wij Uw <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Dak Repareren</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Van inspectie tot oplevering begeleiden wij u professioneel 
-              door het hele proces voor een waterdicht resultaat.
+            <p className="text-xl text-gray-700 font-semibold max-w-3xl mx-auto mb-2">
+              In 4 Simpele Stappen Naar Een Waterdicht Dak!
             </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Snel, vakkundig en zonder zorgen - wij regelen alles voor u
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <button
+                onClick={() => setIsContactPopupOpen(true)}
+                className="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>START VANDAAG NOG!</span>
+              </button>
+              <a
+                href="tel:0488234625"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-flex items-center space-x-2"
+              >
+                <Clock className="w-5 h-5" />
+                <span>BINNEN 24 UUR INSPECTIE</span>
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -488,12 +598,32 @@ const RoofingPage = () => {
                   </div>
                 ))}
               </div>
-              <div className="mt-8 p-6 bg-brand-50 border border-brand-200 rounded-lg">
-                <h4 className="font-bold text-slate-900 mb-2">Waarom Compleet Dakonderhoud Nederland?</h4>
-                <p className="text-gray-700">
-                  Van kleine reparaties tot complete dakvernieuwing. Wij zorgen voor waterdicht 
-                  en duurzaam dakwerk met garantie en persoonlijke service.
-                </p>
+              <div className="mt-8">
+                <div className="p-6 bg-gradient-to-br from-brand-50 to-blue-50 border-2 border-brand-400 rounded-lg mb-6">
+                  <h4 className="font-bold text-slate-900 mb-4 text-xl">
+                    💰 Bespaar Op Uw Energierekening!
+                  </h4>
+                  <p className="text-gray-700 mb-4">
+                    Een goed geïsoleerd dak bespaart u <strong>aanzienlijk op uw energierekening</strong>.
+                    Onze dakwerkzaamheden betalen zichzelf terug!
+                  </p>
+                  <button
+                    onClick={() => setIsContactPopupOpen(true)}
+                    className="w-full bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    BEREKEN UW BESPARING →
+                  </button>
+                </div>
+                <div className="bg-white rounded-lg p-4 border-2 border-gray-200">
+                  <h5 className="font-bold text-slate-900 mb-3 text-lg">✅ Direct Voordeel:</h5>
+                  <div className="space-y-2 text-gray-700">
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Waterdichte garantie</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Lagere energierekening</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />10 jaar garantie</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Transparante prijzen</div>
+                    <div className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-2" />Hogere woningwaarde</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="relative">
@@ -663,15 +793,6 @@ const RoofingPage = () => {
                   <h4 className="font-bold text-slate-900 mb-2">✓ Gratis dakinspectie</h4>
                   <h4 className="font-bold text-slate-900 mb-2">✓ Vrijblijvende offerte</h4>
                   <h4 className="font-bold text-slate-900">✓ Persoonlijk advies</h4>
-                </div>
-                
-                <div className="bg-gradient-to-r from-orange-100 to-red-100 border border-orange-300 rounded-lg p-4 mb-6">
-                  <div className="text-center">
-                    <h4 className="font-bold text-slate-900 mb-2">☀️ ZOMER ACTIE: 10% KORTING</h4>
-                    <p className="text-slate-800 text-sm">
-                      Profiteer nu van 10% korting op alle dakwerkzaamheden!
-                    </p>
-                  </div>
                 </div>
                 
                 {error && (

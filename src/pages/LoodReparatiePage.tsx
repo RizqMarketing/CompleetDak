@@ -107,27 +107,67 @@ const LoodReparatiePage = () => {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920')] bg-cover bg-center opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="relative inline-block mb-6">
+              <div className="bg-gradient-to-r from-white/20 to-brand-400/30 backdrop-blur-sm rounded-full px-6 py-3 border border-brand-400/40 shadow-xl">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
+                  <span className="text-white font-semibold text-sm tracking-wide">
+                    Gecertificeerd Specialist in Loodreparatie
+                  </span>
+                  <div className="w-3 h-3 bg-brand-400 rounded-full shadow-lg"></div>
+                </div>
+              </div>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Professionele <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Lood Reparatie</span>
+              Professionele <span className="text-brand-400">Lood Reparatie</span>
+              <br />
+              <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">100% Waterdicht Gegarandeerd!</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Specialist in loodslabben, loodaansluitingen en loodgoten. Vakkundige reparatie voor 100% waterdichte resultaten.
+              Lekkage door defect loodwerk? Wij lossen het definitief op!
+              <span className="text-brand-400 font-bold"> Gratis inspectie en 10 jaar garantie!</span>
+              Specialist in loodslabben, aansluitingen en dakgoten.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button
                 onClick={() => setIsContactPopupOpen(true)}
-                className="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center text-lg animate-pulse"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Direct Contact
+                <Calculator className="w-6 h-6 mr-3" />
+                GRATIS OFFERTE AANVRAGEN
               </button>
-              <a 
+              <a
                 href="tel:0488234625"
-                className="bg-white hover:bg-gray-100 text-slate-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center text-lg"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Bel: 0488 234 625
+                <Phone className="w-6 h-6 mr-3" />
+                DIRECT BELLEN
               </a>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <CheckCircle className="w-6 h-6 text-brand-400" />
+                <p className="text-lg font-semibold text-brand-400">Waarom kiezen voor ons?</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span className="text-white">Gratis Inspectie</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span className="text-white">10 Jaar Garantie</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span className="text-white">100% Waterdicht</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span className="text-white">Vaste Lage Prijs</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

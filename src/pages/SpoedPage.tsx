@@ -107,43 +107,149 @@ const SpoedPage = () => {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1920')] bg-cover bg-center opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="relative inline-block mb-6">
+              <div className="bg-gradient-to-r from-white/20 to-red-400/30 backdrop-blur-sm rounded-full px-6 py-3 border border-red-400/40 shadow-xl">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-red-400 rounded-full shadow-lg animate-pulse"></div>
+                  <span className="text-white font-semibold text-sm tracking-wide">
+                    SPOEDDIENST 24/7 - BINNEN 2 UUR TER PLAATSE
+                  </span>
+                  <div className="w-3 h-3 bg-red-400 rounded-full shadow-lg animate-pulse"></div>
+                </div>
+              </div>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">24/7</span> Dakspoed Service
+              <span className="text-red-400">DAKSPOED NODIG?</span>
+              <br />
+              <span className="bg-gradient-to-r from-blue-500 to-brand-600 bg-clip-text text-transparent">Binnen 2 Uur Ter Plaatse!</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Acute lekkage? Storm schade? Wij zijn er binnen 2 uur. Professionele noodservice voor alle dakproblemen.
+              <span className="text-red-400 font-bold">NOODGEVAL?</span> Acute lekkage? Storm schade?
+              Wij zijn er binnen 2 uur. 24/7 professionele spoedservice voor alle dakproblemen.
+              <span className="text-brand-400 font-bold"> Geen voorrijkosten!</span>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <a
                 href="tel:0488234625"
-                className="bg-brand-500 hover:bg-brand-600 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center text-lg"
+                className="bg-red-500 hover:bg-red-600 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center text-lg animate-pulse"
               >
-                <Phone className="w-6 h-6 mr-2" />
-                SPOED: 0488 234 625
+                <Phone className="w-6 h-6 mr-3" />
+                SPOED: 0488 234 625 - BEL NU!
               </a>
-              <button 
+              <button
                 onClick={() => setIsContactPopupOpen(true)}
-                className="bg-white hover:bg-gray-100 text-slate-900 font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl flex items-center justify-center text-lg"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Direct Contact
+                <Calculator className="w-6 h-6 mr-3" />
+                GRATIS SPOEDADVIES
               </button>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <CheckCircle className="w-6 h-6 text-green-400" />
+                <p className="text-lg font-semibold text-green-400">Waarom ons bellen bij spoed?</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span className="text-white">Binnen 2 Uur Ter Plaatse</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span className="text-white">24/7 Bereikbaar</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span className="text-white">Geen Voorrijkosten</span>
+                </div>
+                <div className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-6 h-6 text-green-400" />
+                  <span className="text-white">Direct Gestopt</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Emergency Alert Banner */}
-      <section className="bg-gradient-to-r from-brand-50 to-blue-50 border-y border-brand-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-center space-x-2 text-brand-900">
-            <Clock className="w-5 h-5 text-brand-600" />
-            <span className="font-semibold">24/7 Spoedservice beschikbaar</span>
-            <span className="mx-2">•</span>
-            <Phone className="w-4 h-4 text-brand-600" />
-            <a href="tel:0488234625" className="hover:text-brand-600 transition-colors font-medium">
-              0488 234 625
-            </a>
+      {/* Urgency Section */}
+      <section className="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-6 animate-pulse" />
+            <h2 className="text-4xl font-bold text-slate-900 mb-6">
+              <span className="text-red-600">Elk Moment Telt Bij Spoedgevallen!</span>
+            </h2>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-4">
+              <strong>Elke minuut wachten is elke euro meer schade!</strong> Dakproblemen verergeren snel.
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Wij zijn binnen 2 uur ter plaatse. Direct gestopt. Verdere schade voorkomen!
+            </p>
+          </div>
+
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+            <div className="px-6 py-4 bg-red-500 text-white">
+              <h3 className="text-xl font-bold">Wat Gebeurt Er Als U Wacht?</h3>
+            </div>
+            <div className="divide-y divide-gray-200">
+              <div className="px-6 py-4 flex justify-between items-center">
+                <div className="font-medium text-slate-900">Storm schade niet direct afgedekt</div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Gevolg</div>
+                  <div className="font-bold text-red-600">Regenwater in huis</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Extra Kosten</div>
+                  <div className="font-bold text-red-600">Hoge Kosten</div>
+                </div>
+              </div>
+              <div className="px-6 py-4 flex justify-between items-center">
+                <div className="font-medium text-slate-900">Lekkage niet direct gedicht</div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Gevolg</div>
+                  <div className="font-bold text-red-600">Isolatie doorweekt</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Extra Kosten</div>
+                  <div className="font-bold text-red-600">Zeer Hoge Kosten</div>
+                </div>
+              </div>
+              <div className="px-6 py-4 flex justify-between items-center">
+                <div className="font-medium text-slate-900">Losgewaaide dakpannen niet vervangen</div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Gevolg</div>
+                  <div className="font-bold text-red-600">Complete dakschade</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-sm text-gray-600">Extra Kosten</div>
+                  <div className="font-bold text-red-600">Zeer Hoge Kosten</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center space-y-4">
+            <p className="text-lg font-semibold text-gray-700">
+              BEL NU! Wachten kost u veel meer dan onze spoedservice!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:0488234625"
+                className="bg-red-500 hover:bg-red-600 text-white font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center space-x-2 text-lg animate-pulse"
+              >
+                <Phone className="w-6 h-6" />
+                <span>0488 234 625 - SPOED!</span>
+              </a>
+              <button
+                onClick={() => setIsContactPopupOpen(true)}
+                className="bg-brand-500 hover:bg-brand-600 text-slate-900 font-bold px-10 py-5 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-2xl inline-flex items-center space-x-2 text-lg"
+              >
+                <Calculator className="w-6 h-6" />
+                <span>BEREKEN SCHADE</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
