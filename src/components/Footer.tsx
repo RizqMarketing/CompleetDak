@@ -211,16 +211,13 @@ const Footer = ({ children }: FooterProps) => {
             {/* Extra spacing to align with right column */}
             <div className="mt-8 mb-16"></div>
             
-            {/* Emergency Contact moved here - positioned to align with blue box */}
-            <div className="p-4 bg-red-900/20 border border-red-900/50 rounded-lg">
-              <h5 className="font-bold text-red-400 mb-2">24/7 Spoedservice</h5>
-              <p className="text-gray-300 text-sm mb-2">Voor urgente zaken</p>
-              <a 
-                href="tel:0488234625" 
-                className="text-red-400 hover:text-red-300 font-semibold transition-colors"
-              >
-                0488 234 625
-              </a>
+            {/* Keurmerk Badge */}
+            <div className="flex items-center justify-center">
+              <img
+                src="https://imgur.com/vrjlxgm.png"
+                alt="Keurmerk Badge"
+                className="h-28 w-auto opacity-90 hover:opacity-100 transition-opacity"
+              />
             </div>
           </div>
 
