@@ -280,20 +280,6 @@ const ExtensionPage = () => {
                 </div>
               </div>
             </div>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Shield className="w-6 h-6 text-brand-400" />
-                <span>Vergunningen Geregeld</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Clock className="w-6 h-6 text-brand-400" />
-                <span>24/7 Bereikbaar</span>
-              </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Users className="w-6 h-6 text-brand-400" />
-                <span>Complete Service</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
