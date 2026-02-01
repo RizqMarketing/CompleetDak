@@ -247,31 +247,19 @@ const Footer = ({ children }: FooterProps) => {
                 <FileText className="w-4 h-4" />
                 <span className="text-sm font-medium">Gratis Offertes</span>
               </div>
+              <div className="flex items-center space-x-2 text-emerald-400">
+                <Shield className="w-4 h-4" />
+                <span className="text-sm font-medium">100% Verzekerd</span>
+              </div>
+              <div className="flex items-center space-x-2 text-purple-400">
+                <CheckCircle className="w-4 h-4" />
+                <span className="text-sm font-medium">Gratis Inspectie</span>
+              </div>
             </div>
 
-            {/* Trust Badges */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2 p-3 bg-gray-800 rounded-lg">
-                <Shield className="w-6 h-6 text-green-400" />
-                <div>
-                  <div className="text-sm font-semibold">100% Verzekerd</div>
-                  <div className="text-xs text-gray-400">Volledig gedekt</div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2 p-3 bg-gray-800 rounded-lg">
-                <Award className="w-6 h-6 text-brand-400" />
-                <div>
-                  <div className="text-sm font-semibold">Kwaliteitsgarantie</div>
-                  <div className="text-xs text-gray-400">Op al ons werk</div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2 p-3 bg-gray-800 rounded-lg">
-                <Clock className="w-6 h-6 text-blue-400" />
-                <div>
-                  <div className="text-sm font-semibold">24/7 Bereikbaar</div>
-                  <div className="text-xs text-gray-400">Altijd voor u klaar</div>
-                </div>
-              </div>
+            {/* Trust Badge Image */}
+            <div className="pt-8">
+              <img src="/footer-badge.jpg" alt="Keurmerk badge" className="w-5/6 h-auto rounded-lg border-2 border-brand-400/30 shadow-lg" />
             </div>
           </div>
         </div>
