@@ -303,16 +303,20 @@ const ReviewsSlider: React.FC = () => {
           display: flex;
           width: max-content;
           animation: reviewsMarquee 90s linear infinite;
+          -webkit-animation: reviewsMarquee 90s linear infinite;
           will-change: transform;
+          transform: translateZ(0);
         }
-        .reviews-slider:hover .reviews-track {
-          animation-play-state: paused;
+        @media (hover: hover) {
+          .reviews-slider:hover .reviews-track {
+            animation-play-state: paused;
+          }
         }
         @media (max-width: 640px) {
-          .reviews-track { animation-duration: 70s; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .reviews-track { animation: none; }
+          .reviews-track {
+            animation-duration: 60s;
+            -webkit-animation-duration: 60s;
+          }
         }
       `}</style>
 
