@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ReviewsSlider from '../components/ReviewsSlider';
 import { 
   Users, CheckCircle, Phone, Mail, ArrowRight, 
   Award, Shield, Clock, Calculator, Eye, Clipboard, Target, FileText,
@@ -485,20 +486,10 @@ const ProjectManagementPage = () => {
               {/* Top accent */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-500 to-brand-600 rounded-b-full"></div>
               
-              {/* Widget */}
-              <div 
-                className="overflow-hidden rounded-xl"
-                style={{ 
-                  minHeight: '400px',
-                  paddingBottom: '10px'
-                }}
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
-                    <iframe class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/bGV3Pxr7SBGEoFWh6kb3' frameborder='0' scrolling='auto' style='min-width: 100%; width: 100%; height: 350px; border-radius: 12px; display: block; margin: 0; padding: 0; box-sizing: border-box;'></iframe>
-                  `
-                }}
-              />
+              {/* Reviews Slider */}
+              <div className="overflow-hidden rounded-xl">
+                <ReviewsSlider />
+              </div>
             </div>
           </div>
 

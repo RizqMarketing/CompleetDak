@@ -1,5 +1,6 @@
 import React from 'react';
-import { Users, Shield, Award, Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import ReviewsSlider from './ReviewsSlider';
 
 const Testimonials = () => {
 
@@ -40,29 +41,10 @@ const Testimonials = () => {
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-400 to-brand-400 rounded-b-full"></div>
             
             
-            {/* Widget */}
-            <div 
-              className="overflow-hidden rounded-xl"
-              style={{ 
-                minHeight: '400px',
-                paddingBottom: '10px'
-              }}
-              dangerouslySetInnerHTML={{
-                __html: `
-                  <style>
-                    /* Mobile styling - keep it simple like ChimneyPage */
-                    @media screen and (max-width: 768px) {
-                      .lc_reviews_widget iframe {
-                        height: 350px !important;
-                        border-radius: 12px !important;
-                      }
-                    }
-                  </style>
-                  <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
-                  <iframe class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/bGV3Pxr7SBGEoFWh6kb3' frameborder='0' scrolling='no' style='min-width: 100%; width: 100%; height: 350px; border-radius: 12px; display: block; margin: 0; padding: 0; box-sizing: border-box;'></iframe>
-                `
-              }}
-            />
+            {/* Reviews Slider */}
+            <div className="overflow-hidden rounded-xl">
+              <ReviewsSlider />
+            </div>
           </div>
         </div>
 
