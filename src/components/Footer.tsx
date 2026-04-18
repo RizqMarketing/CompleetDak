@@ -84,7 +84,35 @@ const Footer = ({ children }: FooterProps) => {
           {children}
         </div>
       )}
-      
+
+      {/* Top 30 Vakbedrijven Premium Banner */}
+      <div className="relative border-y border-yellow-500/20 bg-gradient-to-r from-slate-900 via-slate-800/50 to-slate-900 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-500/5 to-transparent"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+            <div className="relative group flex-shrink-0">
+              <div className="absolute inset-0 bg-yellow-400/30 blur-2xl rounded-full group-hover:bg-yellow-400/50 transition-all duration-500"></div>
+              <img
+                src="/top30-badge.png"
+                alt="Top 30 Vakbedrijven 2026-2027 - Geselecteerd Vakbedrijf"
+                className="relative h-28 md:h-36 w-auto drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="text-center md:text-left max-w-md">
+              <div className="text-yellow-400 text-xs font-bold tracking-[0.2em] uppercase mb-2">
+                Officiële Erkenning 2026-2027
+              </div>
+              <div className="text-white text-xl md:text-2xl font-bold mb-2 leading-tight">
+                Geselecteerd als Top 30 Vakbedrijf
+              </div>
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                Compleet Dakonderhoud Nederland behoort tot de beste vakbedrijven van Nederland — erkend voor kwaliteit, betrouwbaarheid en vakmanschap.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -210,7 +238,7 @@ const Footer = ({ children }: FooterProps) => {
             
             {/* Extra spacing to align with right column */}
             <div className="mt-8 mb-16"></div>
-            
+
             {/* Keurmerk Badge */}
             <div className="flex items-center justify-center">
               <img

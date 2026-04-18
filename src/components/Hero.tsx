@@ -66,6 +66,18 @@ const Hero = () => {
         <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-brand-600/10 rotate-45 animate-pulse"></div>
       </div>
 
+      {/* Top 30 Vakbedrijven Badge */}
+      <div className="hidden md:block absolute top-28 right-6 lg:right-10 z-20 animate-[fadeIn_1s_ease-out]">
+        <div className="relative group">
+          <div className="absolute inset-0 bg-yellow-400/30 blur-2xl rounded-full group-hover:bg-yellow-400/50 transition-all duration-500"></div>
+          <img
+            src="/top30-badge.png"
+            alt="Top 30 Vakbedrijven 2026-2027 - Geselecteerd Vakbedrijf"
+            className="relative w-32 lg:w-40 xl:w-48 h-auto drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      </div>
+
       {/* Main Content */}
       <div className="relative z-10 text-center text-white w-full px-4 sm:px-6 lg:px-8 py-20 pt-32 lg:pt-48">
         <div className="max-w-6xl mx-auto">
